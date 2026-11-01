@@ -21,7 +21,7 @@
   --pill-b-bg:#e3eefc; --pill-b-fg:#1c3b7a; --pill-b-bd:#9db8e8;
   --pill-r-bg:#fde8ec; --pill-r-fg:#9b1c31; --pill-r-bd:#f0a7b4;
   --nav-bg:#0b1530; --nav-bg-end:#1b1d5c; --nav-text:#cdd7ee; --nav-dim:#8592b8; --nav-accent:#6fa0e8;
-  --nm-line:#5b6270; --loc:#9b111e; --fd1:#f7fbff; --fd2:#abd0e6; --fd3:#3787c0; --fd4:#08306b;
+  --nm-line:#5b6270; --loc:#9b111e; --hot:#B91C1C; --fd1:#f7fbff; --fd2:#abd0e6; --fd3:#3787c0; --fd4:#08306b;
   --sev1:#7a869e; --sev2:#4c7ea8; --sev3:#532b88; --sev4:#008000; --sev5:#800f2f; --comb:#191f5e;
   --bef:#d3d6db; --aft:#d4edc9; --aft-line:#2e7d32;
   --shadow:0 1px 2px rgba(15,27,51,.05), 0 8px 28px rgba(15,27,51,.10);
@@ -38,7 +38,7 @@
   --bad:#f07a7e; --bad-soft:#3b1e22; --warn:#f3c27f; --warn-soft:#382914;
   --pill-b-bg:#16223c; --pill-b-fg:#a9c6ff; --pill-b-bd:#2f4a80; --pill-r-bg:#3b1e24; --pill-r-fg:#f5a3ae; --pill-r-bd:#74323d;
   --nav-bg:#050a18; --nav-bg-end:#12123f; --nav-text:#a9b7d6; --nav-dim:#5c6b8f; --nav-accent:#7fb0ff;
-  --nm-line:#9aa3b5; --loc:#ff6b6b; --fd1:#f7fbff; --fd2:#abd0e6; --fd3:#3787c0; --fd4:#08306b;
+  --nm-line:#9aa3b5; --loc:#ff6b6b; --hot:#ef4444; --fd1:#f7fbff; --fd2:#abd0e6; --fd3:#3787c0; --fd4:#08306b;
   --sev1:#a3b1b4; --sev2:#86b5dc; --sev3:#b592ea; --sev4:#53c653; --sev5:#ff7394; --comb:#97a2f0;
   --bef:#5b616b; --aft:#1f3d23; --aft-line:#7fd48a;
   --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 28px rgba(0,0,0,.35); --glass:rgba(11,18,32,.82); --py-kw:#d6a0f0; --py-str:#8fd9a2; --py-num:#f3b47f; --py-com:#8592ad; --py-fn:#8ab4ff; color-scheme:dark}}
@@ -48,7 +48,7 @@
   --bad:#f07a7e; --bad-soft:#3b1e22; --warn:#f3c27f; --warn-soft:#382914;
   --pill-b-bg:#16223c; --pill-b-fg:#a9c6ff; --pill-b-bd:#2f4a80; --pill-r-bg:#3b1e24; --pill-r-fg:#f5a3ae; --pill-r-bd:#74323d;
   --nav-bg:#050a18; --nav-bg-end:#12123f; --nav-text:#a9b7d6; --nav-dim:#5c6b8f; --nav-accent:#7fb0ff;
-  --nm-line:#9aa3b5; --loc:#ff6b6b; --fd1:#f7fbff; --fd2:#abd0e6; --fd3:#3787c0; --fd4:#08306b;
+  --nm-line:#9aa3b5; --loc:#ff6b6b; --hot:#ef4444; --fd1:#f7fbff; --fd2:#abd0e6; --fd3:#3787c0; --fd4:#08306b;
   --sev1:#a3b1b4; --sev2:#86b5dc; --sev3:#b592ea; --sev4:#53c653; --sev5:#ff7394; --comb:#97a2f0;
   --bef:#5b616b; --aft:#1f3d23; --aft-line:#7fd48a;
   --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 28px rgba(0,0,0,.35); --glass:rgba(11,18,32,.82); --py-kw:#d6a0f0; --py-str:#8fd9a2; --py-num:#f3b47f; --py-com:#8592ad; --py-fn:#8ab4ff; color-scheme:dark}
@@ -249,7 +249,7 @@ ol.steps li::before{content:counter(st) ".";position:absolute;left:0;top:0;font-
 .fig .chart{width:100%}
 .fig svg{display:block;width:100%;height:auto;overflow:visible}
 .fig .cap{color:var(--muted)}
-.legend{display:flex;flex-wrap:wrap;gap:6px 14px;color:var(--ink)}.legend .lt{color:var(--ink)}.chart svg text[fill="var(--muted)"]:not(.tick),.chart svg tspan[fill="var(--muted)"]{fill:var(--ink)}.legend.mapleg{width:fit-content;max-width:100%;box-sizing:border-box;margin:0 auto 10px;padding:10px 16px;border:1px solid var(--ink);border-radius:12px}
+.figcol-btn{position:fixed;right:16px;bottom:16px;z-index:60;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 16px;box-shadow:var(--shadow);font:inherit;cursor:pointer}.figcol{position:fixed;right:16px;bottom:64px;z-index:60;width:min(340px,calc(100vw - 32px));max-height:calc(100vh - 96px);overflow:auto;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:14px 16px;display:grid;gap:8px}.figcol h3{margin:0}.figcol .fc-g{font-weight:600;margin-top:4px}.figcol label{display:flex;align-items:center;gap:10px}.figcol input[type=color]{width:34px;height:24px;padding:0;border:1px solid var(--line);border-radius:6px;background:none;cursor:pointer}.figcol .fc-note{color:var(--muted)}.figcol .fc-warn{color:var(--warn)}.figcol .fc-row{display:flex;gap:8px;align-items:center;justify-content:space-between}.figcol button{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:8px;padding:4px 12px}.legend{display:flex;flex-wrap:wrap;gap:6px 14px;color:var(--ink)}.legend .lt{color:var(--ink)}.chart svg text[fill="var(--muted)"]:not(.tick),.chart svg tspan[fill="var(--muted)"]{fill:var(--ink)}.legend.mapleg{width:fit-content;max-width:100%;box-sizing:border-box;margin:0 auto 10px;padding:10px 16px;border:1px solid var(--ink);border-radius:12px}
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .legend i{width:12px;height:12px;border-radius:3px;display:inline-block}.legend i.ln{width:28px;height:0;border-radius:0;border-top:3px solid var(--c);align-self:center}.legend i.ln.dash{border-top-style:dashed}.rdkey .lt{white-space:nowrap}
 .cards.rmap{grid-template-columns:minmax(0,1fr)}
@@ -744,7 +744,7 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
   <p class="lede">27,804 flood-exposed buildings in 92 subdistricts; hot spots tested on each building’s raw risk with 8 neighbours, 9,999 permutations and FDR (q = 0.05). </p>
   <div class="card"><h3>Two thirds of the difference in flood risk lies inside subdistricts <button type="button" class="figq" data-dlg="d-ht-e">ⓘ What it shows</button></h3><div class="chart" id="ht2-split"></div></div>
   <div class="card"><h3>Fig. 14. Risk hot spots form clusters inside subdistricts of every rating <button type="button" class="figq" data-dlg="d-ht-map">ⓘ What it shows</button></h3>
-    <div class="legend htleg mapleg"><span><i style="background:#B91C1C;border-radius:50%"></i><em class="lt">Hot spot, high risk score among high-scoring neighbours (4,563)</em></span><span><i style="background:var(--sev2);border-radius:50%"></i><em class="lt">Cold spot, low score among low-scoring neighbours (4,773)</em></span><span class="rdkey"><em class="lt">Subdistrict risk (R<sub>s</sub>)</em><i style="--k:4%"></i>1<i style="--k:7%"></i>2<i style="--k:13%"></i>3<i style="--k:22%"></i>4<i style="--k:46%"></i>5</span></div>
+    <div class="legend htleg mapleg"><span><i style="background:var(--hot);border-radius:50%"></i><em class="lt">Hot spot, high risk score among high-scoring neighbours (4,563)</em></span><span><i style="background:var(--sev2);border-radius:50%"></i><em class="lt">Cold spot, low score among low-scoring neighbours (4,773)</em></span><span class="rdkey"><em class="lt">Subdistrict risk (R<sub>s</sub>)</em><i style="--k:4%"></i>1<i style="--k:7%"></i>2<i style="--k:13%"></i>3<i style="--k:22%"></i>4<i style="--k:46%"></i>5</span></div>
     <div class="chart" id="ht2-map"></div><div class="htexl"></div>
     <p class="cap htdrag">Drag the cards to move them. <button type="button" class="rlink" data-htreset>Reset positions</button> · <button type="button" class="rlink" data-htcopy>Copy positions</button> <span class="htcopied" hidden>copied</span></p></div>
   <div class="card"><h3>Fig. 15. 1,323 of 4,563 risk hot-spot buildings (29 %) sit in subdistricts rated 1–3 <button type="button" class="figq" data-dlg="d-ht-f">ⓘ What it shows</button></h3>
@@ -1916,8 +1916,8 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
   }
   // Item 2 map: hot (amber) and cold (blue) spot buildings over subdistricts shaded by R_s; three named examples outlined.
   // [id, name, R_s, hot-spot count, label side, label height as a share of the map height, why picked, pill colour]
-  const HTEX2 = [['89', 'Juwol 1(il)', 4, '558 of 1,035 in hot spots', 'e', .66, 'Most risk hot spots', '#B91C1C', [0.69, 0.695]],
-    ['90', 'Juwol 2(i)', 3, '297 of 937 in hot spots', 'w', .72, 'Most in a lower-rated area', '#B91C1C', [0.01, 0.80]],
+  const HTEX2 = [['89', 'Juwol 1(il)', 4, '558 of 1,035 in hot spots', 'e', .66, 'Most risk hot spots', 'var(--hot)', [0.69, 0.695]],
+    ['90', 'Juwol 2(i)', 3, '297 of 937 in hot spots', 'w', .72, 'Most in a lower-rated area', 'var(--hot)', [0.01, 0.80]],
     ['117', 'Geonguk', 5, '18 of 229 in hot spots', 'n', .40, 'Fewest in high-rated', '#1D4ED8', [0.735, 0.47]]];   // Part 2: flood risk; last item = card spot chosen by the user (left edge, centre height; shares of the map)
   function hetMap(box, src, EX){
     const W = Math.max(260, Math.round(box.clientWidth)); if (!box.clientWidth) return;
@@ -1929,7 +1929,7 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
     MAPD.dong.forEach(d => d.g.forEach(r => el('path', {d:path(r), fill:d.R ? 'var(--fg)' : 'none', 'fill-opacity':d.R ? SHADE[d.R] : 0, stroke:'var(--surface)', 'stroke-width':.8}, s)));
     basinLine(s, X, Y);
     const rr = (W < 500 ? 0.9 : 1.2) * (PTS.length < 20000 ? 1.5 : 1);   // cold spots first, hot spots on top; sparser maps get larger dots
-    [['l', 'var(--sev2)'], ['h', '#B91C1C']].forEach(([t, c]) => { const g = el('g', {fill:c}, s);
+    [['l', 'var(--sev2)'], ['h', 'var(--hot)']].forEach(([t, c]) => { const g = el('g', {fill:c}, s);
       PTS.forEach(([x, y, tt]) => { if (tt === t) el('circle', {cx:X(x).toFixed(1), cy:Y(y).toFixed(1), r:rr}, g); }); });
     // examples: outline, then a label pill beside the subdistrict with a short leader
     s.style.fontSize = (FS * W / box.clientWidth) + 'px'; s.style.fontFamily = 'var(--f-body)';   // set now so text can be measured
@@ -2064,7 +2064,7 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
     if (!flH5.p){ const d = JSON.parse(document.getElementById('flpts').textContent); let a = 0, b = 0; flH5.big = new Set(d.big.map(String)); flH5.p = d.dx.map((v, i) => { a += v; b += d.dy[i]; return [a, b, d.t[i]]; }); }
     const P = flH5.p, nL = P.filter(p => p[2] === 'L').length, n = P.length, pL = Math.round(nL / n * 100), f = x => x.toLocaleString('en-US');
     const W = Math.round(box.clientWidth), N = W < 560, L = 22, T = 0;   // map only (the share is in the text)
-    const RED = '#B91C1C', BLUE = 'var(--sev2)', PINK = 'color-mix(in srgb,#B91C1C 14%,var(--surface))', LBLUE = 'color-mix(in srgb,var(--sev2) 16%,var(--surface))', DRED = 'var(--sev5)';
+    const RED = 'var(--hot)', BLUE = 'var(--sev2)', PINK = 'color-mix(in srgb,var(--hot) 14%,var(--surface))', LBLUE = 'color-mix(in srgb,var(--sev2) 16%,var(--surface))', DRED = 'var(--sev5)';
     const g = basinGeo(W), mh = g.H;
     const h5 = Object.keys(V.dh).filter(k => V.dh[k][0] === 5);
     const LI = [['L', 'In large subdistricts, ' + f(nL) + ' (' + pL + ' %)'], ['s', 'In small subdistricts, ' + f(n - nL) + ' (' + (100 - pL) + ' %)'], ['h', 'Subdistrict H = 5 (' + h5.length + ')'], ['o', 'Large subdistrict (> 10 km²)']];
@@ -2238,6 +2238,42 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
     pop.addEventListener('keydown', e => { if (e.key === 'Escape' || e.key === 'Enter') close(); });
     card.querySelector('[data-rbreset]').addEventListener('click', () => { try { localStorage.removeItem(KEY); } catch (e) {} sharePref(KEY, null);
       pop.hidden = true; sw.forEach((b, i) => { st[i] = [b.dataset.hex, 100]; card.style.removeProperty('--rb' + (i + 1)); }); draw(); });
+  })();
+  // Owner-only colour editor (v295): figure colour tokens, saved per theme to the artifact db doc prefs/figColors; only the owner reads and writes it.
+  (function(){
+    const TOK = [['Risk class (Rb, Rs)', [['--sev1', 'Class 1'], ['--sev2', 'Class 2 (also cold spots)'], ['--sev3', 'Class 3'], ['--sev4', 'Class 4'], ['--sev5', 'Class 5']]],
+      ['Flood depth', [['--fd1', '< 0.5 m'], ['--fd2', '0.5–1 m'], ['--fd3', '1–2 m'], ['--fd4', '> 2 m']]],
+      ['Points and outlines', [['--accent', 'Blue (Fig. 9 points; also page accent)'], ['--bad', 'Red (Fig. 9 points)'], ['--hot', 'Hot spot'], ['--nm-line', 'Named subdistrict outline'], ['--loc', 'Inset square']]]];
+    const mode = () => { const a = document.documentElement.dataset.theme; return a === 'dark' || a === 'light' ? a : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); };
+    let st = {light:{}, dark:{}}, db = null, saving = Promise.resolve();
+    const tag = document.head.appendChild(document.createElement('style'));
+    const apply = () => { const body = o => Object.entries(o).filter(([k, v]) => /^--[\w-]+$/.test(k) && /^#[0-9a-f]{6}$/i.test(v)).map(([k, v]) => k + ':' + v).join(';');
+      tag.textContent = ':root{' + body(st.light) + '}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){' + body(st.dark) + '}}:root[data-theme="dark"]{' + body(st.dark) + '}';
+      if (typeof draw === 'function') draw(); };
+    const hex = k => { const c = getComputedStyle(document.documentElement).getPropertyValue(k).trim(); const cv = document.createElement('canvas').getContext('2d'); cv.fillStyle = '#000'; cv.fillStyle = c; return cv.fillStyle; };
+    const lum = h => { const [r, g, b] = [1, 3, 5].map(i => { const v = parseInt(h.slice(i, i + 2), 16) / 255; return v <= .03928 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4; }); return .2126 * r + .7152 * g + .0722 * b; };
+    const ratio = (a, b) => { const x = lum(a), y = lum(b); return (Math.max(x, y) + .05) / (Math.min(x, y) + .05); };
+    (async () => {
+      if (!window.claude) return; const timer = new Promise(r => setTimeout(() => r(null), 10000));
+      const user = await Promise.race([claude.use('user'), timer]); if (!(await (user?.isOwner() ?? false))) return;   // viewers never see the editor
+      db = await Promise.race([claude.use('db'), timer]);
+      try { const d = db && await Promise.race([db.doc('prefs/figColors').get(), timer]); const v = d && d.exists ? d.data() : null;
+        if (v) { st = {light:Object.assign({}, v.light || {}), dark:Object.assign({}, v.dark || {})}; apply(); } } catch (e) {}
+      const btn = document.body.appendChild(Object.assign(document.createElement('button'), {type:'button', className:'figcol-btn', textContent:'Edit colours'}));
+      const pan = document.body.appendChild(Object.assign(document.createElement('div'), {className:'figcol', hidden:true})); pan.setAttribute('role', 'dialog'); pan.setAttribute('aria-label', 'Figure colours');
+      const render = () => { const m = mode(); pan.innerHTML = '<h3>Figure colours</h3><p class="fc-note"></p>'; pan.querySelector('.fc-note').textContent = 'Changes apply to the ' + m + ' theme and are saved for you only.';
+        TOK.forEach(([g, list]) => { pan.insertAdjacentHTML('beforeend', '<div class="fc-g"></div>'); pan.lastChild.textContent = g;
+          list.forEach(([k, lab]) => { const l = document.createElement('label'), inp = Object.assign(document.createElement('input'), {type:'color', value:hex(k)}), s = document.createElement('span');
+            s.textContent = lab; inp.setAttribute('aria-label', lab); l.append(inp, s); pan.append(l);
+            inp.addEventListener('input', () => { st[m][k] = inp.value.toLowerCase(); apply(); const r = ratio(inp.value, hex('--surface')); warn.textContent = r < 3 ? lab + ': low contrast against the background (' + r.toFixed(1) + ':1).' : ''; });
+            inp.addEventListener('change', () => { status.textContent = 'Saving…'; const doc = {light:st.light, dark:st.dark, updatedAt:new Date().toISOString()};
+              saving = saving.then(() => db ? db.doc('prefs/figColors').set(doc) : Promise.reject()).then(() => status.textContent = 'Saved', () => status.textContent = 'Not saved (no access to storage)'); }); }); });
+        const warn = pan.appendChild(Object.assign(document.createElement('p'), {className:'fc-warn'})), row = pan.appendChild(Object.assign(document.createElement('div'), {className:'fc-row'}));
+        const status = row.appendChild(Object.assign(document.createElement('span'), {className:'fc-note'})), rs = row.appendChild(Object.assign(document.createElement('button'), {type:'button', textContent:'Reset to defaults'}));
+        rs.addEventListener('click', () => { st = {light:{}, dark:{}}; apply(); render(); saving = saving.then(() => db ? db.doc('prefs/figColors').delete() : null).catch(() => {}); }); };
+      btn.addEventListener('click', () => { pan.hidden = !pan.hidden; if (!pan.hidden) render(); btn.setAttribute('aria-expanded', !pan.hidden); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape' && !pan.hidden) { pan.hidden = true; btn.focus(); } });
+    })();
   })();
   // item 2 map: reset or copy the viewer's dragged card positions
   document.querySelector('[data-htreset]')?.addEventListener('click', () => { try { localStorage.removeItem('htCardPos'); } catch (e) {} sharePref('htCardPos', null); draw(); });
