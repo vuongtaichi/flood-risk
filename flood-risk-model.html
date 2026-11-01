@@ -15,7 +15,7 @@
    numbered part headers, two-column notebook cards on a cool slate ground. Cobalt = model, orange = summary, red = issues. */
 :root{
   --bg:#f5f7fb; --surface:#ffffff; --raise:#f9faff; --fg:#1b2436; --ink:#1b2436; --muted:#4b5670; --faint:#7a869e; --line:#dce3f0; --chip:#eef2fa;
-  --accent:#2951a3; --accent-soft:#e8edf9;
+  --accent:#2951a3;--fblue:#2563eb;--al-b:#008000;--al-h:#d63c41;--al-s:#2951a3; --accent-soft:#e8edf9;
   --hl-bg:#fbeedb; --hl-fg:#8a5210;
   --bad:#d63c41; --bad-soft:#fde6e7; --warn:#8a5210; --warn-soft:#fbeedb;
   --pill-b-bg:#e3eefc; --pill-b-fg:#1c3b7a; --pill-b-bd:#9db8e8;
@@ -34,7 +34,7 @@
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#0b1220; --surface:#101a2c; --raise:#15203c; --fg:#e4e9f5; --ink:#e4e9f5; --muted:#a3aecb; --faint:#7482a3; --line:#223151; --chip:#16223c;
-  --accent:#8ab4ff; --accent-soft:#16223c; --hl-bg:#382914; --hl-fg:#f3c27f;
+  --accent:#8ab4ff;--fblue:#60a5fa;--al-b:#53c653;--al-h:#f07a7e;--al-s:#8ab4ff; --accent-soft:#16223c; --hl-bg:#382914; --hl-fg:#f3c27f;
   --bad:#f07a7e; --bad-soft:#3b1e22; --warn:#f3c27f; --warn-soft:#382914;
   --pill-b-bg:#16223c; --pill-b-fg:#a9c6ff; --pill-b-bd:#2f4a80; --pill-r-bg:#3b1e24; --pill-r-fg:#f5a3ae; --pill-r-bd:#74323d;
   --nav-bg:#050a18; --nav-bg-end:#12123f; --nav-text:#a9b7d6; --nav-dim:#5c6b8f; --nav-accent:#7fb0ff;
@@ -44,7 +44,7 @@
   --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 28px rgba(0,0,0,.35); --glass:rgba(11,18,32,.82); --py-kw:#d6a0f0; --py-str:#8fd9a2; --py-num:#f3b47f; --py-com:#8592ad; --py-fn:#8ab4ff; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0b1220; --surface:#101a2c; --raise:#15203c; --fg:#e4e9f5; --ink:#e4e9f5; --muted:#a3aecb; --faint:#7482a3; --line:#223151; --chip:#16223c;
-  --accent:#8ab4ff; --accent-soft:#16223c; --hl-bg:#382914; --hl-fg:#f3c27f;
+  --accent:#8ab4ff;--fblue:#60a5fa;--al-b:#53c653;--al-h:#f07a7e;--al-s:#8ab4ff; --accent-soft:#16223c; --hl-bg:#382914; --hl-fg:#f3c27f;
   --bad:#f07a7e; --bad-soft:#3b1e22; --warn:#f3c27f; --warn-soft:#382914;
   --pill-b-bg:#16223c; --pill-b-fg:#a9c6ff; --pill-b-bd:#2f4a80; --pill-r-bg:#3b1e24; --pill-r-fg:#f5a3ae; --pill-r-bd:#74323d;
   --nav-bg:#050a18; --nav-bg-end:#12123f; --nav-text:#a9b7d6; --nav-dim:#5c6b8f; --nav-accent:#7fb0ff;
@@ -570,7 +570,7 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
   <div class="ana-b">
   <div class="cards rmap">
     <div class="card pfig"><h3>Fig. 9. Higher-risk buildings (R<sub>b</sub> ≥ 4) on the subdistrict risk map (R<sub>s</sub>)</h3>
-      <div class="legend mapleg"><span><i style="background:var(--accent);border-radius:50%"></i><em class="lt">Higher-risk building, in a higher-risk subdistrict, 3,493 <b>(66.4 %)</b></em></span><span style="flex-basis:100%"><i style="background:var(--bad);border-radius:50%"></i><em class="lt">Higher-risk building, in a lower-risk subdistrict, 1,768 <b>(33.6 %)</b></em></span><span class="rdkey"><em class="lt">Subdistrict risk (R<sub>s</sub>)</em><i style="--k:4%"></i>1<i style="--k:7%"></i>2<i style="--k:13%"></i>3<i style="--k:22%"></i>4<i style="--k:46%"></i>5</span></div>
+      <div class="legend mapleg"><span><i style="background:var(--fblue);border-radius:50%"></i><em class="lt">Higher-risk building, in a higher-risk subdistrict, 3,493 <b>(66.4 %)</b></em></span><span style="flex-basis:100%"><i style="background:var(--bad);border-radius:50%"></i><em class="lt">Higher-risk building, in a lower-risk subdistrict, 1,768 <b>(33.6 %)</b></em></span><span class="rdkey"><em class="lt">Subdistrict risk (R<sub>s</sub>)</em><i style="--k:4%"></i>1<i style="--k:7%"></i>2<i style="--k:13%"></i>3<i style="--k:22%"></i>4<i style="--k:46%"></i>5</span></div>
       <div class="chart" id="al-map"></div>
       <p class="cap"><span class="real">real values</span> Data:<br><span class="pill out">build_risk_class_261030_equal_sqrt.pkl</span><br><span class="pill out">dong_risk_261030_equal_sqrt[3].pkl</span></p></div>
     <div class="card rbpal pfig"><h3>Fig. 10. Building risk classes (R<sub>b</sub>) within each subdistrict class (R<sub>s</sub>)</h3>
@@ -1676,7 +1676,7 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
       let p = ''; for (let i = 0; i < r.length; i += 2) p += (i ? 'L' : 'M') + X(r[i]).toFixed(1) + ',' + Y(r[i + 1]).toFixed(1);
       el('path', {d:p + 'Z', fill:d.R ? 'var(--fg)' : 'none', 'fill-opacity':d.R ? SHADE[d.R] : 0, stroke:'var(--surface)', 'stroke-width':.8}, s);
     }));
-    ['i', 'o'].forEach(f => { const g = el('g', {fill: f === 'i' ? 'var(--accent)' : 'var(--bad)'}, s);
+    ['i', 'o'].forEach(f => { const g = el('g', {fill: f === 'i' ? 'var(--fblue)' : 'var(--bad)'}, s);
       for (let i = 0; i < bp.x.length; i++) if (ALLOC.pri[i] === f) el('circle', {cx:X(bp.x[i]).toFixed(1), cy:Y(bp.y[i]).toFixed(1), r:1.7}, g); });
     // subdistricts named in the paper text (most important first): dark outline; label right beside the outline, clear of building points
     const LB = ['Juwol 2(i)', 'Jangseong', 'Damyang', 'Suwan', 'Geonguk'], put = g.fur.map(([x, y, w, h]) => [x, y, x + w, y + h]), pts = [];
@@ -1743,20 +1743,21 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
     ALLOC = ALLOC || JSON.parse(document.getElementById('allocdata').textContent);
     [0, 1, 2, 3].forEach(k => toyCity(document.getElementById('al-toy' + k), k));
     const v = n => 'var(--' + n + ')';
-    const SC = [['Building-based', 'sev4'], ['Hybrid', 'bad'], ['Subdistrict-based', 'accent']], at = ALLOC.at5k, NB = ALLOC.nb;
+    const SC = [['Building-based', 'al-b'], ['Hybrid', 'al-h'], ['Subdistrict-based', 'al-s']],   // own tokens (user: Fig 13 independent of other charts)
+      at = ALLOC.at5k, NB = ALLOC.nb;
     const xo = {xmin:0, xmax:NB, xticks:[0, 5000, 10000, 15000, 20000, 25000], xtf:x => x.toLocaleString('en-US'), xkeep:(i, w) => w > 400 || i % 2 === 0, xlab:'Budget: buildings supported (N)', refs:[], grid:true};
     const ser = key => SC.map(([n, c]) => ({pts:ALLOC[key][n], dots:[[5000, key === 'curves' ? at[n][0] : at[n][2]]], color:v(c), dash:n === 'Hybrid' ? '7 5' : null}));
     // last building of R_b = 5, 4, 3, 2 (counts 546 / 4,715 / 11,536 / 10,222)
     const rbEnds = [[546, 5], [5261, 4], [16797, 3], [27019, 2]].map(([x, c]) => ({x, t:[['R'], ['b', 1], ['=' + c]]}));
     lines(document.getElementById('al-cur'), Object.assign({h:220, ymin:0, ymax:122, yticks:[0, 25, 50, 75, 100], ytf:y => y + ' %',
       ylab:[['% of R'], ['b', 1], [' ≥ 4 buildings captured']], series:ser('curves'), vrefs:rbEnds, leg:SC.map(([n, c]) => [n, v(c), n === 'Hybrid' ? '7 5' : null]),
-      notes:[{x:5000, y:at['Building-based'][0], dx:9, dy:24, t:'Both ' + at['Building-based'][0].toFixed(0) + ' %', color:v('sev4')},
-             {x:5000, y:at['Subdistrict-based'][0], dx:9, dy:22, t:at['Subdistrict-based'][0].toFixed(0) + ' %', color:v('accent')}]}, xo));
+      notes:[{x:5000, y:at['Building-based'][0], dx:9, dy:24, t:'Both ' + at['Building-based'][0].toFixed(0) + ' %', color:v('al-b')},
+             {x:5000, y:at['Subdistrict-based'][0], dx:9, dy:22, t:at['Subdistrict-based'][0].toFixed(0) + ' %', color:v('al-s')}]}, xo));
     lines(document.getElementById('al-sub'), Object.assign({h:220, ymin:0, ymax:112, yticks:[0, 25, 50, 75, 100], ytf:y => String(y),
       ylab:'Subdistricts to work in', series:ser('subd'),
       vrefs:rbEnds,   // building-based and hybrid hold the same buildings at each R_b end
       // labels placed in empty space, clear of the R_b 4 marker just right of N = 5,000: 76 and 10 above-left, 57 right
-      notes:[['Building-based', 'sev4', -9, -10, 'end'], ['Hybrid', 'bad', 9, 20, 'start'], ['Subdistrict-based', 'accent', -9, -10, 'end']].map(([n, c, dx, dy, anchor]) => ({x:5000, y:at[n][2], dx, dy, anchor, t:String(at[n][2]), color:v(c)}))}, xo));
+      notes:[['Building-based', 'al-b', -9, -10, 'end'], ['Hybrid', 'al-h', 9, 20, 'start'], ['Subdistrict-based', 'al-s', -9, -10, 'end']].map(([n, c, dx, dy, anchor]) => ({x:5000, y:at[n][2], dx, dy, anchor, t:String(at[n][2]), color:v(c)}))}, xo));
   }
   // Tab 5, item 2 concept: three toy subdistricts with the same average vulnerability; B and C hold the same buildings.
   function hetToy(box){
@@ -1972,11 +1973,11 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
   }
   // Item 2 (c): the whole picture. R_s coloured by group, with the ink that reads on each.
   const mixc = (c, k) => `color-mix(in srgb,${c} ${k}%,var(--surface))`;   // R_s by group: 1-3 shades of blue, 4-5 dark red
-  const RDC = [mixc('var(--accent)', 18), mixc('var(--accent)', 35), mixc('var(--accent)', 75), mixc('var(--sev5)', 50), 'var(--sev5)'], RDK = ['var(--ink)', 'var(--ink)', 'var(--surface)', 'var(--ink)', 'var(--surface)'];   // user: 3 darker blue, 4 lighter red
+  const RDC = [mixc('var(--fblue)', 18), mixc('var(--fblue)', 35), mixc('var(--fblue)', 75), mixc('var(--sev5)', 50), 'var(--sev5)'], RDK = ['var(--ink)', 'var(--ink)', 'var(--surface)', 'var(--ink)', 'var(--surface)'];   // user: 3 darker blue, 4 lighter red
   const rdLab = (p, x, y, rd, extra, a) => { const t = txt(p, x, y, '', a); [['R'], ['s', 1], [' = ' + rd + (extra || '')]].forEach(([q, sub]) => { el('tspan', sub ? {'baseline-shift':'sub'} : {}, t).textContent = q; }); return t; };
   const unitTitle = (s, x, y, pre, unit, post) => { const a = {'font-weight':700}, t1 = txt(s, x, y, pre, a), ux = x + twb(pre) + 4, uw = twb(unit) + 14, Wv = s.viewBox.baseVal.width;
     post = [].concat(post).find(p => ux + uw + 5 + twb(p) <= Wv - 2) || [].concat(post).pop();   // panel title, its unit in a chip
-    el('rect', {x:ux, y:y - 16, width:uw, height:22, rx:11, fill:'var(--accent)'}, s); txt(s, ux + 7, y, unit, {class:'ontop', 'font-weight':700, fill:'var(--surface)'}); txt(s, ux + uw + 5, y, post, a); return t1; };
+    el('rect', {x:ux, y:y - 16, width:uw, height:22, rx:11, fill:'var(--fblue)'}, s); txt(s, ux + 7, y, unit, {class:'ontop', 'font-weight':700, fill:'var(--surface)'}); txt(s, ux + uw + 5, y, post, a); return t1; };
   function hetRdBar(box, V){
     if (!box.clientWidth) return; const W = Math.round(box.clientWidth), L = 22, N = W < 560, x0 = 2, x1 = W - 2, bh = 1.6 * L;
     const c = [1, 2, 3, 4, 5].map(k => V.hh_rd[k] || 0), tot = c.reduce((a, b) => a + b, 0), lo = c[0] + c[1] + c[2], sx = v => (x1 - x0) * v / tot;
@@ -1984,7 +1985,7 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
     const ky = 0.9 * L, y0 = ky + (kwrap ? 3 : 1.7) * L, yl = y0 + 1.6 * L, yb = yl + 0.9 * L, H = yb + bh + 0.6 * L, s = newSvg(box, W, H);   // the figure's one R_s key on top (user)
     const f = n => n.toLocaleString('en-US'), pc = n => Math.round(n / tot * 100) + ' %';
     unitTitle(s, x0, y0, '(a)', 'Buildings', N ? ['in hot spots, by subdistrict risk', 'in hot spots'] : 'in hot spots (' + f(tot) + '), by the risk of their subdistrict');
-    [[0, lo, 'Rated 1–3' + (N ? '' : ': ' + f(lo)), pc(lo), 'var(--accent)', 'var(--surface)'], [lo, tot, 'Rated 4–5' + (N ? '' : ': ' + f(tot - lo)), pc(tot - lo), 'var(--sev5)', 'var(--surface)']].forEach(([a, b, t, p, col, pk]) => {
+    [[0, lo, 'Rated 1–3' + (N ? '' : ': ' + f(lo)), pc(lo), 'var(--fblue)', 'var(--surface)'], [lo, tot, 'Rated 4–5' + (N ? '' : ': ' + f(tot - lo)), pc(tot - lo), 'var(--sev5)', 'var(--surface)']].forEach(([a, b, t, p, col, pk]) => {
       const xa = x0 + sx(a) + 1, xb = x0 + sx(b) - 1;   // bracket over its part of the bar; label, then the share in a filled pill
       el('path', {d:`M${xa},${yb - 0.2 * L}V${yb - 0.5 * L}H${xb}V${yb - 0.2 * L}`, fill:'none', stroke:col, 'stroke-width':1.5}, s);
       const pw = tw(p) + 16, lw = tw(t) + 8, lx = a ? xb - pw - lw : xa;
@@ -2054,7 +2055,7 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
   function scaleWhy(box){   // result 2: missed / over-included buildings, own H, E, V class against their subdistrict's: higher | same | lower (why: [above, same, below] %)
     const W = Math.round(box.clientWidth); if (!W) return;
     const Y = scd().why, f = n => n.toLocaleString('en-US'), L = 22, two = W >= 760, gap = 40, pw = two ? (W - gap) / 2 : W, bh = 26;
-    const C = ['color-mix(in srgb,var(--sev5) 85%,var(--surface))', 'var(--line)', 'color-mix(in srgb,var(--accent) 85%,var(--surface))'], INK = ['var(--surface)', 'var(--ink)', 'var(--surface)'];
+    const C = ['color-mix(in srgb,var(--sev5) 85%,var(--surface))', 'var(--line)', 'color-mix(in srgb,var(--fblue) 85%,var(--surface))'], INK = ['var(--surface)', 'var(--ink)', 'var(--surface)'];
     const s = newSvg(box, W, 100);
     // key: one colour bar per line, as in the bars below
     let ky = 0.3 * L;
@@ -2068,7 +2069,7 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
       const ox = two ? n * (pw + gap) : 0, oy = top0 + (two ? 0 : n * (ph + gap / 2));
       txt(s, ox, oy + .9 * L, t, {'font-weight':800});
       txt(s, ox + twb(t) * 1.15 + 10, oy + .9 * L, f(Y[k].n), {fill:'var(--muted)'});
-      const hc = n ? 'var(--accent)' : 'var(--sev5)', sw = cw(sub), sy = inl ? oy + .9 * L : oy + 1.95 * L, sx = inl ? ox + twb(t) * 1.15 + 10 + tw(f(Y[k].n)) + 12 : ox;   // which buildings: a light tint of the panel's colour
+      const hc = n ? 'var(--fblue)' : 'var(--sev5)', sw = cw(sub), sy = inl ? oy + .9 * L : oy + 1.95 * L, sx = inl ? ox + twb(t) * 1.15 + 10 + tw(f(Y[k].n)) + 12 : ox;   // which buildings: a light tint of the panel's colour
       el('rect', {x:sx, y:sy - 16, width:sw, height:24, rx:12, fill:'color-mix(in srgb,var(--warn) 16%,var(--surface))'}, s); stx(s, sx + 9, sy, sub, {class:'ontop', fill:'var(--ink)', 'font-weight':600});   // both pills one colour, not a bar colour (user)
       ['H', 'E', 'V'].forEach((c, r) => { const v = Y[k][c], y = oy + rt + r * (bh + 12), x0 = ox + lw, bw = pw - lw, top = Math.max(...v);
         const g = el('g', (k === 'miss' ? c === 'E' : c === 'V') ? {opacity:.5} : {}, s);   // the bar without a pattern faded (bar only, user), so the two telling parts stand out
@@ -2203,14 +2204,16 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
   // Owner-only colour editor (v295): figure colour tokens, saved per theme to the artifact db doc prefs/figColors; only the owner reads and writes it.
   (function(){
     const TOK = [['Fig. 10: building risk (Rb)', [['--rb1', 'Rb 1'], ['--rb2', 'Rb 2'], ['--rb3', 'Rb 3'], ['--rb4', 'Rb 4'], ['--rb5', 'Rb 5']]],
-      ['Risk classes: Figs 12, 13, 14, 16, A1', [['--sev1', 'Class 1 (Fig. 12)'], ['--sev2', 'Class 2 (Fig. 12); cold spots (Fig. 14); small subdistricts (Fig. 16)'], ['--sev3', 'Class 3 (Fig. 12)'], ['--sev4', 'Class 4 (Fig. 12); building-based line (Fig. 13)'], ['--sev5', 'Class 5 (Figs 12, A1); higher (Fig. 11); rated 4–5 (Fig. 15); H = 5 (Fig. 16)']]],
-      ['Blue and red', [['--accent', 'Blue: Fig. 9 points, lower (Fig. 11), subdistrict-based line (Fig. 13), rated 1–3 (Fig. 15)'], ['--bad', 'Red: Fig. 9 points, hybrid line (Fig. 13)'], ['--hot', 'Hot spots (Fig. 14); large subdistricts (Fig. 16)']]],
+      ['Risk classes: Figs 12, 14, 16, A1', [['--sev1', 'Class 1 (Fig. 12)'], ['--sev2', 'Class 2 (Fig. 12); cold spots (Fig. 14); small subdistricts (Fig. 16)'], ['--sev3', 'Class 3 (Fig. 12)'], ['--sev4', 'Class 4 (Fig. 12)'], ['--sev5', 'Class 5 (Figs 12, A1); higher (Fig. 11); rated 4–5 (Fig. 15); H = 5 (Fig. 16)']]],
+      ['Blue and red', [['--fblue', 'Blue: Fig. 9 points, lower (Fig. 11), rated 1–3 (Fig. 15)'], ['--bad', 'Red: Fig. 9 points'], ['--hot', 'Hot spots (Fig. 14); large subdistricts (Fig. 16)']]],
+      ['Fig. 13 lines', [['--al-b', 'Building-based'], ['--al-h', 'Hybrid'], ['--al-s', 'Subdistrict-based']]],
       ['Fig. 12 map', [['--fd1', 'Flood depth < 0.5 m'], ['--fd2', 'Flood depth 0.5–1 m'], ['--fd3', 'Flood depth 1–2 m'], ['--fd4', 'Flood depth > 2 m'], ['--loc', 'Inset square']]],
       ['Outlines', [['--nm-line', 'Named subdistrict outline (Fig. 9)']]]];
     const mode = () => { const a = document.documentElement.dataset.theme; return a === 'dark' || a === 'light' ? a : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); };
     let st = {light:{}, dark:{}}, db = null, saving = Promise.resolve(); const rbSet = new Set();
     const tag = document.head.appendChild(document.createElement('style'));
-    const apply = () => { const body = o => Object.entries(o).filter(([k, v]) => /^--[\w-]+$/.test(k) && /^#[0-9a-f]{6}$/i.test(v)).map(([k, v]) => k + ':' + v).join(';');
+    const OK = new Set(TOK.flatMap(([, l]) => l.map(([k]) => k)));   // only figure tokens: headings and page accent never follow the editor
+    const apply = () => { const body = o => Object.entries(o).filter(([k, v]) => OK.has(k) && /^#[0-9a-f]{6}$/i.test(v)).map(([k, v]) => k + ':' + v).join(';');
       tag.textContent = 'html:root{' + body(st.light) + '}@media (prefers-color-scheme: dark){html:root:not([data-theme="light"]){' + body(st.dark) + '}}html:root[data-theme="dark"]{' + body(st.dark) + '}';   // html:root outranks the page's own :root token rules wherever they sit
       document.querySelectorAll('.rbpal').forEach(c => ['--rb1', '--rb2', '--rb3', '--rb4', '--rb5'].forEach(k => { const v = (mode() === 'dark' ? st.dark : st.light)[k]; if (v) { c.style.setProperty(k, v); rbSet.add(k); } else if (rbSet.has(k)) { c.style.removeProperty(k); rbSet.delete(k); } }));   // Fig 10 keeps its classes on the card
       window.__redraw && window.__redraw(); };
