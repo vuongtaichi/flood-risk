@@ -2029,7 +2029,7 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
     const RED = 'var(--hot)', BLUE = 'var(--fblue)', PINK = 'color-mix(in srgb,var(--hot) 14%,var(--surface))', LBLUE = 'color-mix(in srgb,var(--fblue) 16%,var(--surface))', DRED = 'var(--sev5)';   // user: figure blue, not class 2
     const g = basinGeo(W), mh = g.H;
     const h5 = Object.keys(V.dh).filter(k => V.dh[k][0] === 5);
-    const LI = [['L', 'In large subdistricts, ' + f(nL) + ' (' + pL + ' %)'], ['s', 'In small subdistricts, ' + f(n - nL) + ' (' + (100 - pL) + ' %)'], ['h', 'Subdistrict H = 5 (' + h5.length + ')'], ['o', 'Large subdistrict (> 10 km²)']];
+    const LI = [['L', 'In large subdistricts, ' + f(nL) + ' (' + pL + ' %)'], ['s', 'In small subdistricts, ' + f(n - nL) + ' (' + (100 - pL) + ' %)'], ['o', 'Large subdistrict (> 10 km²)'], ['h', 'Large subdistrict, H = 5 (' + h5.length + ')']];   // H = 5 ones are large too (user)
     const lw = Math.max(...LI.map(l => tw(l[1]))) + 44, lH = LI.length * 22 + 14, H = T + mh + (N ? 12 + lH : 0), s = newSvg(box, W, H);
     const m = el('g', {transform:`translate(0,${T})`}, s), X = g.X, Y = g.Y;   // map below the share pill, same frame as the other basin maps
     const path = r => { let p = ''; for (let i = 0; i < r.length; i += 2) p += (i ? 'L' : 'M') + X(r[i]).toFixed(1) + ',' + Y(r[i + 1]).toFixed(1); return p + 'Z'; };
@@ -2086,8 +2086,7 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
     const sym = (x, y, t, c, a) => stx(s, x, y, [['R'], [c, 1]], a), lw = tw('Rb') + 12;   // symbols only (user, 2 Nov)
     A.forEach((a, n) => { const cx = (n % cols) * (pw + gap), oy = Math.floor(n / cols) * ph, [wx, wy, ws] = a.win, rd = Number(a.rd);
       const lab = `(${'abcd'[n]}) ${a.case}`; txt(s, cx, oy + 0.9 * L, lab, {'font-weight':800});
-      txt(s, cx + twb(lab) + 12, oy + 0.9 * L, a.n);
-      const y2 = oy + 0.9 * L, y3 = oy + 2.25 * L, x0 = cx + lw, xr = cx + twb(lab) + 12 + tw(a.n) + 16;   // subdistrict rating on the title line, then the mix of building ratings
+      const y2 = oy + 0.9 * L, y3 = oy + 2.25 * L, x0 = cx + lw, xr = cx + twb(lab) + 16;   // no subdistrict name: it is in the caption (user)   // subdistrict rating on the title line, then the mix of building ratings
       sym(xr, y2, 'Subdistrict risk', 's', {fill:'var(--muted)'});
       el('rect', {x:xr + lw, y:y2 - 15, width:26, height:20, rx:10, fill:`var(--sev${rd})`}, s);
       txt(s, xr + lw + 13, y2, String(rd), {class:'ontop', 'text-anchor':'middle', fill:'var(--surface)', 'font-weight':700});
