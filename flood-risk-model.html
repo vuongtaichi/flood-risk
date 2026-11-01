@@ -15,7 +15,7 @@
    numbered part headers, two-column notebook cards on a cool slate ground. Cobalt = model, orange = summary, red = issues. */
 :root{
   --bg:#f5f7fb; --surface:#ffffff; --raise:#f9faff; --fg:#1b2436; --ink:#1b2436; --muted:#4b5670; --faint:#7a869e; --line:#dce3f0; --chip:#eef2fa;
-  --accent:#2951a3;--fblue:#1d4ed8;--al-b:#008000;--al-h:#d63c41;--al-s:#2951a3; --accent-soft:#e8edf9;
+  --accent:#2951a3;--fblue:#1d4ed8;--f15-1:#d6dff8;--f15-2:#b0c1f1;--f15-3:#567ae2;--f15-4:#c08797;--f15-5:#800f2f;--f15-lo:#1d4ed8;--f15-hi:#800f2f;--f15-chip:#1d4ed8;--al-b:#008000;--al-h:#d63c41;--al-s:#2951a3; --accent-soft:#e8edf9;
   --hl-bg:#fbeedb; --hl-fg:#8a5210;
   --bad:#d63c41; --bad-soft:#fde6e7; --warn:#8a5210; --warn-soft:#fbeedb;
   --pill-b-bg:#e3eefc; --pill-b-fg:#1c3b7a; --pill-b-bd:#9db8e8;
@@ -34,7 +34,7 @@
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#0b1220; --surface:#101a2c; --raise:#15203c; --fg:#e4e9f5; --ink:#e4e9f5; --muted:#a3aecb; --faint:#7482a3; --line:#223151; --chip:#16223c;
-  --accent:#8ab4ff;--fblue:#60a5fa;--al-b:#53c653;--al-h:#f07a7e;--al-s:#8ab4ff; --accent-soft:#16223c; --hl-bg:#382914; --hl-fg:#f3c27f;
+  --accent:#8ab4ff;--fblue:#60a5fa;--f15-1:#1e3351;--f15-2:#2c4b74;--f15-3:#4c82c6;--f15-4:#884660;--f15-5:#ff7394;--f15-lo:#60a5fa;--f15-hi:#ff7394;--f15-chip:#60a5fa;--al-b:#53c653;--al-h:#f07a7e;--al-s:#8ab4ff; --accent-soft:#16223c; --hl-bg:#382914; --hl-fg:#f3c27f;
   --bad:#f07a7e; --bad-soft:#3b1e22; --warn:#f3c27f; --warn-soft:#382914;
   --pill-b-bg:#16223c; --pill-b-fg:#a9c6ff; --pill-b-bd:#2f4a80; --pill-r-bg:#3b1e24; --pill-r-fg:#f5a3ae; --pill-r-bd:#74323d;
   --nav-bg:#050a18; --nav-bg-end:#12123f; --nav-text:#a9b7d6; --nav-dim:#5c6b8f; --nav-accent:#7fb0ff;
@@ -44,7 +44,7 @@
   --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 28px rgba(0,0,0,.35); --glass:rgba(11,18,32,.82); --py-kw:#d6a0f0; --py-str:#8fd9a2; --py-num:#f3b47f; --py-com:#8592ad; --py-fn:#8ab4ff; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0b1220; --surface:#101a2c; --raise:#15203c; --fg:#e4e9f5; --ink:#e4e9f5; --muted:#a3aecb; --faint:#7482a3; --line:#223151; --chip:#16223c;
-  --accent:#8ab4ff;--fblue:#60a5fa;--al-b:#53c653;--al-h:#f07a7e;--al-s:#8ab4ff; --accent-soft:#16223c; --hl-bg:#382914; --hl-fg:#f3c27f;
+  --accent:#8ab4ff;--fblue:#60a5fa;--f15-1:#1e3351;--f15-2:#2c4b74;--f15-3:#4c82c6;--f15-4:#884660;--f15-5:#ff7394;--f15-lo:#60a5fa;--f15-hi:#ff7394;--f15-chip:#60a5fa;--al-b:#53c653;--al-h:#f07a7e;--al-s:#8ab4ff; --accent-soft:#16223c; --hl-bg:#382914; --hl-fg:#f3c27f;
   --bad:#f07a7e; --bad-soft:#3b1e22; --warn:#f3c27f; --warn-soft:#382914;
   --pill-b-bg:#16223c; --pill-b-fg:#a9c6ff; --pill-b-bd:#2f4a80; --pill-r-bg:#3b1e24; --pill-r-fg:#f5a3ae; --pill-r-bd:#74323d;
   --nav-bg:#050a18; --nav-bg-end:#12123f; --nav-text:#a9b7d6; --nav-dim:#5c6b8f; --nav-accent:#7fb0ff;
@@ -1973,11 +1973,12 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
   }
   // Item 2 (c): the whole picture. R_s coloured by group, with the ink that reads on each.
   const mixc = (c, k) => `color-mix(in srgb,${c} ${k}%,var(--surface))`;   // R_s by group: 1-3 shades of blue, 4-5 dark red
-  const RDC = [mixc('var(--fblue)', 18), mixc('var(--fblue)', 35), mixc('var(--fblue)', 75), mixc('var(--sev5)', 50), 'var(--sev5)'], RDK = ['var(--ink)', 'var(--ink)', 'var(--surface)', 'var(--ink)', 'var(--surface)'];   // user: 3 darker blue, 4 lighter red
+  const RDC = [1, 2, 3, 4, 5].map(k => `var(--f15-${k})`),   // Fig 15's own colours (user: change them separately)
+    RDK = ['var(--ink)', 'var(--ink)', 'var(--surface)', 'var(--ink)', 'var(--surface)'];   // user: 3 darker blue, 4 lighter red
   const rdLab = (p, x, y, rd, extra, a) => { const t = txt(p, x, y, '', a); [['R'], ['s', 1], [' = ' + rd + (extra || '')]].forEach(([q, sub]) => { el('tspan', sub ? {'baseline-shift':'sub'} : {}, t).textContent = q; }); return t; };
   const unitTitle = (s, x, y, pre, unit, post) => { const a = {'font-weight':700}, t1 = txt(s, x, y, pre, a), ux = x + twb(pre) + 4, uw = twb(unit) + 14, Wv = s.viewBox.baseVal.width;
     post = [].concat(post).find(p => ux + uw + 5 + twb(p) <= Wv - 2) || [].concat(post).pop();   // panel title, its unit in a chip
-    el('rect', {x:ux, y:y - 16, width:uw, height:22, rx:11, fill:'var(--fblue)'}, s); txt(s, ux + 7, y, unit, {class:'ontop', 'font-weight':700, fill:'var(--surface)'}); txt(s, ux + uw + 5, y, post, a); return t1; };
+    el('rect', {x:ux, y:y - 16, width:uw, height:22, rx:11, fill:'var(--f15-chip)'}, s); txt(s, ux + 7, y, unit, {class:'ontop', 'font-weight':700, fill:'var(--surface)'}); txt(s, ux + uw + 5, y, post, a); return t1; };
   function hetRdBar(box, V){
     if (!box.clientWidth) return; const W = Math.round(box.clientWidth), L = 22, N = W < 560, x0 = 2, x1 = W - 2, bh = 1.6 * L;
     const c = [1, 2, 3, 4, 5].map(k => V.hh_rd[k] || 0), tot = c.reduce((a, b) => a + b, 0), lo = c[0] + c[1] + c[2], sx = v => (x1 - x0) * v / tot;
@@ -1985,7 +1986,7 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
     const ky = 0.9 * L, y0 = ky + (kwrap ? 3 : 1.7) * L, yl = y0 + 1.6 * L, yb = yl + 0.9 * L, H = yb + bh + 0.6 * L, s = newSvg(box, W, H);   // the figure's one R_s key on top (user)
     const f = n => n.toLocaleString('en-US'), pc = n => Math.round(n / tot * 100) + ' %';
     unitTitle(s, x0, y0, '(a)', 'Buildings', N ? ['in hot spots, by subdistrict risk', 'in hot spots'] : 'in hot spots (' + f(tot) + '), by the risk of their subdistrict');
-    [[0, lo, 'Rated 1–3' + (N ? '' : ': ' + f(lo)), pc(lo), 'var(--fblue)', 'var(--surface)'], [lo, tot, 'Rated 4–5' + (N ? '' : ': ' + f(tot - lo)), pc(tot - lo), 'var(--sev5)', 'var(--surface)']].forEach(([a, b, t, p, col, pk]) => {
+    [[0, lo, 'Rated 1–3' + (N ? '' : ': ' + f(lo)), pc(lo), 'var(--f15-lo)', 'var(--surface)'], [lo, tot, 'Rated 4–5' + (N ? '' : ': ' + f(tot - lo)), pc(tot - lo), 'var(--f15-hi)', 'var(--surface)']].forEach(([a, b, t, p, col, pk]) => {
       const xa = x0 + sx(a) + 1, xb = x0 + sx(b) - 1;   // bracket over its part of the bar; label, then the share in a filled pill
       el('path', {d:`M${xa},${yb - 0.2 * L}V${yb - 0.5 * L}H${xb}V${yb - 0.2 * L}`, fill:'none', stroke:col, 'stroke-width':1.5}, s);
       const lab = t + ' (' + p + ')', lx = a ? xb - twb(lab) : xa;   // share in brackets, no pill (user)
@@ -2202,9 +2203,10 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
   // Owner-only colour editor (v295): figure colour tokens, saved per theme to the artifact db doc prefs/figColors; only the owner reads and writes it.
   (function(){
     const TOK = [['Fig. 10: building risk (Rb)', [['--rb1', 'Rb 1'], ['--rb2', 'Rb 2'], ['--rb3', 'Rb 3'], ['--rb4', 'Rb 4'], ['--rb5', 'Rb 5']]],
-      ['Risk classes: Figs 12, 14, 16, A1', [['--sev1', 'Class 1 (Fig. 12)'], ['--sev2', 'Class 2 (Fig. 12); cold spots (Fig. 14); small subdistricts (Fig. 16)'], ['--sev3', 'Class 3 (Fig. 12)'], ['--sev4', 'Class 4 (Fig. 12)'], ['--sev5', 'Class 5 (Figs 12, A1); higher (Fig. 11); rated 4–5 (Fig. 15); H = 5 (Fig. 16)']]],
-      ['Blue and red', [['--fblue', 'Blue: Fig. 9 points, lower (Fig. 11), rated 1–3 (Fig. 15)'], ['--bad', 'Red: Fig. 9 points'], ['--hot', 'Hot spots (Fig. 14); large subdistricts (Fig. 16)']]],
+      ['Risk classes: Figs 12, 14, 16, A1', [['--sev1', 'Class 1 (Fig. 12)'], ['--sev2', 'Class 2 (Fig. 12); cold spots (Fig. 14); small subdistricts (Fig. 16)'], ['--sev3', 'Class 3 (Fig. 12)'], ['--sev4', 'Class 4 (Fig. 12)'], ['--sev5', 'Class 5 (Figs 12, A1); higher (Fig. 11); H = 5 (Fig. 16)']]],
+      ['Blue and red', [['--fblue', 'Blue: Fig. 9 points, lower (Fig. 11), Fig. 14 box'], ['--bad', 'Red: Fig. 9 points'], ['--hot', 'Hot spots (Fig. 14); large subdistricts (Fig. 16)']]],
       ['Fig. 13 lines', [['--al-b', 'Building-based'], ['--al-h', 'Hybrid'], ['--al-s', 'Subdistrict-based']]],
+      ['Fig. 15', [['--f15-1', 'Subdistrict risk 1'], ['--f15-2', 'Subdistrict risk 2'], ['--f15-3', 'Subdistrict risk 3'], ['--f15-4', 'Subdistrict risk 4'], ['--f15-5', 'Subdistrict risk 5'], ['--f15-lo', 'Rated 1–3 label and bracket'], ['--f15-hi', 'Rated 4–5 label and bracket'], ['--f15-chip', 'Panel title chips']]],
       ['Fig. 12 map', [['--fd1', 'Flood depth < 0.5 m'], ['--fd2', 'Flood depth 0.5–1 m'], ['--fd3', 'Flood depth 1–2 m'], ['--fd4', 'Flood depth > 2 m'], ['--loc', 'Inset square']]],
       ['Outlines', [['--nm-line', 'Named subdistrict outline (Fig. 9)']]]];
     const mode = () => { const a = document.documentElement.dataset.theme; return a === 'dark' || a === 'light' ? a : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); };
