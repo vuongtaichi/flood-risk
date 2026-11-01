@@ -824,12 +824,8 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
   <p class="lede">What is still open, then expected limits and intended choices (lighter cards).</p>
   <div class="issues">
 
-    <article class="iss red"><h3>1 · Notebook #1’s residential filter is missing</h3>
-      <p><span class="tag">Confirmed in code</span></p>
-      <ul><li><b>Problem:</b> cell 19 uses <span class="mono">Building_SA_res</span>, but no cell creates it</li><li><b>Effect:</b> the step that picks residential buildings cannot be re-run from the file</li><li><b>Needed:</b> the filter, from the author</li></ul></article>
-
-    <article class="iss red"><h3>2 · Small things to tidy</h3>
-      <ul><li><b>House types:</b> two labels, “detached” (140,046) and “detach” (6,509); no later notebook uses the column</li><li><b>Flood layers on disk:</b> still carry the old 14/19 labels; the code works around it</li><li><b>Kernel:</b> the re-run needs <span class="mono">geo_env_pd2</span> (pandas 2.3.3); under pandas 3, 3A2 fails (fix report)</li><li><b>Old files:</b> the 260xxx notebooks and files still sit beside the new ones</li></ul></article>
+    <article class="iss red"><h3>1 · Small things to tidy</h3>
+      <ul><li><b>House types:</b> two labels, “detached” (140,046) and “detach” (6,509); no later notebook uses the column</li><li><b>Flood layers on disk:</b> still carry the old 14/19 labels; the code works around it</li><li><b>Kernel:</b> the re-run needs <span class="mono">geo_env_pd2</span> (pandas 2.3.3); under pandas 3, 3A2 fails (fix report)</li></ul></article>
 
     <div class="lim-h"><span class="eyebrow">Expected</span><h3>Expected limitations and intended choices</h3></div>
     <div class="lim">
