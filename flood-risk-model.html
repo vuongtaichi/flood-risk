@@ -2248,7 +2248,7 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
     let st = {light:{}, dark:{}}, db = null, saving = Promise.resolve();
     const tag = document.head.appendChild(document.createElement('style'));
     const apply = () => { const body = o => Object.entries(o).filter(([k, v]) => /^--[\w-]+$/.test(k) && /^#[0-9a-f]{6}$/i.test(v)).map(([k, v]) => k + ':' + v).join(';');
-      tag.textContent = ':root{' + body(st.light) + '}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){' + body(st.dark) + '}}:root[data-theme="dark"]{' + body(st.dark) + '}';
+      tag.textContent = 'html:root{' + body(st.light) + '}@media (prefers-color-scheme: dark){html:root:not([data-theme="light"]){' + body(st.dark) + '}}html:root[data-theme="dark"]{' + body(st.dark) + '}';   // html:root outranks the page's own :root token rules wherever they sit
       if (typeof draw === 'function') draw(); };
     const hex = k => { const c = getComputedStyle(document.documentElement).getPropertyValue(k).trim(); const cv = document.createElement('canvas').getContext('2d'); cv.fillStyle = '#000'; cv.fillStyle = c; return cv.fillStyle; };
     const lum = h => { const [r, g, b] = [1, 3, 5].map(i => { const v = parseInt(h.slice(i, i + 2), 16) / 255; return v <= .03928 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4; }); return .2126 * r + .7152 * g + .0722 * b; };
