@@ -821,11 +821,8 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
 <div class="part-head"><span class="part-n">6</span><div><h2 class="part-t">Open issues</h2><p>Check these before citing any result.</p></div></div>
 <section aria-labelledby="i-h">
   <h2 id="i-h">Before citing</h2>
-  <p class="lede">What is still open, then expected limits and intended choices (lighter cards).</p>
+  <p class="lede">No open issues. Below: expected limits and intended choices.</p>
   <div class="issues">
-
-    <article class="iss red"><h3>1 · Small things to tidy</h3>
-      <ul><li><b>House types:</b> two labels, “detached” (140,046) and “detach” (6,509); no later notebook uses the column</li><li><b>Flood layers on disk:</b> still carry the old 14/19 labels; the code works around it</li><li><b>Kernel:</b> the re-run needs <span class="mono">geo_env_pd2</span> (pandas 2.3.3); under pandas 3, 3A2 fails (fix report)</li></ul></article>
 
     <div class="lim-h"><span class="eyebrow">Expected</span><h3>Expected limitations and intended choices</h3></div>
     <div class="lim">
@@ -842,6 +839,9 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
       <div class="iss lite"><h3>Quintile sets (intended)</h3><p>E depends on the flood: cut over the 27,804 exposed buildings. V does not: cut over all 166,999.</p></div>
       <div class="iss lite"><h3>Relative hazard classes (intended)</h3><p>H is a quintile class at both levels, so H 5 means the top fifth, not a physical depth.</p></div>
       <div class="iss lite"><h3>0.58 loading cut (intended)</h3><p>Each indicator loads high on one PC; holds for the final 19 (MP 0.604, PPH −0.588). All loadings still enter SEVI.</p></div>
+      <div class="iss lite"><h3>Flood layers keep IDs 14 and 19 (intended)</h3><p>The flood shapefiles carry the old labels; every notebook swaps 14 and 19 on load. Relabelling the files would swap them twice.</p></div>
+      <div class="iss lite"><h3>Two detached-house labels (intended)</h3><p>“detached” (140,046) and “detach” (6,509); no notebook after #1 uses the column.</p></div>
+      <div class="iss lite"><h3>Python environment (intended)</h3><p>Re-runs need <span class="mono">geo_env_pd2</span> (pandas 2.3.3); under pandas 3, 3A2 fails. Noted in <span class="mono file">Python\README_environment.txt</span>.</p></div>
       <div class="iss lite"><h3>API keys in the notebook (intended)</h3><p>The Naver keys sit in <span class="mono file">2_Reverse geocoding_260114.ipynb</span> by design; not shown here.</p></div>
     </div>
     </div>
