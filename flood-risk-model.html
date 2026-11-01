@@ -15,14 +15,14 @@
    numbered part headers, two-column notebook cards on a cool slate ground. Cobalt = model, orange = summary, red = issues. */
 :root{
   --bg:#f5f7fb; --surface:#ffffff; --raise:#f9faff; --fg:#1b2436; --ink:#1b2436; --muted:#4b5670; --faint:#7a869e; --line:#dce3f0; --chip:#eef2fa;
-  --accent:#2951a3;--fblue:#1d4ed8;--f15-1:#d6dff8;--f15-2:#b0c1f1;--f15-3:#567ae2;--f15-4:#c08797;--f15-5:#800f2f;--f15-lo:#1d4ed8;--f15-hi:#800f2f;--al-b:#008000;--al-h:#d63c41;--al-s:#2951a3; --accent-soft:#e8edf9;
+  --accent:#2951a3;--fblue:#1d4ed8;--f15-1:#edf2fb;--f15-2:#abc4ff;--f15-3:#1d4ed8;--f15-4:#ffcad4;--f15-5:#800f2f;--f15-lo:#1d4ed8;--f15-hi:#800f2f;--al-b:#008000;--al-h:#9d0208;--al-s:#1d4ed8; --accent-soft:#e8edf9;
   --hl-bg:#fbeedb; --hl-fg:#8a5210;
-  --bad:#d63c41;--file:#e5484d; --bad-soft:#fde6e7; --warn:#8a5210; --warn-soft:#fbeedb;
+  --bad:#9d0208;--file:#e5484d; --bad-soft:#fde6e7; --warn:#8a5210; --warn-soft:#fbeedb;
   --pill-b-bg:#e3eefc; --pill-b-fg:#1c3b7a; --pill-b-bd:#9db8e8;
   --pill-r-bg:#fde8ec; --pill-r-fg:#9b1c31; --pill-r-bd:#f0a7b4;
   --nav-bg:#0b1530; --nav-bg-end:#1b1d5c; --nav-text:#cdd7ee; --nav-dim:#8592b8; --nav-accent:#6fa0e8;
-  --nm-line:#5b6270; --loc:#9b111e; --hot:#B91C1C; --fd1:#f7fbff; --fd2:#abd0e6; --fd3:#3787c0; --fd4:#08306b;
-  --sev1:#7a869e; --sev2:#4c7ea8; --sev3:#532b88; --sev4:#008000; --sev5:#800f2f; --comb:#191f5e;
+  --nm-line:#008000; --loc:#9d0208; --hot:#9d0208; --fd1:#f7fbff; --fd2:#abd0e6; --fd3:#3787c0; --fd4:#08306b;
+  --sev1:#c2c7d6; --sev2:#023e8a; --sev3:#008000; --sev4:#f77f00; --sev5:#9d0208; --comb:#191f5e;
   --bef:#d3d6db; --aft:#d4edc9; --aft-line:#2e7d32;
   --shadow:0 1px 2px rgba(15,27,51,.05), 0 8px 28px rgba(15,27,51,.10);
   --glass:rgba(245,247,251,.82);
@@ -250,7 +250,7 @@ ol.steps li::before{content:counter(st) ".";position:absolute;left:0;top:0;font-
 .fig svg{display:block;width:100%;height:auto;overflow:visible}
 .fig .cap{color:var(--muted)}
 .pfig{width:min(640px,100%);justify-self:center;margin-inline:auto}.pfig #r-rdrb,.pfig #ht2-rdbar,.pfig #ht2-rank,.pfig #ht-map{width:100%}   /* paper figures: print width on the site too */
-.figcol-btn{position:fixed;right:20px;bottom:20px;z-index:60;display:inline-flex;align-items:center;gap:8px;border:none;background:var(--ink);color:var(--surface);border-radius:999px;padding:10px 18px 10px 14px;box-shadow:0 6px 20px rgb(0 0 0/.18);font:600 14px/1 var(--f-body);cursor:pointer;transition:transform .15s,box-shadow .15s}.figcol-btn:hover{transform:translateY(-1px);box-shadow:0 10px 28px rgb(0 0 0/.24)}.figcol-btn:focus-visible,.figcol button:focus-visible,.figcol input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.figcol-btn svg{width:18px;height:18px;flex:none}@media (prefers-reduced-motion:reduce){.figcol-btn{transition:none}.figcol-btn:hover{transform:none}}.figcol{position:fixed;right:20px;bottom:72px;z-index:60;width:min(360px,calc(100vw - 32px));max-height:calc(100vh - 110px);overflow:auto;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:16px;box-shadow:0 18px 50px rgb(0 0 0/.22);padding:16px;display:grid;gap:2px}.figcol .fc-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:2px}.figcol h3{margin:0;font-size:16px}.figcol .fc-x{border:none;background:none;color:var(--muted);width:32px;height:32px;border-radius:50%;font-size:20px;line-height:1;padding:0}.figcol .fc-x:hover{background:var(--chip);color:var(--ink)}.figcol .fc-g{font-size:13px;font-weight:700;color:var(--muted);margin:10px 0 2px}.figcol label{display:flex;align-items:center;gap:12px;padding:5px 6px;border-radius:10px;cursor:pointer}.figcol label:hover{background:var(--chip)}.figcol input[type=color]{width:26px;height:26px;padding:0;border:none;border-radius:50%;background:none;cursor:pointer;flex:none}.figcol input[type=color]::-webkit-color-swatch-wrapper{padding:0}.figcol input[type=color]::-webkit-color-swatch{border:1px solid var(--line);border-radius:50%}.figcol input[type=color]::-moz-color-swatch{border:1px solid var(--line);border-radius:50%}.figcol .fc-note{color:var(--muted)}.figcol .fc-warn{color:var(--warn)}.figcol .fc-row{display:flex;gap:8px;align-items:center;justify-content:space-between;margin-top:8px;padding-top:10px;border-top:1px solid var(--line)}.figcol .fc-row button{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:999px;padding:5px 14px}.figcol .fc-row button:hover{border-color:var(--ink)}.legend{display:flex;flex-wrap:wrap;gap:6px 14px;color:var(--ink);font-size:14px}.legend .lt{color:var(--ink)}.chart svg text[fill="var(--muted)"]:not(.tick),.chart svg tspan[fill="var(--muted)"]{fill:var(--ink)}.legend.mapleg{box-sizing:border-box;justify-self:stretch;align-self:stretch;margin:0 26px 6px;padding:0}
+.collapse-btn{position:fixed;right:20px;bottom:20px;z-index:60;display:inline-flex;align-items:center;gap:8px;max-width:calc(100vw - 40px);border:none;border-radius:999px;padding:10px 16px;background:var(--ink);color:var(--surface);font:inherit;font-weight:600;box-shadow:var(--shadow);cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.collapse-btn[hidden]{display:none}.collapse-btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}@media (max-width:600px){.collapse-btn{right:12px;bottom:12px}}.legend{display:flex;flex-wrap:wrap;gap:6px 14px;color:var(--ink);font-size:14px}.legend .lt{color:var(--ink)}.chart svg text[fill="var(--muted)"]:not(.tick),.chart svg tspan[fill="var(--muted)"]{fill:var(--ink)}.legend.mapleg{box-sizing:border-box;justify-self:stretch;align-self:stretch;margin:0 26px 6px;padding:0}
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .legend i{width:12px;height:12px;border-radius:3px;display:inline-block;flex:none}.legend i.ln{width:28px;height:0;border-radius:0;border-top:3px solid var(--c);align-self:center}.legend i.ln.dash{border-top-style:dashed}.rdkey .lt{white-space:nowrap}
 .cards.rmap{grid-template-columns:minmax(0,1fr)}
@@ -378,7 +378,7 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
 .cmp-row .hev{min-width:0}.pcfcard{border:1px solid var(--line);border-radius:var(--r-lg);padding:14px 16px;background:var(--raise);min-width:0}
 @media (max-width:720px){.eqs{grid-template-columns:minmax(0,1fr)}.cmp-cols{display:none}.cmp-2{grid-template-columns:minmax(0,1fr)}}
 /*lt*/.lt-fig{max-width:none}.lt-r5{display:grid;gap:10px}.lt-row{display:grid;grid-template-columns:7.5em minmax(0,1fr) 11em;align-items:center;gap:10px}.lt-lab{font-weight:600}.lt-val{color:var(--muted);font-family:var(--f-mono);white-space:nowrap}.lt-trk{position:relative;height:18px;border-radius:999px;background:var(--chip);border:1px solid var(--line)}.lt-trk i{position:absolute;top:0;bottom:0}.lt-trk .obs{left:25%;width:49.95%;background:var(--accent-soft);border-left:2px solid var(--accent);border-right:2px solid var(--accent)}.lt-trk .zone{background:var(--sev5);border-radius:0 999px 999px 0}.lt-trk .six{top:4px;bottom:4px;background:var(--accent);border-radius:999px}.lt-tk{display:flex;justify-content:space-between;font-family:var(--f-mono);color:var(--muted)}.lt-key{display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--muted)}.lt-key i{display:inline-block;width:14px;height:10px;border-radius:3px;margin-right:6px;vertical-align:baseline}.lt-key .zone{background:var(--sev5)}.lt-key .obs{background:var(--accent-soft);border:1px solid var(--accent)}.lt-key .six{background:var(--accent)}.lt-stack{display:flex;height:30px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}.lt-stack{container-type:inline-size}.lt-stack .d5{color:#fff}@container (max-width:420px){.lt-stack .d4 span{display:none}}@container (max-width:720px){.lt-stack .d5 span{display:none}}.lt-stack i{display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:600;color:#0b1b33}.d2{background:#cfe3f7}.d3{background:#8fbde8}.d4{background:#4c8fd0}.d5{background:#1f5a99}button.rlink{font:inherit;color:var(--accent);background:none;border:0;padding:0;margin:0;cursor:pointer;text-align:inherit;text-decoration:underline solid;text-decoration-thickness:1px;text-underline-offset:3px}button.rlink:hover{text-decoration-thickness:2px}button.rlink *{cursor:pointer}.rlink:focus-visible{outline:2px solid var(--accent);outline-offset:2px}dialog.refd{width:min(620px,calc(100vw - 32px))}dialog.refd h3{color:var(--fg)}.rmeta{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 14px;margin:0}.rmeta dt{color:var(--faint)}.rmeta dd{margin:0;min-width:0;overflow-wrap:anywhere}.rfig{margin:0;display:grid;gap:6px}dialog .x:disabled{opacity:.45;cursor:default}.rzoom{display:block;padding:0;border:0;background:none;cursor:zoom-in;width:100%}.rzoom:focus-visible{outline:2px solid var(--accent);outline-offset:2px}dialog.figd{width:calc(100vw - 32px);max-width:1800px;height:calc(100vh - 32px);max-height:none;overflow:hidden}dialog.figd[open]{display:flex;flex-direction:column}dialog.figd h3{color:var(--fg)}dialog.figd .db{flex:1;min-height:0;display:grid;grid-template-rows:minmax(0,1fr) auto;gap:8px;padding:12px 16px 14px}.fzb{display:inline-flex;gap:6px;margin-left:auto}dialog.figd .dh{gap:10px}.fzwrap{min-height:0;overflow:auto;display:grid;background:#fff;border-radius:6px}#figdlg-i{display:block;margin:auto;max-width:none;background:#fff}.rfig img{display:block;max-width:100%;max-height:420px;width:auto;height:auto;margin:0 auto;border:1px solid var(--line);border-radius:6px;background:#fff}.rfig figcaption{color:var(--muted)}.rq{display:inline-block;border-radius:999px;padding:0 8px;font-weight:600;background:var(--accent-soft);color:var(--accent)}.rsrc{color:var(--faint)}.lt-refs ul{padding:0 18px 16px 40px;display:grid;gap:6px}.lt-refs li{overflow-wrap:anywhere}#literature td{vertical-align:top}@media (max-width:560px){.lt-row{grid-template-columns:5.5em minmax(0,1fr);row-gap:2px}.lt-row .lt-val{grid-column:2}.lt-ax .lt-val{display:none}}/*/lt*/
-.kchain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0}.kchain .k{font-weight:600;margin-right:4px}.kchain i{font-style:normal;background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:1px 10px}.kchain b{font-weight:400;color:var(--muted)}.score{font-weight:600;margin:0}.toy0{display:grid;grid-template-columns:minmax(0,460px) minmax(0,1fr);gap:12px 24px;align-items:start}.toy0 h3,.toy0 .chart{grid-column:1/-1}.t0txt{display:grid;gap:10px;align-content:start}.cards3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:16px;row-gap:12px}.cards3>.card{grid-row:span 2;grid-template-rows:subgrid;gap:12px}@media (max-width:1000px){.cards3{grid-template-columns:minmax(0,1fr);row-gap:12px}.cards3>.card{margin-bottom:4px}}@media (max-width:720px){.toy0{grid-template-columns:minmax(0,1fr)}}em.lt{font-style:normal}.kord{display:grid;gap:6px;align-content:start}.kord .k{font-weight:600}.ksteps{list-style:none;margin:0;padding:0;counter-reset:ks;display:grid;gap:6px}.ksteps li{counter-increment:ks;display:grid;grid-template-columns:24px minmax(0,1fr);gap:8px;align-items:start}.ksteps li::before{content:counter(ks);display:grid;place-items:center;width:22px;height:22px;margin-top:1px;border-radius:50%;background:#2951a3;color:#fff;font-weight:600}
+.kchain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0}.kchain .k{font-weight:600;margin-right:4px}.kchain i{font-style:normal;background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:1px 10px}.kchain b{font-weight:400;color:var(--muted)}.score{font-weight:600;margin:0}.toy0{display:grid;grid-template-columns:minmax(0,460px) minmax(0,1fr);gap:12px 24px;align-items:start}.toy0 h3,.toy0 .chart,.toy0 .key{grid-column:1/-1}.t0txt{display:grid;gap:10px;align-content:start}.cards3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:16px;row-gap:12px}.cards3>.card{grid-row:span 2;grid-template-rows:subgrid;gap:12px}@media (max-width:1000px){.cards3{grid-template-columns:minmax(0,1fr);row-gap:12px}.cards3>.card{margin-bottom:4px}}@media (max-width:720px){.toy0{grid-template-columns:minmax(0,1fr)}}em.lt{font-style:normal}.kord{display:grid;gap:6px;align-content:start}.kord .k{font-weight:600}.ksteps{list-style:none;margin:0;padding:0;counter-reset:ks;display:grid;gap:6px}.ksteps li{counter-increment:ks;display:grid;grid-template-columns:24px minmax(0,1fr);gap:8px;align-items:start}.ksteps li::before{content:counter(ks);display:grid;place-items:center;width:22px;height:22px;margin-top:1px;border-radius:50%;background:#2951a3;color:#fff;font-weight:600}
 </style>
 
 <header class="top"><div class="wrap">
@@ -618,19 +618,6 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
   <div class="card"><span class="eyebrow">Item 2 · Flood risk heterogeneity</span><h3>Why building level, and where the pockets are</h3><p>Most flood risk varies inside subdistricts, and high-risk buildings cluster, including in pockets the area map rates lower. Local measures placed at these clusters could cover many high-risk buildings at once.</p></div>
 </div>
 <div class="cards t5sum t5one"><div class="card"><span class="eyebrow">Item 3 · Flooded and non-flooded</span><h3>Where vulnerability and flood overlap</h3><p>The 100-year flood takes in only slightly more vulnerable buildings than its share (46 % vs 40 % in the two most vulnerable classes), mostly in the more vulnerable of the large, rural subdistricts; in small subdistricts there is no gap.</p></div></div>
-<div class="card t5all"><span class="eyebrow">Items 1, 2 and 3</span><h3>What the analyses show together</h3>
-  <p>The subdistrict scale hides where flood risk sits, so area-based selection would miss some higher-risk buildings and include lower-risk ones.</p>
-  <ol class="t5f">
-    <li><b>The cause:</b> about two thirds (68 %) of the variation in building flood risk lies inside subdistricts; a subdistrict rating can show only the other third.</li>
-    <li><b>Hidden risk:</b> 34 % of higher-risk buildings (1,768 of 5,261) and 29 % of buildings in high-risk clusters (1,323 of 4,563) sit in subdistricts rated 1–3.</li>
-    <li><b>Errors both ways:</b> lower-rated subdistricts hold many higher-risk buildings (Juwol 2(i), rated 3: 286), while some high-rated ones hold few (Geonguk, rated 5: 39 of 229).</li>
-    <li><b>Budget:</b> for the same budget (5,000 buildings), selecting by building risk captures 95 % of higher-risk buildings, against 33 % by subdistrict.</li>
-    <li><b>Vulnerability and flood:</b> vulnerable buildings are slightly over-represented in the flood extent (46 % vs 40 %), and the gap lies in the large, rural subdistricts, where flooded buildings sit in the more vulnerable ones (no gap in small ones); inside subdistricts there is no consistent pattern.</li>
-    <li><b>Delivery:</b> choosing by building risk and then ordering by subdistrict captures as many higher-risk buildings in about a quarter fewer subdistricts (57 vs 76).</li>
-  </ol>
-  <p class="hl"><b>Decision rule:</b> decide who gets support by building risk; organise delivery by subdistrict or cluster; keep area-wide measures (e.g. warnings, evacuation help) for subdistricts with high exposure or where vulnerability and flood overlap.</p>
-  <p class="t5lim"><b>Limits:</b> counts are buildings, not people; no cost data, so lower delivery cost is an implication; hot-spot shares depend on the neighbourhood size; building H, E and V rest on the model’s downscaling assumptions.</p>
-</div>
 
 <details class="grp ana"><summary><span class="chev" aria-hidden="true"></span><span class="eyebrow">Supervisor item 1 · notebook _261031</span><h3 class="grp-t">Resource allocation</h3><p>Same budget, three ways to target it: how many higher-risk buildings each captures, and how many subdistricts the work spans.</p></summary>
 <div class="ana-b">
@@ -660,7 +647,7 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
 <section aria-labelledby="al-c">
   <h2 id="al-c">Method: three ways to spend the same budget</h2>
   <p class="lede">Each approach picks 6 buildings from the same toy area.</p>
-  <div class="card toy0"><h3>Toy area: same input for all three</h3><div class="chart" id="al-toy0"></div></div>
+  <div class="card toy0"><h3>Toy area: same input for all three</h3><p class="key"><b>The task:</b> support 6 buildings in four subdistricts. Which 6 catch the most of the 7 targets (R<sub>b</sub> ≥ 4)? C and D are rated only 3 and 2, but hold 3 of them.</p><div class="chart" id="al-toy0"></div></div>
   <div class="cards3">
     <div class="card"><h3>Subdistrict-based</h3><div class="chart" id="al-toy1"></div></div>
     <div class="card"><h3>Building-based</h3><div class="chart" id="al-toy2"></div></div>
@@ -1548,7 +1535,7 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
     if (k) stx(s, 0, 1.1 * L, [['Pick by R'], [k === 1 ? 's' : 'b', 1]].concat(k === 3 ? [[', then R'], ['s', 1]] : []), {fill:'var(--muted)'});
     TOY.forEach(([d, rd, rbs]) => { const [x, y] = pos[d], whole = k === 1 && blocks.has(d);
       el('rect', Object.assign({x, y, width:bw, height:bh, rx:8, fill:'var(--fg)', 'fill-opacity':SHADE[rd]}, whole ? {stroke:'var(--accent)', 'stroke-width':3} : {stroke:'var(--line)'}), s);
-      stx(s, x + 10, y + 21, [[d + ' · R'], ['s', 1], [' ' + rd]], {'font-weight':600});
+      stx(s, x + 10, y + 21, [[d + '. R'], ['s', 1], ['=' + rd]], {'font-weight':600});
       rbs.forEach((rb, i) => { const id = d + i, [bx, by] = sqAt(id), pick = on.has(id), g = el('g', {opacity:!sel || pick ? 1 : .25}, s);
         el('rect', {x:bx, y:by, width:sq, height:sq, rx:4, fill:'var(--sev' + rb + ')'}, g);
         txt(g, bx + sq / 2, by + sq / 2 + 5, String(rb), {class:'ontop', 'text-anchor':'middle', fill:'var(--surface)', 'font-weight':600}); });
@@ -1561,7 +1548,19 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
       txt(s, 2, y1, 'Targets', {fill:'var(--muted)'}); txt(s, 2, y2, 'Subdistricts', {fill:'var(--muted)'});
       T.forEach(([id, rb], i) => el('rect', {x:lw + i * (q + 3), y:y1 - q + 2, width:q, height:q, rx:3, fill:`var(--sev${rb})`, opacity:on.has(id) ? 1 : .25}, s));
       txt(s, lw + 7 * (q + 3) + 4, y1, got + ' / ' + T.length, {'font-weight':700});
-      txt(s, lw, y2, String(blocks.size), {'font-weight':700}); H = y2 + 0.6 * L; }
+      txt(s, lw, y2, String(blocks.size), {'font-weight':700});
+      // steps named: badge + what that step picks (n of all such buildings when the budget ends inside the step)
+      const all = []; TOY.forEach(([d, , rbs]) => rbs.forEach((rb, i) => all.push(d + i)));
+      // a note part: plain text, or ['b'|'s', class] drawn as 'R_b' / 'R_s' and a chip in that building / subdistrict colour
+      const note = (x, y, parts) => parts.forEach(p => { if (typeof p === 'string'){ txt(s, x, y, p); x += tw(p); return; }
+        const [lv, c] = p; stx(s, x, y, [['R'], [lv, 1]], {}); x += tw('R' + lv) + 3; const cw = tw(String(c)) + 10;
+        el('rect', Object.assign({x, y:y - 14, width:cw, height:19, rx:4}, lv === 'b' ? {fill:`var(--sev${c})`} : {fill:'var(--fg)', 'fill-opacity':SHADE[c], stroke:'var(--muted)'}), s);
+        txt(s, x + cw / 2, y, String(c), {class:'ontop', 'text-anchor':'middle', 'font-weight':700, fill:lv === 'b' ? 'var(--surface)' : 'var(--ink)'}); x += cw + 4; });
+      const steps = k === 1 ? [[1, ['Subdistrict A, ', ['s', 5], ': all 6 buildings']]]
+        : keys.map((kk, n) => { const got = sel.filter(id => okey(id) === kk).length, tot = all.filter(id => okey(id) === kk).length, rb = k === 2 ? kk : Math.floor(kk / 10);
+            return [n + 1, [['b', rb]].concat(k === 3 ? ['in ', ['s', kk % 10]] : []).concat([got < tot ? '(' + got + ' of ' + tot + ')' : '(' + got + ')'])]; });
+      let y = y2 + 1.8 * L; steps.forEach(([n, parts]) => { badge(10, y - 5, n); note(28, y, parts); y += 1.4 * L; });
+      H = y - 0.6 * L; }
     else {   // key: beside the map, or under it on narrow screens
       let x = side ? mw + 30 : 0, y = side ? 0.9 * L : H + 1.2 * L; const row = (draw, parts) => { draw(x, y); stx(s, x + 30, y, parts, {fill:'var(--muted)'}); y += 1.45 * L; };
       row((x, y) => { bldIcon(x, y, 4); txt(s, x + 10, y - 2, '4', {class:'ontop', 'text-anchor':'middle', fill:'var(--surface)', 'font-weight':600}); }, [['Building, risk R'], ['b', 1]]);
@@ -1756,7 +1755,7 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
       const cx = N ? W / 2 : M ? 8 + PW / 2 + k * (PW + 8) : 160 + k * 320, py = y0 + (N ? k * (PH + GAPP) : 0), x0 = cx - gw / 2, gt = py + 1.9 * L;
       const h = hot(g), nh = h.filter(Boolean).length, e = vin(g), mean = g.reduce((x, y) => x + y, 0) / 36;
       el('rect', {x:cx - PW / 2, y:py, width:PW, height:PH, rx:16, fill:'var(--raise)', stroke:'var(--line)'}, s);   // soft card per subdistrict
-      txt(s, cx, py + 1.2 * L, id + ' · ' + name, {'text-anchor':'middle', 'font-weight':600});
+      txt(s, cx, py + 1.2 * L, id + '. ' + name, {'text-anchor':'middle', 'font-weight':600});
       const xy = i => [x0 + (i % 6) * (cell + gap), gt + Math.floor(i / 6) * (cell + gap)];
       g.forEach((v, i) => { const [x, y] = xy(i); el('rect', {x, y, width:cell, height:cell, rx:6, fill:fillOf(v)}, s); });
       g.forEach((v, i) => { if (h[i]) { const [x, y] = xy(i); ring(x, y, cell); } });   // rings last, on top of the cells
@@ -2154,49 +2153,20 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
     card.querySelector('[data-rbreset]').addEventListener('click', () => { try { localStorage.removeItem(KEY); } catch (e) {} sharePref(KEY, null);
       pop.hidden = true; sw.forEach((b, i) => { st[i] = [b.dataset.hex, 100]; card.style.removeProperty('--rb' + (i + 1)); }); draw(); });
   })();
-  // Owner-only colour editor (v295): figure colour tokens, saved per theme to the artifact db doc prefs/figColors; only the owner reads and writes it.
+  // Sticky 'Collapse' button for open toggle sections: closes the innermost one being read, back to where it was opened
   (function(){
-    const TOK = [['Fig. 10: building risk (Rb)', [['--rb1', 'Rb 1'], ['--rb2', 'Rb 2'], ['--rb3', 'Rb 3'], ['--rb4', 'Rb 4'], ['--rb5', 'Rb 5']]],
-      ['Risk classes: Figs 12, 14, 16, A1', [['--sev1', 'Class 1 (Fig. 12)'], ['--sev2', 'Class 2 (Fig. 12); cold spots (Fig. 14)'], ['--sev3', 'Class 3 (Fig. 12)'], ['--sev4', 'Class 4 (Fig. 12)'], ['--sev5', 'Class 5 (Figs 12, A1); higher (Fig. 11); H = 5 (Fig. 16)']]],
-      ['Blue and red', [['--fblue', 'Blue: Fig. 9 points, lower (Fig. 11), Fig. 14 box, Fig. 16 blue'], ['--bad', 'Red: Fig. 9 points'], ['--hot', 'Hot spots (Fig. 14); large subdistricts (Fig. 16)']]],
-      ['Fig. 13 lines', [['--al-b', 'Building-based'], ['--al-h', 'Hybrid'], ['--al-s', 'Subdistrict-based']]],
-      ['Fig. 15', [['--f15-1', 'Subdistrict risk 1'], ['--f15-2', 'Subdistrict risk 2'], ['--f15-3', 'Subdistrict risk 3'], ['--f15-4', 'Subdistrict risk 4'], ['--f15-5', 'Subdistrict risk 5'], ['--f15-lo', 'Rated 1–3 label and bracket'], ['--f15-hi', 'Rated 4–5 label and bracket']]],
-      ['Fig. 12 map', [['--fd1', 'Flood depth < 0.5 m'], ['--fd2', 'Flood depth 0.5–1 m'], ['--fd3', 'Flood depth 1–2 m'], ['--fd4', 'Flood depth > 2 m'], ['--loc', 'Inset square']]],
-      ['Outlines', [['--nm-line', 'Named subdistrict outline (Fig. 9)']]]];
-    const mode = () => { const a = document.documentElement.dataset.theme; return a === 'dark' || a === 'light' ? a : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); };
-    let st = {light:{}, dark:{}}, db = null, saving = Promise.resolve(); const rbSet = new Set();
-    const tag = document.head.appendChild(document.createElement('style'));
-    const OK = new Set(TOK.flatMap(([, l]) => l.map(([k]) => k)));   // only figure tokens: headings and page accent never follow the editor
-    const apply = () => { const body = o => Object.entries(o).filter(([k, v]) => OK.has(k) && /^#[0-9a-f]{6}$/i.test(v)).map(([k, v]) => k + ':' + v).join(';');
-      tag.textContent = 'html:root{' + body(st.light) + '}@media (prefers-color-scheme: dark){html:root:not([data-theme="light"]){' + body(st.dark) + '}}html:root[data-theme="dark"]{' + body(st.dark) + '}';   // html:root outranks the page's own :root token rules wherever they sit
-      document.querySelectorAll('.rbpal').forEach(c => ['--rb1', '--rb2', '--rb3', '--rb4', '--rb5'].forEach(k => { const v = (mode() === 'dark' ? st.dark : st.light)[k]; if (v) { c.style.setProperty(k, v); rbSet.add(k); } else if (rbSet.has(k)) { c.style.removeProperty(k); rbSet.delete(k); } }));   // Fig 10 keeps its classes on the card
-      window.__redraw && window.__redraw(); };
-    const hex = k => { const c = getComputedStyle(k.startsWith('--rb') ? document.querySelector('.rbpal') || document.documentElement : document.documentElement).getPropertyValue(k).trim(); const cv = document.createElement('canvas').getContext('2d'); cv.fillStyle = '#000'; cv.fillStyle = c; return cv.fillStyle; };
-    const lum = h => { const [r, g, b] = [1, 3, 5].map(i => { const v = parseInt(h.slice(i, i + 2), 16) / 255; return v <= .03928 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4; }); return .2126 * r + .7152 * g + .0722 * b; };
-    const ratio = (a, b) => { const x = lum(a), y = lum(b); return (Math.max(x, y) + .05) / (Math.min(x, y) + .05); };
-    (async () => {
-      if (!window.claude) return; const timer = new Promise(r => setTimeout(() => r(null), 10000));
-      const user = await Promise.race([claude.use('user'), timer]); if (!user || !((await user.isOwner()) || (await user.canEdit()))) return;   // viewers never see the editor
-      db = await Promise.race([claude.use('db'), timer]);
-      try { const d = db && await Promise.race([db.doc('prefs/figColors').get(), timer]); const v = d && d.exists ? d.data() : null;
-        if (v) { st = {light:Object.assign({}, v.light || {}), dark:Object.assign({}, v.dark || {})}; apply(); } } catch (e) {}
-      const btn = document.body.appendChild(Object.assign(document.createElement('button'), {type:'button', className:'figcol-btn'})); btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.8-.9 1.8-1.9 0-.5-.2-.9-.5-1.3-.3-.3-.5-.8-.5-1.3 0-1 .8-1.8 1.8-1.8H17a4 4 0 0 0 4-4c0-4.3-4-7.7-9-7.7z"/><circle cx="7.5" cy="11" r="1.2" fill="currentColor"/><circle cx="10.5" cy="7.2" r="1.2" fill="currentColor"/><circle cx="15" cy="7.6" r="1.2" fill="currentColor"/></svg>Edit colours'; btn.setAttribute('aria-expanded', 'false');
-      const pan = document.body.appendChild(Object.assign(document.createElement('div'), {className:'figcol', hidden:true})); pan.setAttribute('role', 'dialog'); pan.setAttribute('aria-label', 'Figure colours');
-      const render = () => { const m = mode(); pan.innerHTML = '<div class="fc-head"><h3>Figure colours</h3><button type="button" class="fc-x" aria-label="Close">×</button></div><p class="fc-note"></p>'; pan.querySelector('.fc-x').addEventListener('click', () => close(true)); pan.querySelector('.fc-note').textContent = 'Changes apply to the ' + m + ' theme and are saved for you only.';
-        TOK.forEach(([g, list]) => { pan.insertAdjacentHTML('beforeend', '<div class="fc-g"></div>'); pan.lastChild.textContent = g;
-          list.forEach(([k, lab]) => { const l = document.createElement('label'), inp = Object.assign(document.createElement('input'), {type:'color', value:hex(k)}), s = document.createElement('span');
-            s.textContent = lab; inp.setAttribute('aria-label', lab); l.append(inp, s); pan.append(l);
-            inp.addEventListener('input', () => { st[m][k] = inp.value.toLowerCase(); apply(); const r = ratio(inp.value, hex('--surface')); warn.textContent = r < 3 ? lab + ': low contrast against the background (' + r.toFixed(1) + ':1).' : ''; });
-            inp.addEventListener('change', () => { status.textContent = 'Saving…'; const doc = {light:st.light, dark:st.dark, updatedAt:new Date().toISOString()};
-              saving = saving.then(() => db ? db.doc('prefs/figColors').set(doc) : Promise.reject()).then(() => status.textContent = 'Saved', () => status.textContent = 'Not saved (no access to storage)'); }); }); });
-        const warn = pan.appendChild(Object.assign(document.createElement('p'), {className:'fc-warn'})), row = pan.appendChild(Object.assign(document.createElement('div'), {className:'fc-row'}));
-        const status = row.appendChild(Object.assign(document.createElement('span'), {className:'fc-note'})), rs = row.appendChild(Object.assign(document.createElement('button'), {type:'button', textContent:'Reset to defaults'}));
-        rs.addEventListener('click', () => { st = {light:{}, dark:{}}; apply(); render(); saving = saving.then(() => db ? db.doc('prefs/figColors').delete() : null).catch(() => {}); }); };
-      const close = focus => { if (pan.hidden) return; pan.hidden = true; btn.setAttribute('aria-expanded', 'false'); if (focus) btn.focus(); };
-      btn.addEventListener('click', () => { if (!pan.hidden) return close(); pan.hidden = false; render(); btn.setAttribute('aria-expanded', 'true'); });
-      document.addEventListener('pointerdown', e => { if (!pan.contains(e.target) && !btn.contains(e.target)) close(); });   // click outside closes it
-      document.addEventListener('keydown', e => { if (e.key === 'Escape') close(true); });
-    })();
+    const btn = document.body.appendChild(Object.assign(document.createElement('button'), {type:'button', className:'collapse-btn', hidden:true})), from = new WeakMap();
+    let cur = null;
+    document.addEventListener('click', e => { const sm = e.target.closest('details > summary'); if (sm && !sm.parentElement.open) from.set(sm.parentElement, scrollY); }, true);
+    const upd = () => { cur = null;
+      document.querySelectorAll('details[open]').forEach(d => { const sm = d.querySelector(':scope > summary'); if (!sm || !d.offsetParent) return;
+        if (sm.getBoundingClientRect().bottom < 70 && d.getBoundingClientRect().bottom > innerHeight * .3) cur = d; });   // document order: nested sections win
+      btn.hidden = !cur; if (!cur) return;
+      const t = (cur.querySelector(':scope > summary .grp-t') || cur.querySelector(':scope > summary')).textContent.trim();
+      btn.textContent = '▲ Collapse: ' + (t.length > 40 ? t.slice(0, 38) + '…' : t); btn.setAttribute('aria-label', 'Collapse ' + t); };
+    addEventListener('scroll', upd, {passive:true}); addEventListener('resize', upd); document.addEventListener('toggle', upd, true);
+    btn.addEventListener('click', () => { const d = cur; if (!d) return; const y = from.has(d) ? from.get(d) : d.getBoundingClientRect().top + scrollY - 80;
+      d.open = false; scrollTo({top:y, behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}); upd(); });
   })();
   // item 2 map: reset or copy the viewer's dragged card positions
   document.querySelector('[data-htreset]')?.addEventListener('click', () => { try { localStorage.removeItem('htCardPos'); } catch (e) {} sharePref('htCardPos', null); draw(); });
