@@ -1988,10 +1988,8 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
     [[0, lo, 'Rated 1–3' + (N ? '' : ': ' + f(lo)), pc(lo), 'var(--fblue)', 'var(--surface)'], [lo, tot, 'Rated 4–5' + (N ? '' : ': ' + f(tot - lo)), pc(tot - lo), 'var(--sev5)', 'var(--surface)']].forEach(([a, b, t, p, col, pk]) => {
       const xa = x0 + sx(a) + 1, xb = x0 + sx(b) - 1;   // bracket over its part of the bar; label, then the share in a filled pill
       el('path', {d:`M${xa},${yb - 0.2 * L}V${yb - 0.5 * L}H${xb}V${yb - 0.2 * L}`, fill:'none', stroke:col, 'stroke-width':1.5}, s);
-      const pw = tw(p) + 16, lw = tw(t) + 8, lx = a ? xb - pw - lw : xa;
-      txt(s, lx, yl, t, {fill:col, 'font-weight':700});
-      el('rect', {x:lx + lw, y:yl - 15, width:pw, height:20, rx:10, fill:col}, s);
-      txt(s, lx + lw + pw / 2, yl - 5, p, {'text-anchor':'middle', 'dominant-baseline':'central', fill:pk, 'font-weight':700}); });
+      const lab = t + ' (' + p + ')', lx = a ? xb - twb(lab) : xa;   // share in brackets, no pill (user)
+      txt(s, lx, yl, lab, {fill:col, 'font-weight':700}); });
     htPill(s, x0, yb, x1 - x0, bh, c.map((v, i) => [sx(v), RDC[i]]));
     let acc = 0; c.forEach((v, i) => { const xa = x0 + sx(acc), xb = x0 + sx(acc + v); acc += v; const t = f(v);
       if (xb - xa > tw(t) + 12) txt(s, (xa + xb) / 2, yb + bh / 2 + 5, t, {'text-anchor':'middle', fill:RDK[i], 'font-weight':700}); });
