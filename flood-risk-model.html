@@ -223,7 +223,7 @@ details.ana>.ana-b{padding:4px 18px 18px;display:grid;gap:40px}
 .mleg div{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
 .mleg .t{font-weight:600;color:var(--fg)}
 .mleg i{width:18px;height:10px;border-radius:999px;display:inline-block;border:0;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
-.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:stretch}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:stretch}.cards.al1{grid-template-columns:minmax(0,1fr)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:18px;display:grid;gap:12px;align-content:start;min-width:0;box-shadow:var(--shadow)}
 .card .head{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px;align-items:start}
 .cn{display:grid;place-items:center;min-width:36px;height:36px;padding:0 6px;border-radius:10px;background:var(--accent-soft);color:var(--accent);font-family:var(--f-mono);font-weight:500}
@@ -254,7 +254,7 @@ ol.steps li::before{content:counter(st) ".";position:absolute;left:0;top:0;font-
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .legend i{width:12px;height:12px;border-radius:3px;display:inline-block;flex:none}.legend i.ln{width:28px;height:0;border-radius:0;border-top:3px solid var(--c);align-self:center}.legend i.ln.dash{border-top-style:dashed}.rdkey .lt{white-space:nowrap}
 .cards.rmap{grid-template-columns:minmax(0,1fr)}
-#ht-map,.httypes,#ht2-rdbar,#ht2-rank{width:66.7%;margin:0 auto}.htleg>span{flex-basis:100%}.flk{display:flex;flex-wrap:wrap;gap:8px 24px;margin:4px 0 10px}.flk>span{display:flex;align-items:flex-start;gap:8px}.flk .n{display:inline-flex;flex:none;width:22px;height:22px;border-radius:50%;background:var(--sev5);color:#fff;font-weight:700;align-items:center;justify-content:center;font-size:.85em;align-self:center}.flleg{margin-bottom:6px}@media(max-width:559px){.htdrag{display:none}}.htexl{display:grid;gap:8px;margin-top:8px}.htexl:empty{display:none}.htexl div{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}.htexl .n{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--surface);font-weight:700}.htexl .p{color:#fff;font-weight:600;border-radius:999px;padding:1px 9px}.htexl .m{flex-basis:100%;color:var(--muted)}@media(max-width:600px){#ht-map,.httypes,#ht2-map,#ht2-rdbar,#ht2-rank{width:100%}}
+#ht-map,.httypes,#ht2-rdbar,#ht2-rank{width:66.7%;margin:0 auto}.flk{display:flex;flex-wrap:wrap;gap:8px 24px;margin:4px 0 10px}.flk>span{display:flex;align-items:flex-start;gap:8px}.flk .n{display:inline-flex;flex:none;width:22px;height:22px;border-radius:50%;background:var(--sev5);color:#fff;font-weight:700;align-items:center;justify-content:center;font-size:.85em;align-self:center}.flleg{margin-bottom:6px}@media(max-width:559px){.htdrag{display:none}}.htexl{display:grid;gap:8px;margin-top:8px}.htexl:empty{display:none}.htexl div{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}.htexl .n{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--surface);font-weight:700}.htexl .p{color:#fff;font-weight:600;border-radius:999px;padding:1px 9px}.htexl .m{flex-basis:100%;color:var(--muted)}@media(max-width:600px){#ht-map,.httypes,#ht2-map,#ht2-rdbar,#ht2-rank{width:100%}}
 .ana-b .card>h3,.rmap .card>h3{text-wrap:wrap}   /* chart titles run to the card edge */
 .rbpal{--rb1:#f7c59f;--rb2:#cae9ff;--rb3:#ebedf3;--rb4:#008000;--rb5:#800f2f}   /* muted R_b 1-3, strong R_b 4-5; viewers can override per class */
 #r-rdrb{width:66.7%;margin:0 auto}.rbpal .rbpick{width:fit-content;max-width:100%;margin:0 auto}@media(max-width:600px){#r-rdrb{width:100%}.rbpal .rbpick>span:first-child{flex-basis:100%}}   /* legend sized to its content: the 1-5 swatches stay on one line */   /* chart at 2/3 of the card; full width on phones */
@@ -687,8 +687,7 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
 <section aria-labelledby="al-m">
   <h2 id="al-m">Result: same budget, different capture and spread</h2>
   <p class="lede">A third of the higher-risk buildings sit in subdistricts rated 3 or lower (map in tab 4). Ranking buildings first captures them; adding R<sub>s</sub> keeps the work in fewer subdistricts.</p>
-  <div class="legend"><span><i class="ln" style="--c:var(--sev4)"></i>Building-based</span><span><i class="ln dash" style="--c:var(--bad)"></i>Hybrid</span><span><i class="ln" style="--c:var(--accent)"></i>Subdistrict-based</span></div>
-  <div class="cards">
+  <div class="cards al1">
     <div class="card pfig"><h3>Fig. 13a. Share of higher-risk buildings (R<sub>b</sub> ≥ 4) captured at each budget</h3>
       <div class="chart" id="al-cur"></div></div>
     <div class="card pfig"><h3>Fig. 13b. Number of subdistricts the selected buildings span at each budget</h3>
@@ -743,7 +742,6 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
 <section aria-labelledby="ht-r2">
   <h2 id="ht-r2">Result: the area map misses about three in ten risk hot-spot buildings</h2>
   <p class="lede">27,804 flood-exposed buildings in 92 subdistricts; hot spots tested on each building’s raw risk with 8 neighbours, 9,999 permutations and FDR (q = 0.05). </p>
-  <div class="card"><h3>Two thirds of the difference in flood risk lies inside subdistricts <button type="button" class="figq" data-dlg="d-ht-e">ⓘ What it shows</button></h3><div class="chart" id="ht2-split"></div></div>
   <div class="card pfig"><h3>Fig. 14. Risk hot spots form clusters inside subdistricts of every rating <button type="button" class="figq" data-dlg="d-ht-map">ⓘ What it shows</button></h3>
     <div class="legend htleg mapleg"><span><i style="background:var(--hot);border-radius:50%"></i><em class="lt">Hot spot (4,563)</em></span><span><i style="background:var(--sev2);border-radius:50%"></i><em class="lt">Cold spot (4,773)</em></span><span class="rdkey"><em class="lt">Subdistrict risk (R<sub>s</sub>)</em><i style="--k:4%"></i>1<i style="--k:7%"></i>2<i style="--k:13%"></i>3<i style="--k:22%"></i>4<i style="--k:46%"></i>5</span></div>
     <div class="chart" id="ht2-map"></div><div class="htexl"></div>
@@ -805,8 +803,6 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
 <section aria-labelledby="fl-r">
   <h2 id="fl-r">Result: in this flood, vulnerability and flooding are only weakly related</h2>
   <p class="lede">166,999 buildings, 27,804 flooded; 91 subdistricts with a hazard class. Intervals from 2,000 resamples of whole subdistricts.</p>
-  <div class="card"><h3>Flooded buildings are only slightly more vulnerable than the basin <button type="button" class="figq" data-dlg="d-fl-a">ⓘ What it shows</button></h3>
-    <div class="chart" id="fl-ext"></div></div>
   <div class="card pfig"><h3>Fig. 16. The highest flood hazard sits in large, sparsely built subdistricts <button type="button" class="figq" data-dlg="d-fl-c">ⓘ What it shows</button></h3>
     <div class="flk"><span><span class="n">1</span><span>All <b>19</b> subdistricts in hazard class 5 are large (over 10 km²); hazard class follows subdistrict size (rank correlation <b>0.85</b>)</span></span><span><span class="n">2</span><span>Large subdistricts are less vulnerable (mean SEVI <b>0.38</b> vs <b>0.68</b>), so hazard vs vulnerability is <b>−0.51</b>, but <b>−0.09</b> with size held fixed</span></span></div>
     <div class="chart" id="fl-h5"></div>
@@ -1064,13 +1060,6 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
 
 
 
-<dialog id="d-ht-e" class="refd" aria-labelledby="d-ht-eh"><div class="dh"><h3 id="d-ht-eh">Flood risk varies most inside subdistricts.</h3><button class="x" data-close>Close</button></div><div class="db">
-  <ul>
-    <li><b>Two parts:</b> the spread of risk across all 27,804 exposed buildings splits into <i>between subdistricts</i> (how much the subdistrict averages differ) and <i>inside subdistricts</i> (how much buildings differ from their own subdistrict’s average).</li>
-    <li><b>Finding:</b> 68 % of the spread lies inside subdistricts and 32 % between them; the Theil index, which measures spread in relative terms, gives 67 %.</li>
-    <li><b>Why it matters:</b> a subdistrict map can only show the between part, because it gives every building in a subdistrict the same value. Even a perfect subdistrict map shows about a third of how flood risk varies; in this model, the other two thirds show only at building level. Figure (c) shows where part of that hidden two thirds sits.</li>
-  </ul>
-</div></dialog>
 <dialog id="d-ht-f" class="refd" aria-labelledby="d-ht-fh"><div class="dh"><h3 id="d-ht-fh">The area map misses about three in ten risk hot-spot buildings.</h3><button class="x" data-close>Close</button></div><div class="db">
   <ul>
     <li><b>Finding:</b> 4,563 flood-exposed buildings form clusters of high risk; 1,323 of them (29 %) are in subdistricts rated 1–3, such as Juwol 2(i), rated 3, with 297.</li>
@@ -1104,12 +1093,6 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
   <ul>
     <li><b>Finding:</b> Extent: if the flood holds a larger share of vulnerable buildings than the whole basin, ρ is above 1. Depth: a large subdistrict collects more flooded km², so it gets a higher hazard class even when the water is no deeper.</li>
     <li><b>Why it matters:</b> Subdistrict hazard partly measures size, so a link between subdistrict hazard and vulnerability has to be checked with size held fixed.</li>
-  </ul>
-</div></dialog>
-<dialog id="d-fl-a" class="refd" aria-labelledby="d-fl-ah"><div class="dh"><h3 id="d-fl-ah">Only a slight tilt towards vulnerable buildings</h3><button class="x" data-close>Close</button></div><div class="db">
-  <ul>
-    <li><b>Finding:</b> 46 % of flooded buildings are in vulnerability classes 4–5, against 40 % of all buildings in the basin (ratio 1.15, interval 1.02–1.28). More than half of flooded buildings (54 %) are in classes 1–3. The gap lies in large, mostly rural subdistricts, where flooded buildings sit in the more vulnerable ones; in small subdistricts there is none (ratio 1.02).</li>
-    <li><b>Why it matters:</b> the 100-year extent takes in vulnerable and less vulnerable buildings almost in proportion, so the flood map alone does not point to vulnerable buildings.</li>
   </ul>
 </div></dialog>
 <dialog id="d-fl-c" class="refd" aria-labelledby="d-fl-ch"><div class="dh"><h3 id="d-fl-ch">The highest hazard sits in large subdistricts</h3><button class="x" data-close>Close</button></div><div class="db">
@@ -1251,6 +1234,12 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
     const xt = o.xticks.filter((v, i) => o.xkeep ? o.xkeep(i, x1 - x0) : true);
     xt.forEach(v => { const x = sx(v); el('line', {x1:x, y1:bot, x2:x, y2:bot + 5, stroke:'var(--muted)'}, s); txt(s, x, bot + 20, o.xtf(v), {class:'tick', fill:'var(--muted)', 'text-anchor':'middle'}); });
     txt(s, (x0 + x1) / 2, bot + 44, o.xlab, {'text-anchor':'middle', fill:'var(--muted)'});   // x title centred on the x axis
+    if (o.leg && W < 520){ o.leg.forEach(([t, c, dash], i) => { const y = H + 14 + i * 22; el('line', Object.assign({x1:x0, y1:y - 5, x2:x0 + 28, y2:y - 5, stroke:c, 'stroke-width':3}, dash ? {'stroke-dasharray':dash} : {}), s); txt(s, x0 + 36, y, t); });   // phones: key under the chart
+      s.setAttribute('viewBox', `0 0 ${W} ${H + 18 + o.leg.length * 22}`); }
+    else if (o.leg){ const lw = Math.max(...o.leg.map(l => tw(l[0]))) + 52, lh = o.leg.length * 22 + 12, lx = x1 - lw - 8, ly = bot - lh - 10, fid = 'sh' + (++uid);   // key inside the plot, bottom right: white card, soft shadow, no border
+      const f = el('filter', {id:fid, x:'-20%', y:'-20%', width:'140%', height:'150%'}, el('defs', {}, s)); el('feDropShadow', {dx:0, dy:2, stdDeviation:3, 'flood-color':'#000', 'flood-opacity':.18}, f);
+      const g = el('g', {}, s); el('rect', {x:lx, y:ly, width:lw, height:lh, rx:8, fill:'var(--surface)', filter:`url(#${fid})`}, g);
+      o.leg.forEach(([t, c, dash], i) => { const y = ly + 22 + i * 22; el('line', Object.assign({x1:lx + 12, y1:y - 5, x2:lx + 40, y2:y - 5, stroke:c, 'stroke-width':3}, dash ? {'stroke-dasharray':dash} : {}), g); txt(g, lx + 48, y, t, {class:'ontop'}); }); }
   }
 
 
@@ -1689,19 +1678,25 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
     }));
     ['i', 'o'].forEach(f => { const g = el('g', {fill: f === 'i' ? 'var(--accent)' : 'var(--bad)'}, s);
       for (let i = 0; i < bp.x.length; i++) if (ALLOC.pri[i] === f) el('circle', {cx:X(bp.x[i]).toFixed(1), cy:Y(bp.y[i]).toFixed(1), r:1.7}, g); });
-    // subdistricts named in the paper text (most important first): dark outline; label in the nearest spot clear of building points, with a leader line
+    // subdistricts named in the paper text (most important first): dark outline; label right beside the outline, clear of building points
     const LB = ['Juwol 2(i)', 'Jangseong', 'Damyang', 'Suwan', 'Geonguk'], put = g.fur.map(([x, y, w, h]) => [x, y, x + w, y + h]), pts = [];
     for (let i = 0; i < bp.x.length; i++) if (ALLOC.pri[i] === 'i' || ALLOC.pri[i] === 'o') pts.push([X(bp.x[i]), Y(bp.y[i])]);
     const path = r => { let p = ''; for (let i = 0; i < r.length; i += 2) p += (i ? 'L' : 'M') + X(r[i]).toFixed(1) + ',' + Y(r[i + 1]).toFixed(1); return p + 'Z'; };
     LB.forEach(n => { const d = MAPD.dong.find(q => q.n === n); if (d) d.g.forEach(r => el('path', {d:path(r), fill:'none', stroke:'var(--nm-line)', 'stroke-width':2.2, 'stroke-linejoin':'round'}, s)); });
     const hit = r => pts.some(([px, py]) => px > r[0] - 3 && px < r[2] + 3 && py > r[1] - 3 && py < r[3] + 3) || put.some(q => r[0] < q[2] && q[0] < r[2] && r[1] < q[3] && q[1] < r[3]) || r[0] < g.m + 2 || r[2] > g.m + g.fw - 2 || r[1] < g.m + 2 || r[3] > g.m + g.fh - 2;
-    LB.forEach(n => { const d = MAPD.dong.find(q => q.n === n); if (!d) return; const w = twb(n), ax = X(d.lp[0]), ay = Y(d.lp[1]);
-      let best = null;
-      for (const rad of [0, 26, 40, 56, 72, 90, 110]) { for (let t = 0; t < 16 && !best; t++) { const an = t * Math.PI / 8, x = ax + rad * Math.cos(an), y = ay + rad * Math.sin(an) + 5;
-          const r = [x - w / 2 - 3, y - 15, x + w / 2 + 3, y + 5]; if (!hit(r)) best = [x, y, r]; if (!rad) break; } if (best) break; }
-      if (!best) return; const [x, y, r] = best; put.push(r);
-      if (Math.hypot(x - ax, y - 5 - ay) > 20) { const ex = Math.max(r[0], Math.min(ax, r[2])), ey = Math.max(r[1], Math.min(ay, r[3]));   // leader to the label box edge
-        el('line', {x1:ax, y1:ay, x2:ex, y2:ey, stroke:'var(--ink)', 'stroke-width':1.2}, s); el('circle', {cx:ax, cy:ay, r:2.4, fill:'var(--ink)'}, s); }
+    LB.forEach(n => { const d = MAPD.dong.find(q => q.n === n); if (!d) return; const w = twb(n), V = [];   // name right beside its outline (user: no leader lines)
+      d.g.forEach(r => { for (let i = 0; i < r.length; i += 2) V.push([X(r[i]), Y(r[i + 1])]); });
+      const bx0 = Math.min(...V.map(p => p[0])), bx1 = Math.max(...V.map(p => p[0])), by0 = Math.min(...V.map(p => p[1])), by1 = Math.max(...V.map(p => p[1])), C = [];   // outside the outline, close to it
+      for (let x = bx0 - w / 2; x <= bx1 + w / 2; x += 8) C.push([x, by0 - 5], [x, by1 + 16]);   // centre x, baseline y: along the outline's box, outside it
+      for (let y = by0; y <= by1 + 10; y += 6) for (let x = bx0 - w / 2 - 6; x <= bx1 + w / 2 + 6; x += 6) C.push([x, y]);   // a grid over the outline's box; out() keeps those outside it
+      const box = ([x, y]) => [x - w / 2 - 3, y - 15, x + w / 2 + 3, y + 5], gap = r => Math.min(...V.map(([px, py]) => Math.hypot(Math.max(r[0] - px, 0, px - r[2]), Math.max(r[1] - py, 0, py - r[3]))));
+      const hard = r => put.some(q => r[0] < q[2] && q[0] < r[2] && r[1] < q[3] && q[1] < r[3]) || r[0] < g.m + 2 || r[2] > g.m + g.fw - 2 || r[1] < g.m + 2 || r[3] > g.m + g.fh - 2;
+      const npt = r => pts.filter(([px, py]) => px > r[0] - 2 && px < r[2] + 2 && py > r[1] - 2 && py < r[3] + 2).length;   // closeness first; a few covered points are allowed (white halo)
+      const inP = (px, py) => { let o = false; d.g.forEach(q => { for (let i = 0, j = q.length - 2; i < q.length; j = i, i += 2){ const xi = X(q[i]), yi = Y(q[i + 1]), xj = X(q[j]), yj = Y(q[j + 1]); if ((yi > py) !== (yj > py) && px < (xj - xi) * (py - yi) / (yj - yi) + xi) o = !o; } }); return o; };
+      const out = r => ![[r[0], r[1]], [r[2], r[1]], [r[0], r[3]], [r[2], r[3]], [(r[0] + r[2]) / 2, (r[1] + r[3]) / 2]].some(p => inP(...p)) && !V.some(([px, py]) => px > r[0] && px < r[2] && py > r[1] && py < r[3]);
+      const cx = (bx0 + bx1) / 2, cy = (by0 + by1) / 2;   // touching the outline from outside, as near its middle as possible
+      const ok = C.map(c => [c, box(c)]).filter(([, r]) => !hard(r) && out(r)).map(([c, r]) => [4 * Math.max(0, gap(r) - 4) + 0.5 * Math.hypot(c[0] - cx, c[1] - 5 - cy) + 1.5 * npt(r), c, r]).sort((a, b) => a[0] - b[0]);
+      if (!ok.length) return; const [, [x, y], r] = ok[0]; put.push(r);
       txt(s, x, y, n, {class:'ontop', 'text-anchor':'middle', 'font-weight':700, stroke:'var(--surface)', 'stroke-width':4, 'stroke-linejoin':'round', 'paint-order':'stroke'}); });
     basinFurniture(s, W, g);
   }
@@ -1754,7 +1749,7 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
     // last building of R_b = 5, 4, 3, 2 (counts 546 / 4,715 / 11,536 / 10,222)
     const rbEnds = [[546, 5], [5261, 4], [16797, 3], [27019, 2]].map(([x, c]) => ({x, t:[['R'], ['b', 1], ['=' + c]]}));
     lines(document.getElementById('al-cur'), Object.assign({h:220, ymin:0, ymax:122, yticks:[0, 25, 50, 75, 100], ytf:y => y + ' %',
-      ylab:[['% of R'], ['b', 1], [' ≥ 4 buildings captured']], series:ser('curves'), vrefs:rbEnds,
+      ylab:[['% of R'], ['b', 1], [' ≥ 4 buildings captured']], series:ser('curves'), vrefs:rbEnds, leg:SC.map(([n, c]) => [n, v(c), n === 'Hybrid' ? '7 5' : null]),
       notes:[{x:5000, y:at['Building-based'][0], dx:9, dy:24, t:'Both ' + at['Building-based'][0].toFixed(0) + ' %', color:v('sev4')},
              {x:5000, y:at['Subdistrict-based'][0], dx:9, dy:22, t:at['Subdistrict-based'][0].toFixed(0) + ' %', color:v('accent')}]}, xo));
     lines(document.getElementById('al-sub'), Object.assign({h:220, ymin:0, ymax:112, yticks:[0, 25, 50, 75, 100], ytf:y => String(y),
@@ -1899,22 +1894,10 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
     const g = el('g', {'clip-path':`url(#${id})`}, s); let xa = x;
     parts.forEach(([pw, fill], i) => { if (pw <= 0) return; el('rect', {x:xa, y, width:Math.max(1, pw - (i < parts.length - 1 ? 3 : 0)), height:h, fill}, g); xa += pw; });
   }
-  function hetSplit(box, V, what = 'building SEVI'){
-    if (!box.clientWidth) return; const W = Math.round(box.clientWidth), L = 22, x0 = 2, x1 = W - 2, bh = 1.6 * L, step = 1.2 * L + bh + 1.1 * L;
-    const rows = [['Variance of ' + what, V.within]], H = rows.length * step + 2 * L;   // one bar; the Theil index is a line under it
-    const s = newSvg(box, W, H), soft = 'color-mix(in srgb,var(--faint) 30%,var(--surface))';
-    rows.forEach(([lab, v], i) => { const y = i * step + L, by = y + 0.45 * L, xm = x0 + (x1 - x0) * v / 100;
-      txt(s, x0, y, lab, {fill:'var(--muted)'});
-      htPill(s, x0, by, x1 - x0, bh, [[xm - x0, 'var(--sev5)'], [x1 - xm, soft]]);
-      txt(s, x0 + 0.7 * L, by + bh / 2 + 0.35 * L, 'Inside subdistricts ' + Math.round(v) + ' %', {fill:'#fff', 'font-weight':700});
-      const bt = 'Between subdistricts ' + Math.round(100 - v) + ' %', fits = x1 - xm > tw(bt) + 1.4 * L;   // outside, under the bar, when the grey part is too short
-      txt(s, x1 - (fits ? 0.7 * L : 0), fits ? by + bh / 2 + 0.35 * L : by + bh + L, bt, {'text-anchor':'end', fill:fits ? 'var(--ink)' : 'var(--muted)'}); });
-    txt(s, x0, H - 0.4 * L, (W < 560 ? 'Theil index: ' + Math.round(V.theil) + ' % inside' : 'Theil index gives the same result: ' + Math.round(V.theil) + ' % inside subdistricts.'), {fill:'var(--muted)'});
-  }
   // Item 2 map: hot (amber) and cold (blue) spot buildings over subdistricts shaded by R_s; three named examples outlined.
   // [id, name, R_s, hot-spot count, label side, label height as a share of the map height, why picked, pill colour]
   const HTEX2 = [['89', 'Juwol 1(il)', 4, '558 of 1,035 in hot spots', 'e', .66, 'Most risk hot spots', 'var(--hot)', [0.69, 0.695]],
-    ['90', 'Juwol 2(i)', 3, '297 of 937 in hot spots', 'w', .72, 'Most in a lower-rated area', 'var(--hot)', [0.01, 0.80]],
+    ['90', 'Juwol 2(i)', 3, '297 of 937 in hot spots', 'w', .72, 'Most in lower-rated', 'var(--hot)', [0.01, 0.80]],
     ['117', 'Geonguk', 5, '18 of 229 in hot spots', 'n', .40, 'Fewest in high-rated', '#1D4ED8', [0.735, 0.47]]];   // Part 2: flood risk; last item = card spot chosen by the user (left edge, centre height; shares of the map)
   function hetMap(box, src, EX){
     const W = Math.max(260, Math.round(box.clientWidth)); if (!box.clientWidth) return;
@@ -1952,10 +1935,9 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
         if (Math.hypot(ax - cx, ay - cy) > 6){ el('line', {x1:cx, y1:cy, x2:ax, y2:ay, stroke:'var(--ink)', 'stroke-width':1.2}, s); el('circle', {cx, cy, r:2.6, fill:'var(--ink)'}, s); }
         txt(s, x + w / 2, y + h - 5, nm, {class:'ontop', 'text-anchor':'middle', 'font-weight':700, stroke:'var(--surface)', 'stroke-width':4, 'stroke-linejoin':'round', 'paint-order':'stroke'}); return; }
       // card: text first (to measure), then shadow and card behind it
-      const g = el('g', {}, s), t1 = txt(g, 0, 0, nm, {'font-weight':700}), t2 = txt(g, 0, 24, '', {fill:'var(--muted)'});
-      const b1 = t1.getBBox(), pt = txt(g, b1.x + b1.width + 16, 0, why, {'font-weight':600, fill:'#fff'}), pb = pt.getBBox();   // why-picked pill after the name
+      const g = el('g', {}, s), t1 = txt(g, 0, 0, nm, {'font-weight':700});
+      const pt = txt(g, 8, 28, why, {'font-weight':600, fill:'#fff'}), pb = pt.getBBox();   // name, then the why-picked pill on its own line (user: no R_s line)
       g.insertBefore(el('rect', {x:pb.x - 8, y:pb.y - 3, width:pb.width + 16, height:pb.height + 6, rx:(pb.height + 6) / 2, fill:pc}), pt);
-      [['R'], ['s', 1], [' = ' + rd + (W < 500 ? '' : ' (' + nh + ')')]].forEach(([p, sub]) => { el('tspan', sub ? {'baseline-shift':'sub'} : {}, t2).textContent = p; });
       const bb = g.getBBox(), px = 12, py = 8, w = bb.width + 2 * px, h = bb.height + 2 * py;
       const xs0 = Math.min(...xs), xs1 = Math.max(...xs), ys0 = Math.min(...ys), ys1 = Math.max(...ys), own = [xs0 - 6, ys0 - 6, xs1 - xs0 + 12, ys1 - ys0 + 12];
       let best = null;   // fewest dots under the card, clear of its own subdistrict, the other cards and the map furniture, near its target
@@ -1999,7 +1981,7 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
     if (!box.clientWidth) return; const W = Math.round(box.clientWidth), L = 22, N = W < 560, x0 = 2, x1 = W - 2, bh = 1.6 * L;
     const c = [1, 2, 3, 4, 5].map(k => V.hh_rd[k] || 0), tot = c.reduce((a, b) => a + b, 0), lo = c[0] + c[1] + c[2], sx = v => (x1 - x0) * v / tot;
     const sw = N ? 13 : 18, gp = N ? 30 : 40, kwrap = tw('Subdistrict risk (Rs)') + 12 + 5 * (sw + 4 + (N ? 22 : gp + 12)) > W - 4;   // key on two lines on small phones
-    const y0 = 0.9 * L, yl = y0 + 1.6 * L, yb = yl + 0.9 * L, ky = yb + bh + 1.4 * L, H = ky + (kwrap ? 2.1 : 0.8) * L, s = newSvg(box, W, H);
+    const ky = 0.9 * L, y0 = ky + (kwrap ? 3 : 1.7) * L, yl = y0 + 1.6 * L, yb = yl + 0.9 * L, H = yb + bh + 0.6 * L, s = newSvg(box, W, H);   // the figure's one R_s key on top (user)
     const f = n => n.toLocaleString('en-US'), pc = n => Math.round(n / tot * 100) + ' %';
     unitTitle(s, x0, y0, '(a)', 'Buildings', N ? ['in hot spots, by subdistrict risk', 'in hot spots'] : 'in hot spots (' + f(tot) + '), by the risk of their subdistrict');
     [[0, lo, 'Rated 1–3' + (N ? '' : ': ' + f(lo)), pc(lo), 'var(--accent)', 'var(--surface)'], [lo, tot, 'Rated 4–5' + (N ? '' : ': ' + f(tot - lo)), pc(tot - lo), 'var(--sev5)', 'var(--surface)']].forEach(([a, b, t, p, col, pk]) => {
@@ -2014,46 +1996,30 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
       if (xb - xa > tw(t) + 12) txt(s, (xa + xb) / 2, yb + bh / 2 + 5, t, {'text-anchor':'middle', fill:RDK[i], 'font-weight':700}); });
     let kx = x0; stx(s, kx, ky, [['Subdistrict risk (R'], ['s', 1], [')']], {fill:'var(--muted)'}); kx += tw('Subdistrict risk (Rs)') + 12;
     const k2 = kwrap ? ky + 1.3 * L : ky; if (kwrap) kx = x0;
-    RDC.forEach((col, i) => { el('rect', {x:kx, y:k2 - 11, width:sw, height:12, rx:3, fill:col}, s); kx += sw + 4; if (N) txt(s, kx, k2, String(i + 1), {fill:'var(--muted)'}); else rdLab(s, kx, k2, i + 1, '', {fill:'var(--muted)'}); kx += N ? 22 : gp + 12; });
+    RDC.forEach((col, i) => { el('rect', {x:kx, y:k2 - 11, width:sw, height:12, rx:3, fill:col}, s); kx += sw + 4; txt(s, kx, k2, String(i + 1), {fill:'var(--muted)'}); kx += 26; });   // numbers only: the key's name says R_s (user)
   }
   function hetRank(box, V, EX){
     if (!box.clientWidth) return; const W = Math.round(box.clientWidth), L = 22, N = W < 560;
     const rows = V.d.map(r => ({n:Math.round(r[1] * r[3] / 100), rd:r[2], name:r[4]})).filter(r => r.n > 0).sort((a, b) => b.n - a.n);
     const max = rows[0].n, step = max > 400 ? 200 : 100, ymax = Math.ceil(max / step) * step;
-    const x0 = 3 * L, x1 = W - 0.4 * L, yt = 2.6 * L + EX.length * 1.35 * L + 0.4 * L, h = N ? 170 : 220, yB = yt + h, H = yB + 2.2 * L;
+    const x0 = 3 * L, x1 = W - 0.4 * L, yt = 1.6 * L + EX.length * 1.35 * L + 0.4 * L, h = N ? 170 : 220, yB = yt + h, H = yB + 2.2 * L;
     const s = newSvg(box, W, H), bw = (x1 - x0) / rows.length, sy = v => yB - h * v / ymax;
     unitTitle(s, 2, 0.9 * L, '(b)', 'Subdistricts', N ? ['ranked by hot-spot buildings', 'ranked'] : 'with hot spots (' + rows.length + '), ranked by hot-spot buildings');
-    const grp = [['Rated 1–3', RDC[2], r => r.rd >= 1 && r.rd <= 3], ['Rated 4', RDC[3], r => r.rd === 4], ['Rated 5', RDC[4], r => r.rd === 5]];
-    let gx = 2; if (N){ txt(s, gx, 1.9 * L, 'Rated', {fill:'var(--muted)'}); gx += tw('Rated') + 8; }   // phones: 'Rated' once
-    grp.forEach(([t, c, f]) => { const k = rows.filter(f).length, lab = (N ? t.replace('Rated ', '') : t) + ' (' + k + ')'; el('rect', {x:gx, y:1.9 * L - 11, width:14, height:12, rx:3, fill:c}, s);
-      txt(s, gx + 20, 1.9 * L, lab, {fill:'var(--muted)'}); gx += 20 + tw(lab) + 18; });   // group legend with subdistrict counts
-    for (let v = 0; v <= ymax; v += step){ el('line', {x1:x0, y1:sy(v), x2:x1, y2:sy(v), stroke:'var(--line)', 'stroke-dasharray':v ? '2 4' : ''}, s); txt(s, x0 - 6, sy(v) + 5, String(v), {class:'tick', 'text-anchor':'end', fill:'var(--muted)'}); }
+    for (let v = 0; v <= ymax; v += step){ el('line', {x1:x0, y1:sy(v), x2:x1, y2:sy(v), stroke:v ? 'var(--muted)' : 'var(--line)', 'stroke-opacity':v ? .55 : 1, 'stroke-dasharray':v ? '4 3' : ''}, s); txt(s, x0 - 6, sy(v) + 5, String(v), {class:'tick', 'text-anchor':'end', fill:'var(--muted)'}); }
     rows.forEach((r, i) => el('rect', {x:x0 + i * bw + 0.5, y:sy(r.n), width:Math.max(1, bw - 1.5), height:yB - sy(r.n), rx:Math.min(3, bw / 3), fill:r.rd ? RDC[r.rd - 1] : 'var(--faint)'}, s));
     // the map examples: name rows at the top, a thin leader down to each bar
     const ex = EX.map(([id, nm]) => ({nm, i:rows.findIndex(r => r.name === nm)})).filter(e => e.i >= 0).sort((a, b) => a.i - b.i);
-    ex.forEach((e, k) => { const r = rows[e.i], cx = x0 + (e.i + 0.5) * bw, ly = 2.6 * L + (k + 0.6) * 1.35 * L;   // one line per example
+    ex.forEach((e, k) => { const r = rows[e.i], cx = x0 + (e.i + 0.5) * bw, ly = 1.6 * L + (k + 0.6) * 1.35 * L;   // one line per example
       el('line', {x1:cx, y1:ly + 6, x2:cx, y2:sy(r.n) - 3, stroke:'var(--muted)', 'stroke-width':1}, s);
       el('circle', {cx, cy:sy(r.n) - 3, r:2.5, fill:'var(--ink)'}, s);
       const right = cx < (x0 + x1) / 2, tl = txt(s, cx + (right ? 6 : -6), ly, '', {'text-anchor':right ? 'start' : 'end', fill:'var(--muted)'});
       [[r.name, 0, 1], [', R'], ['s', 1], [' = ' + r.rd + ' (' + r.n + ')']].forEach(([q, sub, b]) => { el('tspan', b ? {'font-weight':700, fill:'var(--ink)'} : sub ? {'baseline-shift':'sub'} : {}, tl).textContent = q; }); });
     const ym = (yt + yB) / 2; txt(s, 0.7 * L, ym, 'Hot-spot buildings', {'text-anchor':'middle', fill:'var(--muted)', transform:`rotate(-90 ${0.7 * L} ${ym})`});
-    txt(s, (x0 + x1) / 2, yB + 1.5 * L, N ? 'Subdistricts, most to fewest' : 'Subdistricts, ranked from most to fewest hot-spot buildings', {'text-anchor':'middle', fill:'var(--muted)'});
+    txt(s, (x0 + x1) / 2, yB + 1.5 * L, 'Subdistricts', {'text-anchor':'middle', fill:'var(--muted)'});
   }
   // Tab 5, item 3 (_261031b, data #fldata): hazard map with large subdistricts outlined; charts drawn in draw()
   const FLH = [.14, .32, .52, .74, .95], FLHC = 'var(--sev2)', FLL = 'color-mix(in srgb,var(--sev5) 45%,var(--muted))';   // muted slate-blue ramp; dusty red outline
 
-  // item 3 (b): two rounded pills on a 100 % track, the value at the end of each fill, the ratio under them
-  function flExt(box, V){
-    if (!box.clientWidth) return; const W = Math.round(box.clientWidth), L = 22, N = W < 560, bh = 26, track = 'color-mix(in srgb,var(--faint) 28%,var(--surface))';
-    const rows = [['Flooded buildings', V.ext[0], FLHC], ['Whole basin', V.ext[1], 'var(--muted)']], lw = N ? 0 : Math.max(...rows.map(r => tw(r[0]))) + 20;
-    const step = N ? bh + 1.9 * L : bh + 0.9 * L, H = rows.length * step + 1.6 * L, s = newSvg(box, W, H), x0 = lw, x1 = W - 2;
-    rows.forEach(([t, v, c], i) => { const y = i * step + (N ? 1.1 * L : 0.3 * L), xm = x0 + (x1 - x0) * v / 100;
-      if (N) txt(s, 0, y - 8, t, {fill:'var(--muted)'}); else txt(s, 0, y + bh / 2 + 5, t, {fill:'var(--muted)'});
-      htPill(s, x0, y, x1 - x0, bh, [[xm - x0, c], [x1 - xm, track]]);
-      txt(s, xm - 10, y + bh / 2 + 5, Math.round(v) + ' %', {'text-anchor':'end', fill:'var(--surface)', 'font-weight':700}); });
-    const rt = 'Ratio ' + Math.round(V.ext[0]) + ' / ' + Math.round(V.ext[1]) + ' = ' + (V.ext[0] / V.ext[1]).toFixed(2), tl = N ? ': slightly over its share' : ': the flood extent holds only slightly more than its share';
-    txt(s, x0, H - 0.4 * L, rt + (twb(rt + tl) < W - 4 ? tl : ': slightly over'), {fill:'var(--ink)', 'font-weight':600});
-  }
   // item 3 (d): hazard-5 buildings (data #flpts), dark red in large subdistricts, blue in small ones; share pill on top
   function flH5(box, V){
     if (!box.clientWidth) return; MAPD = MAPD || JSON.parse(document.getElementById('mapdata').textContent);
@@ -2092,43 +2058,44 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
     const s = newSvg(box, W, 100);
     // key: one colour bar per line, as in the bars below
     let ky = 0.3 * L;
-    const KL = tw('Building class higher than its subdistrict') + 42 <= W ? ['Building class higher than its subdistrict', 'Same class as its subdistrict', 'Building class lower than its subdistrict'] : ['Building higher than subdistrict', 'Same as subdistrict', 'Building lower than subdistrict'];
+    const KL = ['Building class > subdistrict class', 'Same class', 'Building class < subdistrict class'];
     KL.map((l, i) => [l, C[i]]).forEach(([t, c]) => { ky += 1.3 * L;
       el('rect', {x:0, y:ky - 12, width:30, height:14, rx:4, fill:c}, s); txt(s, 40, ky, t, {fill:'var(--muted)'}); });
     const SUB = [[['R'], ['b', 1], [' ≥ 4 in R'], ['s', 1], [' ≤ 3']], [['R'], ['b', 1], [' ≤ 3 in R'], ['s', 1], [' ≥ 4']]], cw = q => tw(q.map(p => p[0]).join('')) + 18;
-    const inl = [['miss', '(a) Missed'], ['over', '(b) Over-included']].every(([k, t], n) => twb(t) * 1.15 + 10 + tw(f(Y[k].n)) + 12 + cw(SUB[n]) <= pw);   // chip beside the title when both fit
-    const rt = inl ? 1.75 * L : 2.75 * L, top0 = ky + 1.0 * L, ph = rt + 3 * (bh + 12), lw = tw('Vulnerability (V)') + 14;
-    [['miss', '(a) Missed', SUB[0]], ['over', '(b) Over-included', SUB[1]]].forEach(([k, t, sub], n) => {
+    const inl = [['miss', '(a) Missed buildings'], ['over', '(b) Over-included buildings']].every(([k, t], n) => twb(t) * 1.15 + 10 + tw(f(Y[k].n)) + 12 + cw(SUB[n]) <= pw);   // chip beside the title when both fit
+    const rt = inl ? 1.75 * L : 2.75 * L, top0 = ky + 1.0 * L, ph = rt + 3 * (bh + 12), lw = twb('H') + 14;
+    [['miss', '(a) Missed buildings', SUB[0]], ['over', '(b) Over-included buildings', SUB[1]]].forEach(([k, t, sub], n) => {
       const ox = two ? n * (pw + gap) : 0, oy = top0 + (two ? 0 : n * (ph + gap / 2));
       txt(s, ox, oy + .9 * L, t, {'font-weight':800});
       txt(s, ox + twb(t) * 1.15 + 10, oy + .9 * L, f(Y[k].n), {fill:'var(--muted)'});
       const hc = n ? 'var(--accent)' : 'var(--sev5)', sw = cw(sub), sy = inl ? oy + .9 * L : oy + 1.95 * L, sx = inl ? ox + twb(t) * 1.15 + 10 + tw(f(Y[k].n)) + 12 : ox;   // which buildings: a light tint of the panel's colour
-      el('rect', {x:sx, y:sy - 16, width:sw, height:24, rx:12, fill:`color-mix(in srgb,${hc} 13%,var(--surface))`}, s); stx(s, sx + 9, sy, sub, {class:'ontop', fill:hc, 'font-weight':600});
+      el('rect', {x:sx, y:sy - 16, width:sw, height:24, rx:12, fill:'color-mix(in srgb,var(--warn) 16%,var(--surface))'}, s); stx(s, sx + 9, sy, sub, {class:'ontop', fill:'var(--ink)', 'font-weight':600});   // both pills one colour, not a bar colour (user)
       ['H', 'E', 'V'].forEach((c, r) => { const v = Y[k][c], y = oy + rt + r * (bh + 12), x0 = ox + lw, bw = pw - lw, top = Math.max(...v);
-        txt(s, ox, y + bh / 2 + 5, SCN[c], {'font-weight':600});
-        htPill(s, x0, y, bw, bh, v.map((p, i) => [bw * p / 100, C[i]]));
+        const g = el('g', (k === 'miss' ? c === 'E' : c === 'V') ? {opacity:.5} : {}, s);   // the bar without a pattern faded (bar only, user), so the two telling parts stand out
+        txt(s, ox, y + bh / 2 + 5, c, {'font-weight':600});   // H, E, V only (user)
+        htPill(g, x0, y, bw, bh, v.map((p, i) => [bw * p / 100, C[i]]));
         let xa = x0; v.forEach((p, i) => { const w = bw * p / 100, lab = Math.round(p) + ' %';
           if (w >= tw(lab) + 12) txt(s, xa + w / 2, y + bh / 2 + 5, lab, Object.assign({class:'ontop', 'text-anchor':'middle', fill:INK[i]}, p === top ? {'font-weight':700} : {})); xa += w; }); }); });
     s.setAttribute('viewBox', `0 0 ${W} ${Math.round(top0 + (two ? ph : 2 * ph + gap / 2))}`);
   }
   function localMap(box){   // result 3: building risk in the most flooded 400 m square of four areas (a.win, decimetres from each area's origin a.o, EPSG:5179 metres)
     const W = Math.round(box.clientWidth); if (!W) return;
-    const A = scd().areas, L = 22, N = W < 560, cols = W >= 600 ? 2 : 1, gap = cols > 1 ? 12 : 28, pw = (W - (cols - 1) * gap) / cols, lm = 24, bm = 23, mw = pw - lm, hd = 2.45 * L, k = mw / A[0].win[2];
+    const A = scd().areas, L = 22, N = W < 560, cols = W >= 600 ? 2 : 1, gap = cols > 1 ? 40 : 28, pw = (W - (cols - 1) * gap) / cols, lm = 0, bm = 0, mw = pw - lm, hd = 3.0 * L, k = mw / A[0].win[2];   // no lon/lat labels (user)
     const rows = Math.ceil(A.length / cols), ph = hd + mw + bm + 2, s = newSvg(box, W, 100);
     const path = (r, X, Y, o) => { let p = ''; for (let i = o; i < r.length; i += 2) p += (i > o ? 'L' : 'M') + X(r[i]).toFixed(1) + ',' + Y(r[i + 1]).toFixed(1); return p + 'Z'; };
     const sym = (x, y, t, c, a) => stx(s, x, y, [['R'], [c, 1]], a), lw = tw('Rb') + 12;   // symbols only (user, 2 Nov)
     A.forEach((a, n) => { const cx = (n % cols) * (pw + gap), oy = Math.floor(n / cols) * ph, [wx, wy, ws] = a.win, rd = Number(a.rd);
       const lab = `(${'abcd'[n]}) ${a.case}`; txt(s, cx, oy + 0.9 * L, lab, {'font-weight':800});
       txt(s, cx + twb(lab) + 12, oy + 0.9 * L, a.n);
-      const y2 = oy + 0.9 * L, y3 = oy + 2.15 * L, x0 = cx + lw, xr = cx + twb(lab) + 12 + tw(a.n) + 16;   // subdistrict rating on the title line, then the mix of building ratings
+      const y2 = oy + 0.9 * L, y3 = oy + 2.25 * L, x0 = cx + lw, xr = cx + twb(lab) + 12 + tw(a.n) + 16;   // subdistrict rating on the title line, then the mix of building ratings
       sym(xr, y2, 'Subdistrict risk', 's', {fill:'var(--muted)'});
       el('rect', {x:xr + lw, y:y2 - 15, width:26, height:20, rx:10, fill:`var(--sev${rd})`}, s);
       txt(s, xr + lw + 13, y2, String(rd), {class:'ontop', 'text-anchor':'middle', fill:'var(--surface)', 'font-weight':700});
       sym(cx, y3, 'Building risk', 'b', {fill:'var(--muted)'});
-      const tot = a.c.reduce((t, v) => t + v, 0), bw = Math.min(pw - lw, 300);   // class mix of all its flooded buildings, % above each part that fits
-      htPill(s, x0, y3 - 14, bw, 18, a.c.map((v, c) => [bw * v / tot, `var(--sev${c + 1})`]));   // shares inside the bar
+      const tot = a.c.reduce((t, v) => t + v, 0), bw = mw - lw;   // class mix of all its flooded buildings, % above each part that fits
+      htPill(s, x0, y3 + 4, bw, 9, a.c.map((v, c) => [bw * v / tot, `var(--sev${c + 1})`]));   // thin bar, shares above it (user)
       let px = x0; a.c.forEach((v, c) => { const w = bw * v / tot, t = Math.round(100 * v / tot) + '%';
-        if (w >= tw(t) + 8) txt(s, px + w / 2, y3, t, {class:'ontop', 'text-anchor':'middle', fill:'var(--surface)', 'font-weight':700}); px += w; });
+        if (w >= tw(t) - 6) txt(s, Math.max(px + w / 2, x0 + tw(t) / 2), y3 - 2, t, {'text-anchor':'middle', fill:`var(--sev${c + 1})`, 'font-weight':700}); px += w; });
       const top = oy + hd, mx = cx + lm, X = x => mx + (x - wx) * k, Y = y => top + (wy + ws - y) * k;
       const id = 'w4c' + (++uid), cp = el('clipPath', {id}, s); el('rect', {x:mx, y:top, width:mw, height:mw, rx:6}, cp);
       const m = el('g', {'clip-path':`url(#${id})`}, s);   // footprints, flood and boundary already cut to the square
@@ -2138,7 +2105,7 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
       a.gl.forEach(r => el('path', {d:path(r, X, Y, 0).slice(0, -1), fill:'none', stroke:'var(--faint)', 'stroke-width':1.6, 'stroke-dasharray':'7 4', 'stroke-linecap':'round'}, m));   // subdistrict boundary: one grey dashed line in all panels
       [true, false].forEach(same => a.b.filter(q => (q[0] === rd) === same).forEach(q =>   // same class as the subdistrict faded, every other class clear
         el('path', Object.assign({d:path(q, X, Y, 1), fill:`var(--sev${q[0]})`, 'stroke-linejoin':'round'}, same ? {opacity:.25} : {stroke:'var(--surface)', 'stroke-width':.8}), m)));
-      mapFrame(s, mx, top, mw, mw, (px, py) => tmInv(a.o[0] + (wx + (px - mx) / k) / 10, a.o[1] + (wy + ws - (py - top) / k) / 10), 10 / 3600, 'lb');
+      mapFrame(s, mx, top, mw, mw, (px, py) => tmInv(a.o[0] + (wx + (px - mx) / k) / 10, a.o[1] + (wy + ws - (py - top) / k) / 10), 10 / 3600, '');   // frame only
       const xs = [], ys = []; a.g.forEach(r => { for (let i = 0; i < r.length; i += 2){ xs.push(r[i]); ys.push(r[i + 1]); } });   // locator inset
       const gx0 = Math.min(...xs), gx1 = Math.max(...xs), gy0 = Math.min(...ys), gy1 = Math.max(...ys), iw = Math.round(mw * (N ? .3 : .24)), pad = 8;
       const ik = (iw - 2 * pad) / Math.max(gx1 - gx0, gy1 - gy0), ix = mx + mw - iw - 8, iy = top + 8;
@@ -2148,9 +2115,9 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
       el('rect', {x:IX(wx), y:IY(wy + ws), width:ws * ik, height:ws * ik, fill:'none', stroke:'var(--loc)', 'stroke-width':2.2}, s); });
     const y0 = rows * ph + 4, XM = N ? W - 26 : W - 254, n0 = s.childNodes.length; let x = 0, y = y0 + 0.8 * L;   // legend left; north star and scale bar right (own line on phones)
     const item = (w, t, draw, keep) => { if (N) w -= 3; if (!keep && x + w + tw(t) > XM && x > 0){ x = 0; y += 1.3 * L; } draw(x); txt(s, x + w, y, t, {fill:'var(--muted)'}); x += w + tw(t) + (N ? 6 : 16); };
-    const fl = N ? 'Flood' : 'Flood depth'; txt(s, 0, y, fl, {fill:'var(--muted)'}); x = tw(fl) + 10;
+    const fl = N ? 'Flood' : 'Flood depth', kx = Math.max(tw(fl), tw('Rb')) + 10; txt(s, 0, y, fl, {fill:'var(--muted)'}); x = kx;   // both rows of swatches start in one column
     ['< 0.5', '0.5–1', '1–2', '> 2 m'].forEach((t, c) => item(20, t, x => el('rect', {x, y:y - 11, width:14, height:12, rx:3, fill:FDC[c], 'fill-opacity':.8, stroke:'var(--fd3)', 'stroke-opacity':.7}, s), true));
-    x = 0; y += 1.3 * L; sym(0, y, 'Building risk', 'b', {fill:'var(--muted)'}); x = tw('Rb') + 10;
+    x = 0; y += 1.3 * L; sym(0, y, 'Building risk', 'b', {fill:'var(--muted)'}); x = kx;
     [1, 2, 3, 4, 5].forEach(c => item(16, String(c), x => el('rect', {x, y:y - 11, width:12, height:12, rx:3, fill:`var(--sev${c})`}, s), true));
     s.style.fontSize = (FS * W / box.clientWidth) + 'px'; s.style.fontFamily = 'var(--f-body)';   // set now so the legend can be measured
     const lg = el('g', {transform:'translate(14,0)'}); while (s.childNodes.length > n0) lg.appendChild(s.childNodes[n0]); s.appendChild(lg); lg.querySelectorAll('text').forEach(e => e.classList.add('ontop'));   // legend items into a rounded box (text inside it on purpose)
@@ -2179,12 +2146,11 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
     const ht = document.getElementById('ht-toy'); if (ht) hetToy(ht);
     const ft = document.getElementById('fl-toy'); if (ft) flToy(ft);
     if (document.getElementById('fl-h5')){ const F3 = JSON.parse(document.getElementById('fldata').textContent);
-      flExt(document.getElementById('fl-ext'), F3);
       flH5(document.getElementById('fl-h5'), F3); }
-    if (document.getElementById('ht2-split')){ const R2 = JSON.parse(document.getElementById('riskdata').textContent);
-      hetSplit(document.getElementById('ht2-split'), R2, 'building risk'); hetMap(document.getElementById('ht2-map'), 'riskdata', HTEX2); hetRdBar(document.getElementById('ht2-rdbar'), R2); hetRank(document.getElementById('ht2-rank'), R2, HTEX2.concat([['58', 'Suwan']])); }
+    if (document.getElementById('ht2-map')){ const R2 = JSON.parse(document.getElementById('riskdata').textContent);
+      hetMap(document.getElementById('ht2-map'), 'riskdata', HTEX2); hetRdBar(document.getElementById('ht2-rdbar'), R2); hetRank(document.getElementById('ht2-rank'), R2, HTEX2.concat([['58', 'Suwan']])); }
     // tab 5 labels sit on cards, pills and map dots by design (checked by eye, v211); qa.mjs still checks them against each other
-    ['al-toy0', 'al-toy1', 'al-toy2', 'al-toy3', 'ht-toy', 'fl-toy', 'fl-ext', 'fl-h5', 'ht2-split', 'ht2-map', 'ht2-rdbar'].forEach(id => document.querySelectorAll('#' + id + ' text').forEach(t => t.classList.add('ontop')));
+    ['al-toy0', 'al-toy1', 'al-toy2', 'al-toy3', 'ht-toy', 'fl-toy', 'fl-h5', 'ht2-map', 'ht2-rdbar'].forEach(id => document.querySelectorAll('#' + id + ' text').forEach(t => t.classList.add('ontop')));
     scaleFonts();
   }
   // One rendered text size: font-size in user units = 14 × viewBox width ÷ displayed width.
