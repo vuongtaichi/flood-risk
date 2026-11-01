@@ -15,9 +15,9 @@
    numbered part headers, two-column notebook cards on a cool slate ground. Cobalt = model, orange = summary, red = issues. */
 :root{
   --bg:#f5f7fb; --surface:#ffffff; --raise:#f9faff; --fg:#1b2436; --ink:#1b2436; --muted:#4b5670; --faint:#7a869e; --line:#dce3f0; --chip:#eef2fa;
-  --accent:#2951a3;--fblue:#1d4ed8;--f15-1:#d6dff8;--f15-2:#b0c1f1;--f15-3:#567ae2;--f15-4:#c08797;--f15-5:#800f2f;--f15-lo:#1d4ed8;--f15-hi:#800f2f;--f15-chip:#1d4ed8;--al-b:#008000;--al-h:#d63c41;--al-s:#2951a3; --accent-soft:#e8edf9;
+  --accent:#2951a3;--fblue:#1d4ed8;--f15-1:#d6dff8;--f15-2:#b0c1f1;--f15-3:#567ae2;--f15-4:#c08797;--f15-5:#800f2f;--f15-lo:#1d4ed8;--f15-hi:#800f2f;--al-b:#008000;--al-h:#d63c41;--al-s:#2951a3; --accent-soft:#e8edf9;
   --hl-bg:#fbeedb; --hl-fg:#8a5210;
-  --bad:#d63c41; --bad-soft:#fde6e7; --warn:#8a5210; --warn-soft:#fbeedb;
+  --bad:#d63c41;--file:#e5484d; --bad-soft:#fde6e7; --warn:#8a5210; --warn-soft:#fbeedb;
   --pill-b-bg:#e3eefc; --pill-b-fg:#1c3b7a; --pill-b-bd:#9db8e8;
   --pill-r-bg:#fde8ec; --pill-r-fg:#9b1c31; --pill-r-bd:#f0a7b4;
   --nav-bg:#0b1530; --nav-bg-end:#1b1d5c; --nav-text:#cdd7ee; --nav-dim:#8592b8; --nav-accent:#6fa0e8;
@@ -34,8 +34,8 @@
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#0b1220; --surface:#101a2c; --raise:#15203c; --fg:#e4e9f5; --ink:#e4e9f5; --muted:#a3aecb; --faint:#7482a3; --line:#223151; --chip:#16223c;
-  --accent:#8ab4ff;--fblue:#60a5fa;--f15-1:#1e3351;--f15-2:#2c4b74;--f15-3:#4c82c6;--f15-4:#884660;--f15-5:#ff7394;--f15-lo:#60a5fa;--f15-hi:#ff7394;--f15-chip:#60a5fa;--al-b:#53c653;--al-h:#f07a7e;--al-s:#8ab4ff; --accent-soft:#16223c; --hl-bg:#382914; --hl-fg:#f3c27f;
-  --bad:#f07a7e; --bad-soft:#3b1e22; --warn:#f3c27f; --warn-soft:#382914;
+  --accent:#8ab4ff;--fblue:#60a5fa;--f15-1:#1e3351;--f15-2:#2c4b74;--f15-3:#4c82c6;--f15-4:#884660;--f15-5:#ff7394;--f15-lo:#60a5fa;--f15-hi:#ff7394;--al-b:#53c653;--al-h:#f07a7e;--al-s:#8ab4ff; --accent-soft:#16223c; --hl-bg:#382914; --hl-fg:#f3c27f;
+  --bad:#f07a7e;--file:#ff8589; --bad-soft:#3b1e22; --warn:#f3c27f; --warn-soft:#382914;
   --pill-b-bg:#16223c; --pill-b-fg:#a9c6ff; --pill-b-bd:#2f4a80; --pill-r-bg:#3b1e24; --pill-r-fg:#f5a3ae; --pill-r-bd:#74323d;
   --nav-bg:#050a18; --nav-bg-end:#12123f; --nav-text:#a9b7d6; --nav-dim:#5c6b8f; --nav-accent:#7fb0ff;
   --nm-line:#9aa3b5; --loc:#ff6b6b; --hot:#ef4444; --fd1:#f7fbff; --fd2:#abd0e6; --fd3:#3787c0; --fd4:#08306b;
@@ -44,8 +44,8 @@
   --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 28px rgba(0,0,0,.35); --glass:rgba(11,18,32,.82); --py-kw:#d6a0f0; --py-str:#8fd9a2; --py-num:#f3b47f; --py-com:#8592ad; --py-fn:#8ab4ff; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0b1220; --surface:#101a2c; --raise:#15203c; --fg:#e4e9f5; --ink:#e4e9f5; --muted:#a3aecb; --faint:#7482a3; --line:#223151; --chip:#16223c;
-  --accent:#8ab4ff;--fblue:#60a5fa;--f15-1:#1e3351;--f15-2:#2c4b74;--f15-3:#4c82c6;--f15-4:#884660;--f15-5:#ff7394;--f15-lo:#60a5fa;--f15-hi:#ff7394;--f15-chip:#60a5fa;--al-b:#53c653;--al-h:#f07a7e;--al-s:#8ab4ff; --accent-soft:#16223c; --hl-bg:#382914; --hl-fg:#f3c27f;
-  --bad:#f07a7e; --bad-soft:#3b1e22; --warn:#f3c27f; --warn-soft:#382914;
+  --accent:#8ab4ff;--fblue:#60a5fa;--f15-1:#1e3351;--f15-2:#2c4b74;--f15-3:#4c82c6;--f15-4:#884660;--f15-5:#ff7394;--f15-lo:#60a5fa;--f15-hi:#ff7394;--al-b:#53c653;--al-h:#f07a7e;--al-s:#8ab4ff; --accent-soft:#16223c; --hl-bg:#382914; --hl-fg:#f3c27f;
+  --bad:#f07a7e;--file:#ff8589; --bad-soft:#3b1e22; --warn:#f3c27f; --warn-soft:#382914;
   --pill-b-bg:#16223c; --pill-b-fg:#a9c6ff; --pill-b-bd:#2f4a80; --pill-r-bg:#3b1e24; --pill-r-fg:#f5a3ae; --pill-r-bd:#74323d;
   --nav-bg:#050a18; --nav-bg-end:#12123f; --nav-text:#a9b7d6; --nav-dim:#5c6b8f; --nav-accent:#7fb0ff;
   --nm-line:#9aa3b5; --loc:#ff6b6b; --hot:#ef4444; --fd1:#f7fbff; --fd2:#abd0e6; --fd3:#3787c0; --fd4:#08306b;
@@ -106,7 +106,7 @@ section>h2{justify-self:start;max-width:100%;background:var(--pill-r-bg);color:v
 .gcard{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--c,var(--accent));border-radius:var(--r);box-shadow:var(--shadow);padding:14px 16px;display:grid;gap:14px;align-content:start;min-width:0}
 .ghead{display:flex;align-items:center;gap:12px;margin:-14px -16px 0;padding:14px 16px;background:color-mix(in srgb,var(--c,var(--accent)) 14%,var(--surface));border-bottom:1px solid color-mix(in srgb,var(--c,var(--accent)) 35%,var(--line));border-radius:calc(var(--r) - 4px) calc(var(--r) - 4px) 0 0}.ghead b{font-family:var(--f-display);font-size:1.5rem;font-weight:800;letter-spacing:-.01em;color:var(--fg)}.ghead .gico{width:34px;height:34px;padding:6px;border-radius:10px}
 .gsi{width:16px;height:16px;flex:none;fill:none;stroke:var(--t);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-3px;margin-right:6px}
-.gcard .grow .glab{color:var(--t,var(--muted))}.gbar{display:flex;align-items:center;gap:10px}.gbar .fbar{flex:1;margin:4px 0}.gpct{color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums;width:6.6em;flex:none}
+.gcard .grow .glab{color:var(--t,var(--ink));font-weight:700;font-size:1.02em;background:color-mix(in srgb,var(--t,var(--muted)) 12%,var(--surface));border-radius:999px;padding:3px 10px;width:fit-content;display:inline-flex;align-items:center;gap:6px}   /* At a glance subheadings stand out (user) */.gbar{display:flex;align-items:center;gap:10px}.gbar .fbar{flex:1;margin:4px 0}.gpct{color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums;width:6.6em;flex:none}
 .gico{width:26px;height:26px;padding:4px;border-radius:8px;flex:none;fill:none;stroke:var(--c,var(--accent));stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;background:color-mix(in srgb,var(--c,var(--accent)) 14%,var(--surface))}
 .grow{display:grid;gap:3px;min-width:0}.grow+.grow{border-top:1px dashed var(--line);padding-top:12px}.gpair .grow+.grow{border-top:0;padding-top:0}
 .grow .glab{font-family:var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}.grow span{color:var(--muted)}.grow b{color:var(--fg);font-weight:600}
@@ -242,7 +242,7 @@ ol.steps li::before{content:counter(st) ".";position:absolute;left:0;top:0;font-
 .files{display:flex;flex-wrap:wrap;gap:6px}
 .pill{display:inline-block;font-family:var(--f-mono);font-size:var(--fs);padding:2px 10px;border-radius:14px;overflow-wrap:anywhere;max-width:100%;background:var(--pill-b-bg);color:var(--pill-b-fg);border:1px solid var(--pill-b-bd)}
 .pill.out{background:none;border:0;padding:0;border-radius:0;color:var(--bad)}
-.mono.file{color:var(--bad)}
+.mono.file{color:var(--file)}
 .real{display:inline-block;background:var(--surface);color:var(--accent);border:1px solid var(--pill-b-bd);border-radius:999px;padding:0 8px;font-weight:600}
 .illus,.inf{display:inline-block;background:var(--warn-soft);color:var(--warn);border-radius:999px;padding:0 8px;font-weight:600}
 .fig{width:100%;max-width:680px;display:grid;gap:6px;min-width:0}
@@ -1976,9 +1976,9 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
   const RDC = [1, 2, 3, 4, 5].map(k => `var(--f15-${k})`),   // Fig 15's own colours (user: change them separately)
     RDK = ['var(--ink)', 'var(--ink)', 'var(--surface)', 'var(--ink)', 'var(--surface)'];   // user: 3 darker blue, 4 lighter red
   const rdLab = (p, x, y, rd, extra, a) => { const t = txt(p, x, y, '', a); [['R'], ['s', 1], [' = ' + rd + (extra || '')]].forEach(([q, sub]) => { el('tspan', sub ? {'baseline-shift':'sub'} : {}, t).textContent = q; }); return t; };
-  const unitTitle = (s, x, y, pre, unit, post) => { const a = {'font-weight':700}, t1 = txt(s, x, y, pre, a), ux = x + twb(pre) + 4, uw = twb(unit) + 14, Wv = s.viewBox.baseVal.width;
-    post = [].concat(post).find(p => ux + uw + 5 + twb(p) <= Wv - 2) || [].concat(post).pop();   // panel title, its unit in a chip
-    el('rect', {x:ux, y:y - 16, width:uw, height:22, rx:11, fill:'var(--f15-chip)'}, s); txt(s, ux + 7, y, unit, {class:'ontop', 'font-weight':700, fill:'var(--surface)'}); txt(s, ux + uw + 5, y, post, a); return t1; };
+  const unitTitle = (s, x, y, pre, unit, post) => { const a = {'font-weight':700}, t1 = txt(s, x, y, pre, a), ux = x + twb(pre + ' '), uw = twb(unit + ' '), Wv = s.viewBox.baseVal.width;
+    post = [].concat(post).find(p => ux + uw + twb(p) <= Wv - 2) || [].concat(post).pop();   // panel title in plain bold text (user: no chip)
+    txt(s, ux, y, unit, a); txt(s, ux + uw, y, post, a); return t1; };
   function hetRdBar(box, V){
     if (!box.clientWidth) return; const W = Math.round(box.clientWidth), L = 22, N = W < 560, x0 = 2, x1 = W - 2, bh = 1.6 * L;
     const c = [1, 2, 3, 4, 5].map(k => V.hh_rd[k] || 0), tot = c.reduce((a, b) => a + b, 0), lo = c[0] + c[1] + c[2], sx = v => (x1 - x0) * v / tot;
@@ -2026,7 +2026,7 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
     if (!flH5.p){ const d = JSON.parse(document.getElementById('flpts').textContent); let a = 0, b = 0; flH5.big = new Set(d.big.map(String)); flH5.p = d.dx.map((v, i) => { a += v; b += d.dy[i]; return [a, b, d.t[i]]; }); }
     const P = flH5.p, nL = P.filter(p => p[2] === 'L').length, n = P.length, pL = Math.round(nL / n * 100), f = x => x.toLocaleString('en-US');
     const W = Math.round(box.clientWidth), N = W < 560, L = 22, T = 0;   // map only (the share is in the text)
-    const RED = 'var(--hot)', BLUE = 'var(--sev2)', PINK = 'color-mix(in srgb,var(--hot) 14%,var(--surface))', LBLUE = 'color-mix(in srgb,var(--sev2) 16%,var(--surface))', DRED = 'var(--sev5)';
+    const RED = 'var(--hot)', BLUE = 'var(--fblue)', PINK = 'color-mix(in srgb,var(--hot) 14%,var(--surface))', LBLUE = 'color-mix(in srgb,var(--fblue) 16%,var(--surface))', DRED = 'var(--sev5)';   // user: figure blue, not class 2
     const g = basinGeo(W), mh = g.H;
     const h5 = Object.keys(V.dh).filter(k => V.dh[k][0] === 5);
     const LI = [['L', 'In large subdistricts, ' + f(nL) + ' (' + pL + ' %)'], ['s', 'In small subdistricts, ' + f(n - nL) + ' (' + (100 - pL) + ' %)'], ['h', 'Subdistrict H = 5 (' + h5.length + ')'], ['o', 'Large subdistrict (> 10 km²)']];
@@ -2203,10 +2203,10 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
   // Owner-only colour editor (v295): figure colour tokens, saved per theme to the artifact db doc prefs/figColors; only the owner reads and writes it.
   (function(){
     const TOK = [['Fig. 10: building risk (Rb)', [['--rb1', 'Rb 1'], ['--rb2', 'Rb 2'], ['--rb3', 'Rb 3'], ['--rb4', 'Rb 4'], ['--rb5', 'Rb 5']]],
-      ['Risk classes: Figs 12, 14, 16, A1', [['--sev1', 'Class 1 (Fig. 12)'], ['--sev2', 'Class 2 (Fig. 12); cold spots (Fig. 14); small subdistricts (Fig. 16)'], ['--sev3', 'Class 3 (Fig. 12)'], ['--sev4', 'Class 4 (Fig. 12)'], ['--sev5', 'Class 5 (Figs 12, A1); higher (Fig. 11); H = 5 (Fig. 16)']]],
-      ['Blue and red', [['--fblue', 'Blue: Fig. 9 points, lower (Fig. 11), Fig. 14 box'], ['--bad', 'Red: Fig. 9 points'], ['--hot', 'Hot spots (Fig. 14); large subdistricts (Fig. 16)']]],
+      ['Risk classes: Figs 12, 14, 16, A1', [['--sev1', 'Class 1 (Fig. 12)'], ['--sev2', 'Class 2 (Fig. 12); cold spots (Fig. 14)'], ['--sev3', 'Class 3 (Fig. 12)'], ['--sev4', 'Class 4 (Fig. 12)'], ['--sev5', 'Class 5 (Figs 12, A1); higher (Fig. 11); H = 5 (Fig. 16)']]],
+      ['Blue and red', [['--fblue', 'Blue: Fig. 9 points, lower (Fig. 11), Fig. 14 box, Fig. 16 blue'], ['--bad', 'Red: Fig. 9 points'], ['--hot', 'Hot spots (Fig. 14); large subdistricts (Fig. 16)']]],
       ['Fig. 13 lines', [['--al-b', 'Building-based'], ['--al-h', 'Hybrid'], ['--al-s', 'Subdistrict-based']]],
-      ['Fig. 15', [['--f15-1', 'Subdistrict risk 1'], ['--f15-2', 'Subdistrict risk 2'], ['--f15-3', 'Subdistrict risk 3'], ['--f15-4', 'Subdistrict risk 4'], ['--f15-5', 'Subdistrict risk 5'], ['--f15-lo', 'Rated 1–3 label and bracket'], ['--f15-hi', 'Rated 4–5 label and bracket'], ['--f15-chip', 'Panel title chips']]],
+      ['Fig. 15', [['--f15-1', 'Subdistrict risk 1'], ['--f15-2', 'Subdistrict risk 2'], ['--f15-3', 'Subdistrict risk 3'], ['--f15-4', 'Subdistrict risk 4'], ['--f15-5', 'Subdistrict risk 5'], ['--f15-lo', 'Rated 1–3 label and bracket'], ['--f15-hi', 'Rated 4–5 label and bracket']]],
       ['Fig. 12 map', [['--fd1', 'Flood depth < 0.5 m'], ['--fd2', 'Flood depth 0.5–1 m'], ['--fd3', 'Flood depth 1–2 m'], ['--fd4', 'Flood depth > 2 m'], ['--loc', 'Inset square']]],
       ['Outlines', [['--nm-line', 'Named subdistrict outline (Fig. 9)']]]];
     const mode = () => { const a = document.documentElement.dataset.theme; return a === 'dark' || a === 'light' ? a : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); };
