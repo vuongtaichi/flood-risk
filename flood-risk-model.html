@@ -11,6 +11,7 @@
   startup: {ready: () => { MathJax.startup.defaultReady(); MathJax.startup.promise.then(() => window.__redraw && window.__redraw()); }}};</script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js"></script>
 <style>
+[hidden]{display:none!important}   /* the page is also served bare (GitHub Pages), without the artifact reset */
 /* Layout: matches the Richmond model-versions site. Navy gradient header with folder pills, glass numbered tab bar,
    numbered part headers, two-column notebook cards on a cool slate ground. Cobalt = model, orange = summary, red = issues. */
 :root{
@@ -2163,7 +2164,7 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
         if (sm.getBoundingClientRect().bottom < 70 && d.getBoundingClientRect().bottom > innerHeight * .3) cur = d; });   // document order: nested sections win
       btn.hidden = !cur; if (!cur) return;
       const t = (cur.querySelector(':scope > summary .grp-t') || cur.querySelector(':scope > summary')).textContent.trim();
-      btn.textContent = '▲ Collapse: ' + (t.length > 40 ? t.slice(0, 38) + '…' : t); btn.setAttribute('aria-label', 'Collapse ' + t); };
+      btn.textContent = '▲ Collapse'; btn.setAttribute('aria-label', 'Collapse ' + t); };
     addEventListener('scroll', upd, {passive:true}); addEventListener('resize', upd); document.addEventListener('toggle', upd, true);
     btn.addEventListener('click', () => { const d = cur; if (!d) return; const y = from.has(d) ? from.get(d) : d.getBoundingClientRect().top + scrollY - 80;
       d.open = false; scrollTo({top:y, behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}); upd(); });
