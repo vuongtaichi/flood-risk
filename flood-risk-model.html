@@ -15,7 +15,7 @@
    numbered part headers, two-column notebook cards on a cool slate ground. Cobalt = model, orange = summary, red = issues. */
 :root{
   --bg:#f5f7fb; --surface:#ffffff; --raise:#f9faff; --fg:#1b2436; --ink:#1b2436; --muted:#4b5670; --faint:#7a869e; --line:#dce3f0; --chip:#eef2fa;
-  --accent:#2951a3;--fblue:#2563eb;--al-b:#008000;--al-h:#d63c41;--al-s:#2951a3; --accent-soft:#e8edf9;
+  --accent:#2951a3;--fblue:#1d4ed8;--al-b:#008000;--al-h:#d63c41;--al-s:#2951a3; --accent-soft:#e8edf9;
   --hl-bg:#fbeedb; --hl-fg:#8a5210;
   --bad:#d63c41; --bad-soft:#fde6e7; --warn:#8a5210; --warn-soft:#fbeedb;
   --pill-b-bg:#e3eefc; --pill-b-fg:#1c3b7a; --pill-b-bd:#9db8e8;
@@ -1899,7 +1899,7 @@ un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1,
   // [id, name, R_s, hot-spot count, label side, label height as a share of the map height, why picked, pill colour]
   const HTEX2 = [['89', 'Juwol 1(il)', 4, '558 of 1,035 in hot spots', 'e', .66, 'Most risk hot spots', 'var(--hot)', [0.69, 0.695]],
     ['90', 'Juwol 2(i)', 3, '297 of 937 in hot spots', 'w', .72, 'Most in lower-rated', 'var(--hot)', [0.01, 0.80]],
-    ['117', 'Geonguk', 5, '18 of 229 in hot spots', 'n', .40, 'Fewest in high-rated', '#1D4ED8', [0.735, 0.47]]];   // Part 2: flood risk; last item = card spot chosen by the user (left edge, centre height; shares of the map)
+    ['117', 'Geonguk', 5, '18 of 229 in hot spots', 'n', .40, 'Fewest in high-rated', 'var(--fblue)', [0.735, 0.47]]];   // Part 2: flood risk; last item = card spot chosen by the user (left edge, centre height; shares of the map)
   function hetMap(box, src, EX){
     const W = Math.max(260, Math.round(box.clientWidth)); if (!box.clientWidth) return;
     MAPD = MAPD || JSON.parse(document.getElementById('mapdata').textContent);
