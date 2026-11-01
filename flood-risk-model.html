@@ -249,6 +249,7 @@ ol.steps li::before{content:counter(st) ".";position:absolute;left:0;top:0;font-
 .fig .chart{width:100%}
 .fig svg{display:block;width:100%;height:auto;overflow:visible}
 .fig .cap{color:var(--muted)}
+.pfig{width:min(560px,100%);justify-self:center;margin-inline:auto}.pfig.pw{width:min(760px,100%)}.pfig #r-rdrb,.pfig .htleg,.pfig #ht2-rdbar,.pfig #ht2-rank,.pfig #ht-map{width:100%}   /* paper figures: print width on the site too */
 .figcol-btn{position:fixed;right:16px;bottom:16px;z-index:60;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 16px;box-shadow:var(--shadow);font:inherit;cursor:pointer}.figcol{position:fixed;right:16px;bottom:64px;z-index:60;width:min(340px,calc(100vw - 32px));max-height:calc(100vh - 96px);overflow:auto;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:14px 16px;display:grid;gap:8px}.figcol h3{margin:0}.figcol .fc-g{font-weight:600;margin-top:4px}.figcol label{display:flex;align-items:center;gap:10px}.figcol input[type=color]{width:34px;height:24px;padding:0;border:1px solid var(--line);border-radius:6px;background:none;cursor:pointer}.figcol .fc-note{color:var(--muted)}.figcol .fc-warn{color:var(--warn)}.figcol .fc-row{display:flex;gap:8px;align-items:center;justify-content:space-between}.figcol button{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:8px;padding:4px 12px}.legend{display:flex;flex-wrap:wrap;gap:6px 14px;color:var(--ink)}.legend .lt{color:var(--ink)}.chart svg text[fill="var(--muted)"]:not(.tick),.chart svg tspan[fill="var(--muted)"]{fill:var(--ink)}.legend.mapleg{width:fit-content;max-width:100%;box-sizing:border-box;margin:0 auto 10px;padding:10px 16px;border:1px solid var(--ink);border-radius:12px}
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .legend i{width:12px;height:12px;border-radius:3px;display:inline-block}.legend i.ln{width:28px;height:0;border-radius:0;border-top:3px solid var(--c);align-self:center}.legend i.ln.dash{border-top-style:dashed}.rdkey .lt{white-space:nowrap}
@@ -490,7 +491,8 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
   <h2 id="rt-h">Run time</h2>
   <div class="fig"><div class="legend"><span><i style="background:var(--accent)"></i>Minutes · share of total, last successful run of each re-run notebook</span></div>
     <div class="chart" id="ch-rt"></div>
-    <p class="cap"><span class="real">real values</span><br><span class="mono file">Pythonun_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1, #2, #3, #5, #7 not re-run (no time).</p></div>
+    <p class="cap"><span class="real">real values</span><br><span class="mono file">Python
+un_log_261028.txt</span><br>Run of 28 Oct 2026: 44.3 min in total. Notebooks #1, #2, #3, #5, #7 not re-run (no time).</p></div>
 </section>
 
 </div></div>
@@ -568,11 +570,11 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
   <details class="grp ana"><summary><span class="chev" aria-hidden="true"></span><span class="eyebrow">Result 1 · how much</span><h3 class="grp-t">The two scales disagree, in both directions</h3><p>Only about a third of flooded buildings share their subdistrict’s risk class; the rest sit above or below it.</p></summary>
   <div class="ana-b">
   <div class="cards rmap">
-    <div class="card"><h3>Fig. 9. Higher-risk buildings (R<sub>b</sub> ≥ 4) on the subdistrict risk map (R<sub>s</sub>)</h3>
+    <div class="card pfig"><h3>Fig. 9. Higher-risk buildings (R<sub>b</sub> ≥ 4) on the subdistrict risk map (R<sub>s</sub>)</h3>
       <div class="legend mapleg"><span><i style="background:var(--accent);border-radius:50%"></i><em class="lt">Higher-risk building, in a higher-risk subdistrict (R<sub>s</sub> ≥ 4), 3,493 <b>(66.4 %)</b></em></span><span style="flex-basis:100%"><i style="background:var(--bad);border-radius:50%"></i><em class="lt">Higher-risk building, in a lower-risk subdistrict (R<sub>s</sub> ≤ 3), 1,768 <b>(33.6 %)</b></em></span><span class="rdkey"><em class="lt">Subdistrict risk (R<sub>s</sub>)</em><i style="--k:4%"></i>1<i style="--k:7%"></i>2<i style="--k:13%"></i>3<i style="--k:22%"></i>4<i style="--k:46%"></i>5</span></div>
       <div class="chart" id="al-map"></div>
       <p class="cap"><span class="real">real values</span> Data:<br><span class="pill out">build_risk_class_261030_equal_sqrt.pkl</span><br><span class="pill out">dong_risk_261030_equal_sqrt[3].pkl</span></p></div>
-    <div class="card rbpal"><h3>Fig. 10. Building risk classes (R<sub>b</sub>) within each subdistrict class (R<sub>s</sub>)</h3>
+    <div class="card rbpal pfig"><h3>Fig. 10. Building risk classes (R<sub>b</sub>) within each subdistrict class (R<sub>s</sub>)</h3>
       <div class="legend rbpick"><span><em class="lt">Building risk (R<sub>b</sub>)</em></span><label><button type="button" class="rbsw" data-rb="1" data-hex="#f7c59f" style="--c:var(--rb1)" aria-label="Colour for R_b 1" aria-haspopup="dialog"></button>1</label><label><button type="button" class="rbsw" data-rb="2" data-hex="#cae9ff" style="--c:var(--rb2)" aria-label="Colour for R_b 2" aria-haspopup="dialog"></button>2</label><label><button type="button" class="rbsw" data-rb="3" data-hex="#ebedf3" style="--c:var(--rb3)" aria-label="Colour for R_b 3" aria-haspopup="dialog"></button>3</label><label><button type="button" class="rbsw" data-rb="4" data-hex="#008000" style="--c:var(--rb4)" aria-label="Colour for R_b 4" aria-haspopup="dialog"></button>4</label><label><button type="button" class="rbsw" data-rb="5" data-hex="#800f2f" style="--c:var(--rb5)" aria-label="Colour for R_b 5" aria-haspopup="dialog"></button>5</label><button type="button" class="rlink" data-rbreset>Reset colours</button><div class="rbpop" role="dialog" aria-label="Colour for this R_b class" hidden><div class="rbsv"><b></b></div><input type="range" class="rbhue" min="0" max="359" aria-label="Hue"><input type="range" class="rbal" min="10" max="100" step="5" aria-label="Opacity"><div class="rbrow"><input type="text" class="rbhex" maxlength="7" spellcheck="false" aria-label="HEX colour"><output>100 %</output></div></div></div>
       <div class="chart" id="r-rdrb"></div>
       <p class="cap"><span class="real">real values</span> Exposed buildings. Above each column: share (count) with R<sub>b</sub> ≥ 4; n = buildings; inside: share of each R<sub>b</sub>. One building without R<sub>s</sub> left out. Data:<br><span class="pill out">build_risk_class_261030_equal_sqrt.pkl</span><br><span class="pill out">dong_risk_261030_equal_sqrt[3].pkl</span></p></div>
@@ -589,7 +591,7 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
   </div></details>
   <details class="grp ana"><summary><span class="chev" aria-hidden="true"></span><span class="eyebrow">Result 2 · why</span><h3 class="grp-t">Each error has its own cause</h3><p>Missed buildings have higher local hazard and vulnerability than their area; over-included ones have lower local hazard and exposure.</p></summary>
   <div class="ana-b">
-  <div class="card"><h3>Fig. 11. What sets a building apart from its subdistrict: (a) missed buildings (R<sub>b</sub> ≥ 4 in subdistricts rated 1–3); (b) over-included buildings (R<sub>b</sub> ≤ 3 in subdistricts rated 4–5)</h3><div class="chart" id="sc-parts"></div>
+  <div class="card pfig"><h3>Fig. 11. What sets a building apart from its subdistrict: (a) missed buildings (R<sub>b</sub> ≥ 4 in subdistricts rated 1–3); (b) over-included buildings (R<sub>b</sub> ≤ 3 in subdistricts rated 4–5)</h3><div class="chart" id="sc-parts"></div>
     <p class="cap"><span class="real">real values</span> 1,768 missed and 9,423 over-included buildings (result 1). A part counts when the building’s own class is above (missed) or below (over-included) its subdistrict’s. Data:<br><span class="pill out">build_risk_class_261030_equal_sqrt.pkl</span><br><span class="pill out">dong_risk_261030_equal_sqrt[3].pkl</span></p></div>
   <div class="note"><p><b>What it shows</b></p>
   <ul class="plain">
@@ -601,7 +603,7 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
   </div></details>
   <details class="grp ana"><summary><span class="chev" aria-hidden="true"></span><span class="eyebrow">Result 3 · on the ground</span><h3 class="grp-t">One rating, many building risks</h3><p>Four subdistricts, building by building: missed, over-included, both ways, and agreement.</p></summary>
   <div class="ana-b">
-  <div class="card"><h3>Fig. 12. Building risk (R<sub>b</sub>) in the most flooded 400 m square of four subdistricts: (a) missed, (b) over-included, (c) both ways, (d) agreement</h3><div class="chart" id="sc-loc"></div>
+  <div class="card pfig pw"><h3>Fig. 12. Building risk (R<sub>b</sub>) in the most flooded 400 m square of four subdistricts: (a) missed, (b) over-included, (c) both ways, (d) agreement</h3><div class="chart" id="sc-loc"></div>
     <p class="cap"><span class="real">real values</span> Flooded footprints by own risk class, in each subdistrict’s most flooded 400 m square (above / below shares within 9 points of the whole area). Areas: the clearest case of each type, chosen from the data. Flood: 100-year depth (<span class="mono file">Flood_area.shp</span>). Basemap: Esri World Street Map (Esri, TomTom, Garmin, FAO, NOAA, USGS, © OpenStreetMap contributors, GIS User Community). Data:<br><span class="pill out">build_risk_class_261030_equal_sqrt.pkl</span><br><span class="pill out">dong_risk_261030_equal_sqrt[3].pkl</span></p></div>
   <div class="note"><p><b>What it shows</b></p>
   <ul class="plain">
@@ -688,9 +690,9 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
   <p class="lede">A third of the higher-risk buildings sit in subdistricts rated 3 or lower (map in tab 4). Ranking buildings first captures them; adding R<sub>s</sub> keeps the work in fewer subdistricts.</p>
   <div class="legend"><span><i class="ln" style="--c:var(--sev4)"></i>Building-based</span><span><i class="ln dash" style="--c:var(--bad)"></i>Hybrid</span><span><i class="ln" style="--c:var(--accent)"></i>Subdistrict-based</span></div>
   <div class="cards">
-    <div class="card"><h3>Fig. 13a. Share of higher-risk buildings (R<sub>b</sub> ≥ 4) captured at each budget</h3>
+    <div class="card pfig"><h3>Fig. 13a. Share of higher-risk buildings (R<sub>b</sub> ≥ 4) captured at each budget</h3>
       <div class="chart" id="al-cur"></div></div>
-    <div class="card"><h3>Fig. 13b. Number of subdistricts the selected buildings span at each budget</h3>
+    <div class="card pfig"><h3>Fig. 13b. Number of subdistricts the selected buildings span at each budget</h3>
       <div class="chart" id="al-sub"></div>
       <p class="cap"><span class="real">real values</span> Buildings; dots at N = 5,000. Data (<span class="mono">Results\261031\</span>):<br><span class="pill out">allocation_curves_every50.csv</span><br><span class="pill out">allocation_metrics_N1000_5000_10000.csv</span><br>Residents and V × residents:<br><span class="pill out">figS_allocation_capture_precision.png</span></p></div>
   </div>
@@ -733,7 +735,7 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
 <section aria-labelledby="ht-c">
   <h2 id="ht-c">Method: does risk vary inside a subdistrict, and does it cluster?</h2>
   <p class="lede">The subdistrict map gives each subdistrict one risk class. Two sets of buildings can share that class and still look very different inside.</p>
-  <div class="card"><h3>Fig. A1. Three toy subdistricts with the same subdistrict risk class <button type="button" class="figq" data-dlg="d-ht-a">ⓘ What it shows</button></h3><div class="chart" id="ht-toy"></div></div>
+  <div class="card pfig"><h3>Fig. A1. Three toy subdistricts with the same subdistrict risk class <button type="button" class="figq" data-dlg="d-ht-a">ⓘ What it shows</button></h3><div class="chart" id="ht-toy"></div></div>
   <div class="eqs">
     <div class="eq"><span class="tex">\[\sum_i (r_i-\bar r)^2=\sum_s n_s(\bar r_s-\bar r)^2+\sum_s\sum_{i\in s}(r_i-\bar r_s)^2\]</span><span class="eqn"><b>Variance split: how much risk varies inside subdistricts</b><br>Left: total spread of risk over all exposed buildings<br>First sum: between subdistricts (how far subdistrict averages differ)<br>Second sum: inside subdistricts (how far buildings differ from their own subdistrict’s average)<br>r<sub>i</sub> = raw risk ∛(H·E·V) of exposed building i; r̄<sub>s</sub> = average of subdistrict s; r̄ = average of all; n<sub>s</sub> = exposed buildings in s<br>Inside share = 68 %; between share = 32 %, the only part a subdistrict map can show</span></div>
     <div class="eq"><span class="tex">\[I_i=z_i\sum_{j\in N_8(i)} w_{ij}\,z_j\]</span><span class="eqn"><b>LISA (Local Moran’s I): how clustered, building by building</b><br>I<sub>i</sub> = Local Moran’s I of building i: above 0 = like its neighbours, below 0 = unlike them<br>z<sub>i</sub>, z<sub>j</sub> = raw risk ∛(H·E·V) of building i and of neighbour j, standardised (0 = mean of exposed buildings)<br>N<sub>8</sub>(i) = the 8 nearest exposed buildings to i<br>w<sub>ij</sub> = weight of neighbour j, 1/8 each<br>Hot spot = z<sub>i</sub> &gt; 0 and I<sub>i</sub> &gt; 0 (high among high), significant after FDR (q = 0.05, 9,999 permutations)</span></div>
@@ -743,11 +745,11 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
   <h2 id="ht-r2">Result: the area map misses about three in ten risk hot-spot buildings</h2>
   <p class="lede">27,804 flood-exposed buildings in 92 subdistricts; hot spots tested on each building’s raw risk with 8 neighbours, 9,999 permutations and FDR (q = 0.05). </p>
   <div class="card"><h3>Two thirds of the difference in flood risk lies inside subdistricts <button type="button" class="figq" data-dlg="d-ht-e">ⓘ What it shows</button></h3><div class="chart" id="ht2-split"></div></div>
-  <div class="card"><h3>Fig. 14. Risk hot spots form clusters inside subdistricts of every rating <button type="button" class="figq" data-dlg="d-ht-map">ⓘ What it shows</button></h3>
+  <div class="card pfig"><h3>Fig. 14. Risk hot spots form clusters inside subdistricts of every rating <button type="button" class="figq" data-dlg="d-ht-map">ⓘ What it shows</button></h3>
     <div class="legend htleg mapleg"><span><i style="background:var(--hot);border-radius:50%"></i><em class="lt">Hot spot, high risk score among high-scoring neighbours (4,563)</em></span><span><i style="background:var(--sev2);border-radius:50%"></i><em class="lt">Cold spot, low score among low-scoring neighbours (4,773)</em></span><span class="rdkey"><em class="lt">Subdistrict risk (R<sub>s</sub>)</em><i style="--k:4%"></i>1<i style="--k:7%"></i>2<i style="--k:13%"></i>3<i style="--k:22%"></i>4<i style="--k:46%"></i>5</span></div>
     <div class="chart" id="ht2-map"></div><div class="htexl"></div>
     <p class="cap htdrag">Drag the cards to move them. <button type="button" class="rlink" data-htreset>Reset positions</button> · <button type="button" class="rlink" data-htcopy>Copy positions</button> <span class="htcopied" hidden>copied</span></p></div>
-  <div class="card"><h3>Fig. 15. 1,323 of 4,563 risk hot-spot buildings (29 %) sit in subdistricts rated 1–3 <button type="button" class="figq" data-dlg="d-ht-f">ⓘ What it shows</button></h3>
+  <div class="card pfig"><h3>Fig. 15. 1,323 of 4,563 risk hot-spot buildings (29 %) sit in subdistricts rated 1–3 <button type="button" class="figq" data-dlg="d-ht-f">ⓘ What it shows</button></h3>
     <div class="chart" id="ht2-rdbar"></div>
     <div class="chart" id="ht2-rank"></div>
     <p class="cap"><span class="real">real values</span> Flood-exposed buildings. Map: LISA hot / cold spots of raw risk (FDR). Bars: hot-spot buildings by subdistrict R<sub>s</sub>. Data (<span class="mono">Results\261031\</span>):<br><span class="pill out">risk_by_dong.csv</span><br><span class="pill out">risk_summary.csv</span><br><span class="pill out">risk_lisa_k_sensitivity.csv</span><br><span class="pill out">fig_heterogeneity_risk.png</span></p></div>
@@ -806,7 +808,7 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
   <p class="lede">166,999 buildings, 27,804 flooded; 91 subdistricts with a hazard class. Intervals from 2,000 resamples of whole subdistricts.</p>
   <div class="card"><h3>Flooded buildings are only slightly more vulnerable than the basin <button type="button" class="figq" data-dlg="d-fl-a">ⓘ What it shows</button></h3>
     <div class="chart" id="fl-ext"></div></div>
-  <div class="card"><h3>Fig. 16. The highest flood hazard sits in large, sparsely built subdistricts <button type="button" class="figq" data-dlg="d-fl-c">ⓘ What it shows</button></h3>
+  <div class="card pfig"><h3>Fig. 16. The highest flood hazard sits in large, sparsely built subdistricts <button type="button" class="figq" data-dlg="d-fl-c">ⓘ What it shows</button></h3>
     <div class="flk"><span><span class="n">1</span><span>All <b>19</b> subdistricts in hazard class 5 are large (over 10 km²); hazard class follows subdistrict size (rank correlation <b>0.85</b>)</span></span><span><span class="n">2</span><span>Large subdistricts are less vulnerable (mean SEVI <b>0.38</b> vs <b>0.68</b>), so hazard vs vulnerability is <b>−0.51</b>, but <b>−0.09</b> with size held fixed</span></span></div>
     <div class="chart" id="fl-h5"></div>
     <p class="cap"><span class="real">real values</span> Buildings. Large = over 10 km² (36 of 118 subdistricts; 35 of 91 with a hazard class). Fig. 16 shows buildings and subdistricts in hazard class 5. Data (<span class="mono">Results\261031b\</span> in <span class="mono">5_Flooded_vs_nonflooded_Claude</span>):<br><span class="pill out">summary.csv</span><br><span class="pill out">depth_summary.csv</span><br><span class="pill out">depth_buildings_by_size.csv</span><br><span class="pill out">depth_subdistricts.csv</span><br><span class="pill out">build_risk_class_261030_equal_sqrt.pkl</span> (hazard 5 buildings)</p></div>
@@ -1770,7 +1772,7 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
   function hetToy(box){
     if (!box.clientWidth) return;
     const need = (1.59 * 22 + tw('Varies inside') + Math.max(tw('variance 0.00'), 1.3 * 22 + tw('LISA hot spots')) + 16) * 960 / 296;   // px for a 296-unit card to hold its widest line at 14 px
-    const N = box.clientWidth < need, W = N ? Math.max(440, Math.round(box.clientWidth)) : 960, f = W / box.clientWidth, L = 22 * f;   // N: stack the panels; L = one text line
+    const N = box.clientWidth < 500, M = !N && box.clientWidth < need, W = N ? Math.max(440, Math.round(box.clientWidth)) : M ? Math.round(box.clientWidth) : 960, f = W / box.clientWidth, L = 22 * f;   // N: stack the panels (phones); M: three compact columns at print width; L = one text line
     const HOT = '#EA580C';   // orange ring: a dark red one would vanish on the dark red buildings
     const pct = [14, 32, 52, 74, 100], fillOf = k => `color-mix(in srgb,var(--sev5) ${pct[k - 1]}%,var(--surface))`;
     const B = []; for (let r = 0; r < 6; r++) for (let c = 0; c < 6; c++) B.push(((r * 2 + c) % 5) + 1);
@@ -1783,7 +1785,7 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
     const hot = g => g.map((v, i) => { const r = Math.floor(i / 6), c = i % 6, nb = [];
       for (let dr = -1; dr <= 1; dr++) for (let dc = -1; dc <= 1; dc++) { const rr = r + dr, cc = c + dc; if ((dr || dc) && rr >= 0 && rr < 6 && cc >= 0 && cc < 6) nb.push(g[rr * 6 + cc]); }
       return v === 5 && nb.reduce((x, y) => x + y, 0) / nb.length >= 3.5; });   // toy rule: darkest building, mostly high neighbours
-    const c2 = 0.84 * L + 0.3 * L + tw('Varies inside') * f + 0.45 * L;   // x of the second claim, after icon and the longer label
+    const c2 = M ? 1.14 * L : 0.84 * L + 0.3 * L + tw('Varies inside') * f + 0.45 * L;   // x of the second claim, after icon and the longer label
     const mark = (lx, y, yes, t, hi) => { const r = 0.42 * L, x = lx + r, c = y - 0.32 * L;   // lx = left edge shared by both lines
       el('circle', {cx:x, cy:c, r, fill:yes ? '#2e7d32' : '#c62828'}, s);
       el('path', {d:yes ? `M${x - r * .45},${c}l${r * .32},${r * .34}l${r * .6},-${r * .66}` : `M${x - r * .38},${c - r * .38}l${r * .76},${r * .76}m0,-${r * .76}l-${r * .76},${r * .76}`,
@@ -1795,18 +1797,18 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
       txt(s, lx + c2 + br, c, n, {'text-anchor':'middle', 'dominant-baseline':'central', fill:'#fff', 'font-weight':700});
       txt(s, lx + c2 + 2 * br + 0.2 * L, y, rest, {fill:'var(--muted)'}); };
     const ring = (x, y, w) => el('rect', {x:x - 3, y:y - 3, width:w + 6, height:w + 6, rx:8, fill:'none', stroke:HOT, 'stroke-width':3}, s);
-    const cell = N ? 28 : 30, gap = 4, gw = 6 * cell + 5 * gap, PW = N ? W - 24 : 296;
+    const cell = N ? 28 : M ? 20 : 30, gap = M ? 3 : 4, gw = 6 * cell + 5 * gap, PW = N ? W - 24 : M ? (W - 32) / 3 : 296;
     const PH = 1.9 * L + gw + 4.3 * L, y0 = 2.4 * L, GAPP = N ? 0.6 * L : 0;
-    const t1 = N ? 'Risk: low' : 'Building risk: low', t2 = N ? 'LISA hot spot: high among high' : 'LISA hot spot: high risk score among high-scoring neighbours';
+    const t1 = N || M ? 'Risk: low' : 'Building risk: low', t2 = N || M ? 'LISA hot spot: high among high' : 'LISA hot spot: high risk score among high-scoring neighbours';
     const two = N || 70 + (tw(t1) + tw('high') + tw(t2)) * f + 5 * (0.9 * L + 4) + 3.7 * L > W - 8;   // key on two lines when one does not fit
     const ky = y0 + (N ? 3 : 1) * (PH + GAPP) + 1.5 * L, H = ky + (two ? 3.2 : 1.6) * L + 0.7 * L;
     const s = newSvg(box, W, H);
     // header: one pill says what the subdistrict map shows for all three
-    const ht = N ? 'Subdistrict map: all rated 3' : 'Subdistrict map: all three are rated 3', hw = tw(ht) * f + 1.6 * L;
+    const ht = N || M ? 'Subdistrict map: all rated 3' : 'Subdistrict map: all three are rated 3', hw = tw(ht) * f + 1.6 * L;
     el('rect', {x:W / 2 - hw / 2, y:0.15 * L, width:hw, height:1.5 * L, rx:0.75 * L, fill:'var(--chip)', stroke:'var(--line)'}, s);
     txt(s, W / 2, 1.13 * L, ht, {'text-anchor':'middle', 'font-weight':600});
     grids.forEach(([id, name, g], k) => {
-      const cx = N ? W / 2 : 160 + k * 320, py = y0 + (N ? k * (PH + GAPP) : 0), x0 = cx - gw / 2, gt = py + 1.9 * L;
+      const cx = N ? W / 2 : M ? 8 + PW / 2 + k * (PW + 8) : 160 + k * 320, py = y0 + (N ? k * (PH + GAPP) : 0), x0 = cx - gw / 2, gt = py + 1.9 * L;
       const h = hot(g), nh = h.filter(Boolean).length, e = vin(g), mean = g.reduce((x, y) => x + y, 0) / 36;
       el('rect', {x:cx - PW / 2, y:py, width:PW, height:PH, rx:16, fill:'var(--raise)', stroke:'var(--line)'}, s);   // soft card per subdistrict
       txt(s, cx, py + 1.2 * L, id + ' · ' + name, {'text-anchor':'middle', 'font-weight':600});
@@ -1814,24 +1816,24 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
       g.forEach((v, i) => { const [x, y] = xy(i); el('rect', {x, y, width:cell, height:cell, rx:6, fill:fillOf(v)}, s); });
       g.forEach((v, i) => { if (h[i]) { const [x, y] = xy(i); ring(x, y, cell); } });   // rings last, on top of the cells
       const ty = gt + gw + 1.3 * L;
-      txt(s, cx, ty, 'Average building risk ' + mean.toFixed(1), {'text-anchor':'middle', fill:'var(--muted)'});
-      const t1 = ['Varies inside', 'variance ' + e.toFixed(2)], t2 = ['Clustered', nh + ' LISA hot spots'];
+      txt(s, cx, ty, (M ? 'Mean risk ' : 'Average building risk ') + mean.toFixed(1), {'text-anchor':'middle', fill:'var(--muted)'});
+      const t1 = [M ? '' : 'Varies inside', 'variance ' + e.toFixed(2)], t2 = [M ? '' : 'Clustered', nh + (M ? ' hot spots' : ' LISA hot spots')];
       const lx = cx - (c2 + Math.max(tw(t1[1]), tw(t2[1])) * f) / 2;
       mark(lx, ty + L, e > 0, t1);
       mark(lx, ty + 2 * L, nh > 0, t2, nh > 0);
     });
     // key: colour ramp, then the hot-spot ring (second line on phones)
     const sw = 0.9 * L, sh = 0.75 * L;
-    let kx = N ? 16 : 70;
+    let kx = N || M ? 16 : 70;
     txt(s, kx, ky, t1, {fill:'var(--muted)'}); kx += tw(t1) * f + 0.5 * L;
     pct.forEach((p, i) => el('rect', {x:kx + i * (sw + 4), y:ky - sh + 2, width:sw, height:sh, rx:4, fill:fillOf(i + 1)}, s)); kx += 5 * (sw + 4) + 0.3 * L;
     txt(s, kx, ky, 'high', {fill:'var(--muted)'});
-    const hy = two ? ky + 1.6 * L : ky; kx = two ? (N ? 16 : 70) : kx + tw('high') * f + 1.5 * L;
+    const hy = two ? ky + 1.6 * L : ky; kx = two ? (N || M ? 16 : 70) : kx + tw('high') * f + 1.5 * L;
     el('rect', {x:kx, y:hy - sh + 2, width:sw, height:sh, rx:4, fill:fillOf(5)}, s);
     el('rect', {x:kx - 3, y:hy - sh - 1, width:sw + 6, height:sh + 6, rx:6, fill:'none', stroke:HOT, 'stroke-width':3}, s);
     txt(s, kx + sw + 0.5 * L, hy, t2, {fill:'var(--muted)'});
     // variance key: 0 in a filled circle, then its meaning
-    let ex = N ? 16 : 70; const ey = hy + 1.6 * L, br = 0.5 * L, kt = (t, c) => { txt(s, ex, ey, t, {fill:c || 'var(--muted)'}); ex += tw(t) * f + 0.4 * L; };
+    let ex = N || M ? 16 : 70; const ey = hy + 1.6 * L, br = 0.5 * L, kt = (t, c) => { txt(s, ex, ey, t, {fill:c || 'var(--muted)'}); ex += tw(t) * f + 0.4 * L; };
     const badge = v => { el('circle', {cx:ex + br, cy:ey - 0.32 * L, r:br, fill:'var(--ink)'}, s); txt(s, ex + br, ey - 0.32 * L, v, {'text-anchor':'middle', 'dominant-baseline':'central', fill:'var(--surface)', 'font-weight':700}); ex += 2 * br + 0.3 * L; };
     const vl = 'all buildings alike; the higher, the more they differ from the subdistrict average';
     kt(N ? 'Variance' : 'Variance inside:'); badge('0'); kt(N || ex + tw(vl) * f > W - 8 ? 'all alike' : vl);
@@ -2105,7 +2107,7 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
     const rt = inl ? 1.75 * L : 2.75 * L, top0 = ky + 1.0 * L, ph = rt + 3 * (bh + 12), lw = tw('Vulnerability (V)') + 14;
     [['miss', '(a) Missed', SUB[0]], ['over', '(b) Over-included', SUB[1]]].forEach(([k, t, sub], n) => {
       const ox = two ? n * (pw + gap) : 0, oy = top0 + (two ? 0 : n * (ph + gap / 2));
-      txt(s, ox, oy + .9 * L, t, {'font-weight':800, style:'font-size:1.15em'});
+      txt(s, ox, oy + .9 * L, t, {'font-weight':800});
       txt(s, ox + twb(t) * 1.15 + 10, oy + .9 * L, f(Y[k].n), {fill:'var(--muted)'});
       const hc = n ? 'var(--accent)' : 'var(--sev5)', sw = cw(sub), sy = inl ? oy + .9 * L : oy + 1.95 * L, sx = inl ? ox + twb(t) * 1.15 + 10 + tw(f(Y[k].n)) + 12 : ox;   // which buildings: a light tint of the panel's colour
       el('rect', {x:sx, y:sy - 16, width:sw, height:24, rx:12, fill:`color-mix(in srgb,${hc} 13%,var(--surface))`}, s); stx(s, sx + 9, sy, sub, {class:'ontop', fill:hc, 'font-weight':600});
@@ -2123,8 +2125,8 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
     const path = (r, X, Y, o) => { let p = ''; for (let i = o; i < r.length; i += 2) p += (i > o ? 'L' : 'M') + X(r[i]).toFixed(1) + ',' + Y(r[i + 1]).toFixed(1); return p + 'Z'; };
     const sym = (x, y, t, c, a) => stx(s, x, y, [[t + ' (R'], [c, 1], [')']], a), lw = Math.max(tw('Subdistrict risk (Rs)'), tw('Building risk (Rb)')) + 12;
     A.forEach((a, n) => { const cx = (n % cols) * (pw + gap), oy = Math.floor(n / cols) * ph, [wx, wy, ws] = a.win, rd = Number(a.rd);
-      const lab = `(${'abcd'[n]}) ${a.case}`; txt(s, cx, oy + 0.9 * L, lab, {'font-weight':800, style:'font-size:1.15em'});
-      txt(s, cx + twb(lab) * 1.15 + 12, oy + 0.9 * L, a.n);
+      const lab = `(${'abcd'[n]}) ${a.case}`; txt(s, cx, oy + 0.9 * L, lab, {'font-weight':800});
+      txt(s, cx + twb(lab) + 12, oy + 0.9 * L, a.n);
       const y2 = oy + 1.9 * L, y3 = oy + 3.25 * L, x0 = cx + lw;   // subdistrict rating, then the mix of building ratings, on their own lines
       sym(cx, y2, 'Subdistrict risk', 's', {fill:'var(--muted)'});
       el('rect', {x:x0, y:y2 - 15, width:26, height:20, rx:10, fill:`var(--sev${rd})`}, s);
@@ -2241,21 +2243,24 @@ math{font-size:1em;line-height:1}math mfrac>*{font-size:inherit}.eq math{font-si
   })();
   // Owner-only colour editor (v295): figure colour tokens, saved per theme to the artifact db doc prefs/figColors; only the owner reads and writes it.
   (function(){
-    const TOK = [['Risk class (Rb, Rs)', [['--sev1', 'Class 1'], ['--sev2', 'Class 2 (also cold spots)'], ['--sev3', 'Class 3'], ['--sev4', 'Class 4'], ['--sev5', 'Class 5']]],
-      ['Flood depth', [['--fd1', '< 0.5 m'], ['--fd2', '0.5–1 m'], ['--fd3', '1–2 m'], ['--fd4', '> 2 m']]],
-      ['Points and outlines', [['--accent', 'Blue (Fig. 9 points; also page accent)'], ['--bad', 'Red (Fig. 9 points)'], ['--hot', 'Hot spot'], ['--nm-line', 'Named subdistrict outline'], ['--loc', 'Inset square']]]];
+    const TOK = [['Fig. 10: building risk (Rb)', [['--rb1', 'Rb 1'], ['--rb2', 'Rb 2'], ['--rb3', 'Rb 3'], ['--rb4', 'Rb 4'], ['--rb5', 'Rb 5']]],
+      ['Risk classes: Figs 12, 13, 14, 16, A1', [['--sev1', 'Class 1 (Fig. 12)'], ['--sev2', 'Class 2 (Fig. 12); cold spots (Fig. 14); small subdistricts (Fig. 16)'], ['--sev3', 'Class 3 (Fig. 12)'], ['--sev4', 'Class 4 (Fig. 12); building-based line (Fig. 13)'], ['--sev5', 'Class 5 (Figs 12, A1); higher (Fig. 11); rated 4–5 (Fig. 15); H = 5 (Fig. 16)']]],
+      ['Blue and red', [['--accent', 'Blue: Fig. 9 points, lower (Fig. 11), subdistrict-based line (Fig. 13), rated 1–3 (Fig. 15)'], ['--bad', 'Red: Fig. 9 points, hybrid line (Fig. 13)'], ['--hot', 'Hot spots (Fig. 14); large subdistricts (Fig. 16)']]],
+      ['Fig. 12 map', [['--fd1', 'Flood depth < 0.5 m'], ['--fd2', 'Flood depth 0.5–1 m'], ['--fd3', 'Flood depth 1–2 m'], ['--fd4', 'Flood depth > 2 m'], ['--loc', 'Inset square']]],
+      ['Outlines', [['--nm-line', 'Named subdistrict outline (Fig. 9)']]]];
     const mode = () => { const a = document.documentElement.dataset.theme; return a === 'dark' || a === 'light' ? a : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); };
-    let st = {light:{}, dark:{}}, db = null, saving = Promise.resolve();
+    let st = {light:{}, dark:{}}, db = null, saving = Promise.resolve(); const rbSet = new Set();
     const tag = document.head.appendChild(document.createElement('style'));
     const apply = () => { const body = o => Object.entries(o).filter(([k, v]) => /^--[\w-]+$/.test(k) && /^#[0-9a-f]{6}$/i.test(v)).map(([k, v]) => k + ':' + v).join(';');
       tag.textContent = 'html:root{' + body(st.light) + '}@media (prefers-color-scheme: dark){html:root:not([data-theme="light"]){' + body(st.dark) + '}}html:root[data-theme="dark"]{' + body(st.dark) + '}';   // html:root outranks the page's own :root token rules wherever they sit
-      if (typeof draw === 'function') draw(); };
-    const hex = k => { const c = getComputedStyle(document.documentElement).getPropertyValue(k).trim(); const cv = document.createElement('canvas').getContext('2d'); cv.fillStyle = '#000'; cv.fillStyle = c; return cv.fillStyle; };
+      document.querySelectorAll('.rbpal').forEach(c => ['--rb1', '--rb2', '--rb3', '--rb4', '--rb5'].forEach(k => { const v = (mode() === 'dark' ? st.dark : st.light)[k]; if (v) { c.style.setProperty(k, v); rbSet.add(k); } else if (rbSet.has(k)) { c.style.removeProperty(k); rbSet.delete(k); } }));   // Fig 10 keeps its classes on the card
+      window.__redraw && window.__redraw(); };
+    const hex = k => { const c = getComputedStyle(k.startsWith('--rb') ? document.querySelector('.rbpal') || document.documentElement : document.documentElement).getPropertyValue(k).trim(); const cv = document.createElement('canvas').getContext('2d'); cv.fillStyle = '#000'; cv.fillStyle = c; return cv.fillStyle; };
     const lum = h => { const [r, g, b] = [1, 3, 5].map(i => { const v = parseInt(h.slice(i, i + 2), 16) / 255; return v <= .03928 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4; }); return .2126 * r + .7152 * g + .0722 * b; };
     const ratio = (a, b) => { const x = lum(a), y = lum(b); return (Math.max(x, y) + .05) / (Math.min(x, y) + .05); };
     (async () => {
       if (!window.claude) return; const timer = new Promise(r => setTimeout(() => r(null), 10000));
-      const user = await Promise.race([claude.use('user'), timer]); if (!(await (user?.isOwner() ?? false))) return;   // viewers never see the editor
+      const user = await Promise.race([claude.use('user'), timer]); if (!user || !((await user.isOwner()) || (await user.canEdit()))) return;   // viewers never see the editor
       db = await Promise.race([claude.use('db'), timer]);
       try { const d = db && await Promise.race([db.doc('prefs/figColors').get(), timer]); const v = d && d.exists ? d.data() : null;
         if (v) { st = {light:Object.assign({}, v.light || {}), dark:Object.assign({}, v.dark || {})}; apply(); } } catch (e) {}
